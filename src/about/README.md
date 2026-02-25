@@ -5,7 +5,7 @@ title: Yd Wen 介绍
 icon: people
 tag:
   - 个人介绍
-timeline: false
+timeline: true
 star: true
 ---
 
@@ -17,7 +17,7 @@ star: true
 
 - 性别: 男
 - 年龄: 26
-- 爱好: 编程
+- 爱好: 编程 / 游戏 / 阅读
 
 ---
 
@@ -30,8 +30,8 @@ star: true
 
 ## 联系方式
 
-你可以通过我的 QQ 1178522294 联系我。
+你可以通过我的 QQ 3505603081 联系我。
 
-当然如果你想，你也可以通过邮箱 [yyz99yyd@163.com](mailto:yyz99yyd@163.com) 发函。
+当然如果你想，你也可以通过邮箱 [wenyindong@163.com](mailto:wenyindong@163.com) 发函。
 
 @slideend

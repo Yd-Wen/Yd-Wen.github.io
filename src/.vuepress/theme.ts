@@ -16,9 +16,9 @@ export default hopeTheme(
 
     logo: "/logo.svg",
 
-    // repo: "Mister-Hope/Mister-Hope.github.io",
+    repo: "Yd-Wen/Yd-Wen.github.io",
 
-    repoDisplay: false,
+    repoDisplay: true,
 
     docsDir: "src",
 
