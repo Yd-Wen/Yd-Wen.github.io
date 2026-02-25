@@ -28,7 +28,7 @@ export default hopeTheme(
     footer:
       '主题使用 <a href="https://theme-hope.vuejs.press/zh/">VuePress Theme Hope</a> | <a href="https://yindongwen.top/about/site.html" target="_blank">关于网站</a>',
 
-    copyright: "基于 MIT 协议，© 2026-至今 Yd Wen",
+    copyright: "基于 MIT 协议 ©2026-至今 Yd Wen",
 
     blog: {
       description: "学生，前端、后端、AI入门者",
@@ -76,15 +76,15 @@ export default hopeTheme(
         excerptLength: 0,
       },
 
-      comment: {
-        provider: "Waline",
-        serverURL: "https://comment.mister-hope.com",
-      },
+      // comment: {
+      //   provider: "Waline",
+      //   serverURL: "https://comment.mister-hope.com",
+      // },
 
       docsearch: {
-        appId: "92EXITUA7H",
-        apiKey: "33b44aab931cbbd821d1cf25727c68aa",
-        indexName: "mister-hope",
+        appId: "S6OIOX9FNH",
+        apiKey: "0909cd8b2d0a6d30a20118db53d63182",
+        indexName: "Yd-Wen-Crawler",
       },
 
       feed: {
