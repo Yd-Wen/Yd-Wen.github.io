@@ -3,13 +3,14 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { zhNavbarConfig } from "./navbar.js";
 import { zhSidebarConfig } from "./sidebar/index.js";
 
+
 export default hopeTheme(
   {
     hostname: "https://yindongwen.top",
 
     author: {
       name: "Yd Wen",
-      url: "https://yindongwen.top",
+      url: "https://yindongwen.top"
     },
 
     favicon: "/favicon.ico",
@@ -37,7 +38,7 @@ export default hopeTheme(
         GitHub: "https://github.com/Yd-Wen",
         Gitee: "https://gitee.com/yindong-wen",
         BiliBili: "https://space.bilibili.com/1882044793"
-      },
+      }
     },
 
     displayFooter: true,
@@ -73,7 +74,7 @@ export default hopeTheme(
 
     plugins: {
       blog: {
-        excerptLength: 0,
+        excerptLength: 0
       },
 
       // comment: {
