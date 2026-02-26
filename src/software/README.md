@@ -1,9 +1,7 @@
 ---
-date: 2022-01-07
-title: 软件教程
-icon: software
-star: 9
-sticky: 9
+date: 2026-02-26
+title: 教程
+icon: tutorial
 ---
 
 ## 代码编辑器

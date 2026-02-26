@@ -20,7 +20,10 @@ heroFullScreen: true
 bgImageStyle:
     background-attachment: fixed
 actions:
-  - text: 文章
+  - text: 快捷导航
+    link: /article/
+    type: primary
+  - text: 博客
     link: /article/
     type: primary
 

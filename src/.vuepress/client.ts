@@ -3,7 +3,7 @@ import { defineClientConfig } from "vuepress/client";
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
 // import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js";
 import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentNavbar.js";
-import "vuepress-theme-hope/presets/bounce-icon.scss";
+// import "vuepress-theme-hope/presets/bounce-icon.scss";
 
 
 export default defineClientConfig({
