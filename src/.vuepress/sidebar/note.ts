@@ -11,7 +11,7 @@ export const note = arraySidebar([
         icon: "machine_learning",
         link: "machine_learning/",
         prefix: "machine_learning/",
-        children: ["intro", "evaluation", "linear_regression", "decision_tree"],
+        children: ["intro", "evaluation", "linear_regression", "decision_tree", "neural_network"],
     },
     {
         text: "深度学习",

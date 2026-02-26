@@ -17,6 +17,8 @@ category: 笔记
 
 ### [4 决策树](machine_learning/decision_tree.md)
 
+### [5 神经网络](machine_learning/neural_network.md)
+
 
 ## 深度学习
 
