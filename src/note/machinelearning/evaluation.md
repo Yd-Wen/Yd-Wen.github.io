@@ -1,11 +1,11 @@
 ---
 date: 2023-09-30
-title: 2 模型选择与评估
-icon: base
+title: 2 模型评估
+icon: evaluation
 category:
   - 机器学习
 tag:
-  - 基础
+  - 模型评估
 ---
 
 ## 2.1 三种误差与两种拟合

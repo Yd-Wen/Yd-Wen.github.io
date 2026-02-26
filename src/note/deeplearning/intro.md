@@ -45,5 +45,3 @@ tag:
 其中 TensorFlow 和 Keras 是 Google 出品的，使用者很多，但是其语法晦涩且和 python 语法不尽相同，对于入门玩家上手难度高。
 
 PyTorch 语法与 Python 相同，操作类似 Numpy，且 PyTorch 使用动态计算，会让代码调试更加简单。
-
----

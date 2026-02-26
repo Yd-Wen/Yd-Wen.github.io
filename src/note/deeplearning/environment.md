@@ -387,5 +387,3 @@ pip install package_name -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 pip install package_name -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
 ```
-
----

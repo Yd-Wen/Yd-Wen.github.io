@@ -9,5 +9,5 @@ category: 机器学习
 
 #### [1 简介](intro.md)
 
-#### [2 模型评估与选择](evaluation.md)
+#### [2 模型评估](evaluation.md)
 
