@@ -19,6 +19,9 @@ category: 笔记
 
 ### [5 神经网络](machine_learning/neural_network.md)
 
+### [6 SVM](machine_learning/svm.md)
+
+
 
 ## 深度学习
 

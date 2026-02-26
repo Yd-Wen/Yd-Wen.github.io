@@ -16,3 +16,5 @@ category: 机器学习
 ### [4 决策树](decision_tree.md)
 
 ### [5 神经网络](neural_network.md)
+
+### [6 SVM](svm.md)

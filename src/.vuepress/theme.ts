@@ -107,7 +107,7 @@ export default hopeTheme(
 
       icon: {
         // assets: "//at.alicdn.com/t/font_2410206_vuzkjonf4s9.css",
-        assets: "//at.alicdn.com/t/c/font_5129685_heaok8asuun.css",
+        assets: "//at.alicdn.com/t/c/font_5129685_3g08fvwiy57.css",
       },
 
       pwa: {
