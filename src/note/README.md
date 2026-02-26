@@ -21,6 +21,8 @@ category: 笔记
 
 ### [6 支持向量机](machine_learning/svm.md)
 
+### [7 贝叶斯分类器](machine_learning/bayesian_classifier.md)
+
 
 
 ## 深度学习

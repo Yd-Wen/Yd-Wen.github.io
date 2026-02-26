@@ -18,3 +18,5 @@ category: 机器学习
 ### [5 神经网络](neural_network.md)
 
 ### [6 支持向量机](svm.md)
+
+### [7 贝叶斯分类器](bayesian_classifier.md)
