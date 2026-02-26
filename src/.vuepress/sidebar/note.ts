@@ -18,7 +18,8 @@ export const note = arraySidebar([
             "decision_tree",
             "neural_network",
             "svm",
-            "bayesian_classifier"
+            "bayesian_classifier",
+            "ensemble_learning"
         ]
     },
     {

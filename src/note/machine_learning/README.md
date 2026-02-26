@@ -20,3 +20,5 @@ category: 机器学习
 ### [6 支持向量机](svm.md)
 
 ### [7 贝叶斯分类器](bayesian_classifier.md)
+
+### [8 集成学习](ensemble_learning.md)

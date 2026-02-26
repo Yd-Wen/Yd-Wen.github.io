@@ -23,6 +23,8 @@ category: 笔记
 
 ### [7 贝叶斯分类器](machine_learning/bayesian_classifier.md)
 
+### [8 集成学习](machine_learning/ensemble_learning.md)
+
 
 
 ## 深度学习
