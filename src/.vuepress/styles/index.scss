@@ -10,9 +10,18 @@
 }
 
 .vp-nav-item {
-  a {
+
+  a,
+  .vp-dropdown-title {
     font-weight: bold;
     font-size: 1.2rem;
+
+    .vp-dropdown-item {
+      a {
+        font-weight: bold;
+        // font-size: 1.2rem;
+      }
+    }
   }
 }
 
