@@ -84,6 +84,10 @@ export default hopeTheme(
         excerptLength: 0
       },
 
+      git: {
+        contributors: false
+      },
+
       // comment: {
       //   provider: "Waline",
       //   serverURL: "https://comment.mister-hope.com",
