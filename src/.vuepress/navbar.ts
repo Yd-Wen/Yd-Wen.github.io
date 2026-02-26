@@ -7,8 +7,8 @@ export const zhNavbarConfig = navbar([
     icon: "note",
     prefix: "/note/",
     children: [
-      "machinelearning/",
-      "deeplearning/",
+      "machine_learning/",
+      "deep_learning/",
     ],
   },
   "/project/", // 项目

@@ -8,16 +8,16 @@ export const note = arraySidebar([
     },
     {
         text: "机器学习",
-        icon: "machinelearning",
-        link: "machinelearning/",
-        prefix: "machinelearning/",
-        children: ["intro", "evaluation"],
+        icon: "machine_learning",
+        link: "machine_learning/",
+        prefix: "machine_learning/",
+        children: ["intro", "evaluation", "linear_regression"],
     },
     {
         text: "深度学习",
-        icon: "deeplearning",
-        link: "deeplearning/",
-        prefix: "deeplearning/",
+        icon: "deep_learning",
+        link: "deep_learning/",
+        prefix: "deep_learning/",
         children: ["intro", "environment"],
     },
 ]);

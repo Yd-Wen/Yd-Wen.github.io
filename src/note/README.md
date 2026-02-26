@@ -9,12 +9,14 @@ category: 笔记
 
 ## 机器学习
 
-### [1 简介](machinelearning/intro.md)
+### [1 简介](machine_learning/intro.md)
 
-### [2 模型评估](machinelearning/evaluation.md)
+### [2 模型评估](machine_learning/evaluation.md)
+
+### [3 线性回归](machine_learning/linear_regression.md)
 
 ## 深度学习
 
-### [1 简介](deeplearning/intro.md)
+### [1 简介](deep_learning/intro.md)
 
-### [2 环境配置](deeplearning/environment.md)
+### [2 环境配置](deep_learning/environment.md)
