@@ -15,6 +15,9 @@ category: 笔记
 
 ### [3 线性回归](machine_learning/linear_regression.md)
 
+### [4 决策树](machine_learning/decision_tree.md)
+
+
 ## 深度学习
 
 ### [1 简介](deep_learning/intro.md)

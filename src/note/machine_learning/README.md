@@ -12,3 +12,5 @@ category: 机器学习
 ### [2 模型评估](evaluation.md)
 
 ### [3 线性回归](linear_regression.md)
+
+### [4 决策树](decision_tree.md)
