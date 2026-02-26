@@ -15,7 +15,7 @@ head:
     - name: msvalidate.01
       content: BFA4352248B0F52F3D36FFB45E3ADF6E
 
-bgImage: http://oss.yindongwen.top/homepage/bg.gif
+bgImage: http://oss.yindongwen.top/homepage/bg.jpg
 heroFullScreen: true
 projects:
   - name: VuePress
