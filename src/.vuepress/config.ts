@@ -17,4 +17,14 @@ export default <UserConfig>defineUserConfig({
   plugins: [appendDatePlugin(), cachePlugin({ type: "filesystem" })],
 
   shouldPrefetch: false,
+
+  head: [
+    [
+      "meta",
+      {
+        name: "referrer",
+        content: "no-referrer"
+      }
+    ],
+  ],
 });

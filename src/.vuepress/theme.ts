@@ -107,7 +107,7 @@ export default hopeTheme(
 
       icon: {
         // assets: "//at.alicdn.com/t/font_2410206_vuzkjonf4s9.css",
-        assets: "//at.alicdn.com/t/c/font_5129685_s4d07768sh.css",
+        assets: "//at.alicdn.com/t/c/font_5129685_5qh6gfeal4.css",
       },
 
       pwa: {
@@ -121,7 +121,7 @@ export default hopeTheme(
           name: "Yd Wen 的个人博客",
           short_name: "Yd Wen Blog",
           description: "Yd Wen 的个人博客",
-          theme_color: "#5c92d1",
+          theme_color: "#f28e16",
           icons: [
             {
               src: "/assets/icon/chrome-192.png",

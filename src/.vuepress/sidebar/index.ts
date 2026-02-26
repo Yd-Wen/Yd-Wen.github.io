@@ -81,14 +81,3 @@ export const zhSidebarConfig = sidebar({
   // fallback
   "/": ["", "note/", "code/", "software/", "about/"],
 });
-
-export const enSidebarConfig = sidebar({
-  "/en/note/": [""],
-
-  "/en/code/": [""],
-
-  "/en/about/": ["", "site"],
-
-  // fallback
-  "/en/": ["", "code/", "about/"],
-});
