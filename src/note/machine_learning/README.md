@@ -17,4 +17,4 @@ category: 机器学习
 
 ### [5 神经网络](neural_network.md)
 
-### [6 SVM](svm.md)
+### [6 支持向量机](svm.md)
