@@ -19,7 +19,8 @@ export const note = arraySidebar([
             "neural_network",
             "svm",
             "bayesian_classifier",
-            "ensemble_learning"
+            "ensemble_learning",
+            "clustering"
         ]
     },
     {

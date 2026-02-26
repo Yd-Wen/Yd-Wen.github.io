@@ -25,6 +25,8 @@ category: 笔记
 
 ### [8 集成学习](machine_learning/ensemble_learning.md)
 
+### [9 聚类](machine_learning/clustering.md)
+
 
 
 ## 深度学习
