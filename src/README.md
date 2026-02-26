@@ -6,7 +6,7 @@ icon: home
 title: 主页
 heroImage: /logo.svg
 heroText: 𝓨𝓭 𝓦𝓮𝓷
-tagline: 路漫漫其修远兮 吾将上下而求索
+tagline: The morning sun never lasts a day.
 head:
   - - meta
     - name: baidu-site-verification
@@ -29,6 +29,10 @@ actions:
 
   - text: 标签
     link: /tag/
+
+  - text: 项目
+    link: /project/
+    type: primary
 
   - text: 关于我
     link: /about/
