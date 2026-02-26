@@ -24,6 +24,13 @@ export default hopeTheme(
     docsDir: "src",
 
     navbar: zhNavbarConfig,
+
+    navbarLayout: {
+      start: ["Brand"],
+      center: ["Links"],
+      end: ["Search", "Repo", "Outlook"]
+    },
+
     sidebar: zhSidebarConfig,
 
     footer:
