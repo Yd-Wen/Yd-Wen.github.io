@@ -1,7 +1,7 @@
 ---
 date: 2026-02-24
 home: true
-layout: Blog
+# layout: Blog
 icon: home
 title: 主页
 heroImage: /logo.svg
@@ -17,6 +17,22 @@ head:
 
 bgImage: http://oss.yindongwen.top/homepage/bg.jpg
 heroFullScreen: true
+bgImageStyle:
+    background-attachment: fixed
+actions:
+  - text: 文章
+    link: /article/
+    type: primary
+
+  - text: 分类
+    link: /category/
+
+  - text: 标签
+    link: /tag/
+
+  - text: 关于我
+    link: /about/
+
 projects:
   - name: VuePress
     desc: 基于 Vue 的静态文档构建器
