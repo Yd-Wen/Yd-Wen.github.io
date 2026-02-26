@@ -1,4 +1,7 @@
 import { sidebar } from "vuepress-theme-hope";
+
+import { note } from "./note.js";
+
 import { code } from "./code.js";
 import { design } from "./design.js";
 import {
@@ -18,6 +21,8 @@ import { vue } from "./vue.js";
 import { jquery, website } from "./website/index.js";
 
 export const zhSidebarConfig = sidebar({
+  "/note": note,
+
   "/teaching": "structure",
 
   "/software/vscode/": vscode,
@@ -30,11 +35,11 @@ export const zhSidebarConfig = sidebar({
 
   "/physics/": physics,
 
-  "/note/innenu/": ["", "yaml", "tag-list", "get-started"],
+  // "/note/innenu/": ["", "yaml", "tag-list", "get-started"],
 
   "/piece/": piece,
 
-  "/note/": "structure",
+  // "/note/": "structure",
 
   "/linux/": linux,
 
