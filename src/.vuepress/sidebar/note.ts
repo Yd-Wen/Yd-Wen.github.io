@@ -38,7 +38,8 @@ export const note = arraySidebar([
             "neural_network",
             "evaluation",
             "computation",
-            "cnn"
+            "cnn",
+            "rnn"
         ],
     },
 ]);

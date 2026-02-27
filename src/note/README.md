@@ -51,5 +51,4 @@ category: 笔记
 
 ### [10 卷积神经网络](deep_learning/cnn.md)
 
-
-
+### [11 循环神经网络](deep_learning/rnn.md)
