@@ -13,6 +13,8 @@ category: 笔记
 
 ## 大数据
 
+### [物联网](big_data/iot.md)
+
 ### [高级数据库系统](big_data/nosql.md)
 
 ## 机器学习
