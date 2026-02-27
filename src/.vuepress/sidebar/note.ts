@@ -24,6 +24,7 @@ export const note = arraySidebar([
                 collapsible: true,
                 children: [
                     "intro",
+                    "concept",
                 ]
             }
         ]

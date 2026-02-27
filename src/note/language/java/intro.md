@@ -1,6 +1,6 @@
 ---
 title: 1 Java 简介
-icon: intro
+icon: base
 date: 2024-01-27
 category: 编程语言
 tag: 
