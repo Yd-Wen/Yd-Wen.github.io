@@ -15,6 +15,7 @@ export const note = arraySidebar([
         children: [
             "latex",
             "cpp_stl",
+            "python",
         ]
     },
     {

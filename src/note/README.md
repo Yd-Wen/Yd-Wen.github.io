@@ -13,6 +13,8 @@ category: 笔记
 
 ### [C++ STL 容器](language/cpp_stl.md)
 
+### [Python](language/python.md)
+
 ## 大数据
 
 ### [物联网](big_data/iot.md)
