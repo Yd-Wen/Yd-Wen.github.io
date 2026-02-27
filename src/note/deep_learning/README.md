@@ -3,6 +3,8 @@ title: 深度学习
 icon: deep_learning
 date: 2024-12-17
 category: 深度学习
+tag: 
+    - README
 ---
 
 本文列出了一些与深度学习相关的学习笔记。

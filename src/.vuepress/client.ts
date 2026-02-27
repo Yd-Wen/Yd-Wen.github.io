@@ -8,7 +8,7 @@ import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentN
 
 export default defineClientConfig({
   setup() {
-    setupTransparentNavbar({ type: "all" });
+    setupTransparentNavbar({ type: "homepage" });
     setupRunningTimeFooter(
       new Date("2026-02-01 20:30:00"),
       {

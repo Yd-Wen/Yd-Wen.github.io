@@ -3,6 +3,8 @@ title: 机器学习
 icon: machine_learning 
 date: 2023-09-24
 category: 机器学习
+tag: 
+    - README
 ---
 
 本文列出了一些与机器学习相关的学习笔记。主要是大学期间**机器学习**课程的学习笔记，现予以整理。

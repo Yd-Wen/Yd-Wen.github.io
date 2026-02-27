@@ -16,6 +16,16 @@ export const note = arraySidebar([
             "latex",
             "cpp_stl",
             "python",
+            {
+                text: "Java",
+                icon: "java",
+                link: "java/",
+                prefix: "java/",
+                collapsible: true,
+                children: [
+                    "intro",
+                ]
+            }
         ]
     },
     {
