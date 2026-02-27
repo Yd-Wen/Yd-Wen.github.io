@@ -14,6 +14,7 @@ export const note = arraySidebar([
         collapsible: true,
         children: [
             "latex",
+            "cpp_stl",
         ]
     },
     {
