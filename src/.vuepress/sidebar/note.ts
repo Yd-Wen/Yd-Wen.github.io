@@ -35,7 +35,8 @@ export const note = arraySidebar([
             "gradient_descent",
             "linear_regression",
             "softmax_regression",
-            "neural_network"
+            "neural_network",
+            "evaluation"
         ],
     },
 ]);

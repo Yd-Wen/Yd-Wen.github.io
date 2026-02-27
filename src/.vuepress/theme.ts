@@ -75,7 +75,8 @@ export default hopeTheme(
       tabs: true,
       vPre: true,
       math: {
-        type: "mathjax",
+        // type: "mathjax",
+        type: "katex",
       },
     },
 

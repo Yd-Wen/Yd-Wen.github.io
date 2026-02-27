@@ -45,4 +45,7 @@ category: 笔记
 
 ### [7 神经网络](deep_learning/neural_network.md)
 
+### [8 模型评估](deep_learning/evaluation.md)
+
+
 

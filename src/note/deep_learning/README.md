@@ -21,5 +21,6 @@ category: 深度学习
 
 ### [7 神经网络](neural_network.md)
 
+### [8 模型评估](evaluation.md)
 
 
