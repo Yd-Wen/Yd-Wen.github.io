@@ -54,3 +54,5 @@ category: 笔记
 ### [11 循环神经网络](deep_learning/rnn.md)
 
 ### [12 注意力机制](deep_learning/attention.md)
+
+### [13 二值神经网络](deep_learning/bnn.md)
