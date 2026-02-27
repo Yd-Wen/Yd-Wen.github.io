@@ -29,6 +29,7 @@ export const note = arraySidebar([
         icon: "deep_learning",
         link: "deep_learning/",
         prefix: "deep_learning/",
+        collapsible: true,
         children: [
             "intro",
             "environment",
