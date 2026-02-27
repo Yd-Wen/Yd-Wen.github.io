@@ -17,6 +17,16 @@ export const note = arraySidebar([
         ]
     },
     {
+        text: "大数据",
+        icon: "big_data",
+        link: "big_data/",
+        prefix: "big_data/",
+        collapsible: true,
+        children: [
+            "no_sql",
+        ]
+    },
+    {
         text: "机器学习",
         icon: "machine_learning",
         link: "machine_learning/",
