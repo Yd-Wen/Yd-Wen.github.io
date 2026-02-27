@@ -7,13 +7,14 @@ export const zhNavbarConfig = navbar([
     icon: "note",
     prefix: "/note/",
     children: [
-      "machine_learning/",
-      "deep_learning/",
+      "language/",          // 编程语言
+      "machine_learning/",  // 机器学习
+      "deep_learning/",     // 深度学习
     ],
   },
-  "/project/", // 项目
+  "/project/",              // 项目
   // "/design/",
   // "/code/",
-  "/piece/", // 随笔
-  "/software/", // 教程
+  "/piece/",                // 随笔
+  "/software/",             // 教程
 ]);

@@ -7,6 +7,16 @@ export const note = arraySidebar([
         link: "",
     },
     {
+        text: "编程语言",
+        icon: "language",
+        link: "language/",
+        prefix: "language/",
+        collapsible: true,
+        children: [
+            "latex",
+        ]
+    },
+    {
         text: "机器学习",
         icon: "machine_learning",
         link: "machine_learning/",

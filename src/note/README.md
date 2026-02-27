@@ -7,6 +7,11 @@ category: 笔记
 
 这里是 Yd Wen 的一些学习笔记。
 
+## 编程语言
+
+### [Latex](language/latex.md)
+
+
 ## 机器学习
 
 ### [1 简介](machine_learning/intro.md)
