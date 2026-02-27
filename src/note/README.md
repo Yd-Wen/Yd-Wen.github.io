@@ -43,4 +43,6 @@ category: 笔记
 
 ### [6 Softmax 回归](deep_learning/softmax_regression.md)
 
+### [7 神经网络](deep_learning/neural_network.md)
+
 

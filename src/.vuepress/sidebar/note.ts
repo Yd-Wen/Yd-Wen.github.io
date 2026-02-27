@@ -34,7 +34,8 @@ export const note = arraySidebar([
             "pytorch",
             "gradient_descent",
             "linear_regression",
-            "softmax_regression"
+            "softmax_regression",
+            "neural_network"
         ],
     },
 ]);

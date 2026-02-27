@@ -19,4 +19,7 @@ category: 深度学习
 
 ### [6 Softmax 回归](softmax_regression.md)
 
+### [7 神经网络](neural_network.md)
+
+
 
