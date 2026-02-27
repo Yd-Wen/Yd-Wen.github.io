@@ -15,5 +15,6 @@ category: 深度学习
 
 ### [4 梯度下降与反向传播](gradient_descent.md)
 
+### [5 线性回归](linear_regression.md)
 
 

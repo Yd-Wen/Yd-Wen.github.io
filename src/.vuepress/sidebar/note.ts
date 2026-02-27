@@ -32,7 +32,8 @@ export const note = arraySidebar([
             "intro",
             "environment",
             "pytorch",
-            "gradient_descent"
+            "gradient_descent",
+            "linear_regression"
         ],
     },
 ]);

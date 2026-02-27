@@ -39,3 +39,6 @@ category: 笔记
 
 ### [4 梯度下降与反向传播](deep_learning/gradient_descent.md)
 
+### [5 线性回归](deep_learning/linear_regression.md)
+
+
