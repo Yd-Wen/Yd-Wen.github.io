@@ -13,4 +13,7 @@ category: 深度学习
 
 ### [3 PyTorch 基础](pytorch.md)
 
+### [4 梯度下降与反向传播](gradient_descent.md)
+
+
 

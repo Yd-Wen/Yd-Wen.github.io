@@ -31,7 +31,8 @@ export const note = arraySidebar([
         children: [
             "intro",
             "environment",
-            "pytorch"
+            "pytorch",
+            "gradient_descent"
         ],
     },
 ]);

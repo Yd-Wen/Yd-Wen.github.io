@@ -36,3 +36,6 @@ category: 笔记
 ### [2 环境配置](deep_learning/environment.md)
 
 ### [3 PyTorch 基础](deep_learning/pytorch.md)
+
+### [4 梯度下降与反向传播](deep_learning/gradient_descent.md)
+
