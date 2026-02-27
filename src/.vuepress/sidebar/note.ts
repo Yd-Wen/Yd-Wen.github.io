@@ -39,7 +39,8 @@ export const note = arraySidebar([
             "evaluation",
             "computation",
             "cnn",
-            "rnn"
+            "rnn",
+            "attention"
         ],
     },
 ]);
