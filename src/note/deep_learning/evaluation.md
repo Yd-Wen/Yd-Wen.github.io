@@ -7,6 +7,10 @@ category:
 tag:
   - 模型评估
   - 数据集划分
+  - Dropout
+  - BatchNorm
+  - ResNet
+  - DenseNet
 ---
 
 ## 8.1 数据集划分

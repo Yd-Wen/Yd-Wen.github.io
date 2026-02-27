@@ -47,5 +47,6 @@ category: 笔记
 
 ### [8 模型评估](deep_learning/evaluation.md)
 
+### [9 深度学习计算](deep_learning/computation.md)
 
 

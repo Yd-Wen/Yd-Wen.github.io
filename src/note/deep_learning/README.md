@@ -23,4 +23,5 @@ category: 深度学习
 
 ### [8 模型评估](evaluation.md)
 
+### [9 深度学习计算](computation.md)
 
