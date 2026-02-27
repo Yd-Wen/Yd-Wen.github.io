@@ -49,4 +49,7 @@ category: 笔记
 
 ### [9 深度学习计算](deep_learning/computation.md)
 
+### [10 卷积神经网络](deep_learning/cnn.md)
+
+
 

@@ -25,3 +25,4 @@ category: 深度学习
 
 ### [9 深度学习计算](computation.md)
 
+### [10 卷积神经网络](cnn.md)

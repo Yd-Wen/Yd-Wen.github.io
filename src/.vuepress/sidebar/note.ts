@@ -37,7 +37,8 @@ export const note = arraySidebar([
             "softmax_regression",
             "neural_network",
             "evaluation",
-            "computation"
+            "computation",
+            "cnn"
         ],
     },
 ]);
