@@ -41,4 +41,6 @@ category: 笔记
 
 ### [5 线性回归](deep_learning/linear_regression.md)
 
+### [6 Softmax 回归](deep_learning/softmax_regression.md)
+
 

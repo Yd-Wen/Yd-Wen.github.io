@@ -17,4 +17,6 @@ category: 深度学习
 
 ### [5 线性回归](linear_regression.md)
 
+### [6 Softmax 回归](softmax_regression.md)
+
 
