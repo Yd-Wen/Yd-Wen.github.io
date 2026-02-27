@@ -25,6 +25,7 @@ export const note = arraySidebar([
                 children: [
                     "intro",
                     "concept",
+                    "array",
                 ]
             }
         ]
