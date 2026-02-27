@@ -13,7 +13,7 @@ category: 笔记
 
 ## 大数据
 
-### [高级数据库系统](big_data/no_sql.md)
+### [高级数据库系统](big_data/nosql.md)
 
 ## 机器学习
 

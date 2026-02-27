@@ -23,7 +23,7 @@ export const note = arraySidebar([
         prefix: "big_data/",
         collapsible: true,
         children: [
-            "no_sql",
+            "nosql",
         ]
     },
     {
