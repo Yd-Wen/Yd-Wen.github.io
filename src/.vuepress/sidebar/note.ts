@@ -28,6 +28,10 @@ export const note = arraySidebar([
         icon: "deep_learning",
         link: "deep_learning/",
         prefix: "deep_learning/",
-        children: ["intro", "environment"],
+        children: [
+            "intro",
+            "environment",
+            "pytorch"
+        ],
     },
 ]);

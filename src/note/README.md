@@ -34,3 +34,5 @@ category: 笔记
 ### [1 简介](deep_learning/intro.md)
 
 ### [2 环境配置](deep_learning/environment.md)
+
+### [3 PyTorch 基础](deep_learning/pytorch.md)
