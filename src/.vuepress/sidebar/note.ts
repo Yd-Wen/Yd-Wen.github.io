@@ -11,6 +11,7 @@ export const note = arraySidebar([
         icon: "machine_learning",
         link: "machine_learning/",
         prefix: "machine_learning/",
+        collapsible: true,
         children: [
             "intro",
             "evaluation",
