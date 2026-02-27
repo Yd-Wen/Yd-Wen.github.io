@@ -27,3 +27,5 @@ IDEA项目结构：
 ### [基本概念](concept.md)
 
 ### [数组](array.md)
+
+### [方法](method.md)
