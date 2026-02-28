@@ -1,6 +1,7 @@
 import { sidebar } from "vuepress-theme-hope";
 
 import { note } from "./note.js";
+import { project } from "./project.js";
 import { tutorial } from "./tutorial.js";
 
 import { code } from "./code.js";
@@ -23,6 +24,8 @@ import { jquery, website } from "./website/index.js";
 
 export const zhSidebarConfig = sidebar({
   "/note": note,
+
+  "/project": project,
 
   "/tutorial": tutorial,
 
