@@ -137,11 +137,11 @@ git push origin branch_name
 git push -u origin branch_name
 ```
 
-# 5 忽略文件
+## 5 忽略文件
 
 Git 忽略文件是通过 `.gitignore` 文件来实现的，该文件列出了 Git 应该忽略的文件和目录。
 
-### 常见的忽略文件
+### 5.1 常见的忽略文件
 
 ```
 # 操作系统文件
@@ -170,15 +170,93 @@ vendor/
 .env.*.local
 ```
 
-### 创建 .gitignore 文件
+### 5.2 创建 .gitignore 文件
 
 在项目根目录创建 `.gitignore` 文件，然后添加需要忽略的文件和目录。
 
-# 6 分支
+### 5.3 使忽略文件生效
+
+- 确保 .gitignore 文件位置正确：应放在项目根目录，这样它会对整个项目生效
+
+- 处理已跟踪的文件：如果文件已经被 Git 跟踪（即已经提交过），修改 .gitignore 不会自动忽略它，需要执行以下步骤：
+
+  ```bash
+  # 从暂存区移除已跟踪的文件（保留本地文件）
+  git rm --cached 文件名
+  
+  # 提交移除操作
+  git commit -m "停止跟踪该文件"
+  ```
+- 验证忽略效果：使用 `git status` 命令检查文件状态，确认被忽略的文件不再显示为未跟踪状态
+
+### 5.4 新增忽略项
+
+1. 编辑 .gitignore 文件，添加需要忽略的文件或目录模式
+
+2. 提交 .gitignore 文件到版本库：
+  ```bash
+  git add .gitignore
+  git commit -m "更新忽略规则"
+  ```
+
+### 5.5 删除忽略项
+
+1. 编辑 .gitignore 文件，删除对应的忽略规则
+
+2. 提交 .gitignore 文件到版本库：
+  ```bash
+  git add .gitignore
+  git commit -m "移除忽略规则"
+  ```
+
+3. 如果需要跟踪之前被忽略的文件，执行：
+  ```bash
+  git add 文件名
+  git commit -m "开始跟踪该文件"
+  ```
+
+### 5.6 忽略文件的语法规则
+
+- 注释：以 # 开头的行是注释
+
+
+- 通配符：
+
+  - * 匹配任意字符（除了斜杠）
+
+  - ? 匹配单个字符
+
+  - ** 匹配任意层级的目录
+
+- 目录：以 / 结尾表示目录
+
+- 否定：以 ! 开头表示否定（不忽略）
+
+- 转义：使用 \ 转义特殊字符
+
+::: tip
+**示例**：
+
+```
+# 忽略所有 .log 文件
+*.log
+
+# 但不忽略 error.log
+!error.log
+
+# 忽略 build 目录
+build/
+
+# 忽略 src 目录下的 temp 目录
+src/temp/
+```
+:::
+
+## 6 分支
 
 分支是 Git 中非常重要的概念，它允许你在不同的分支上开发不同的功能，而不会影响主分支的代码。
 
-### 分支操作命令
+### 6.1 分支操作命令
 
 ```bash
 # 查看所有分支
@@ -203,19 +281,23 @@ git branch -d branch_name
 git branch -D branch_name
 ```
 
-### 分支最佳实践
+### 6.2 分支最佳实践
 
 - 主分支（main/master）：用于存放稳定的代码
+
 - 开发分支（develop）：用于集成开发中的功能
+
 - 特性分支（feature）：用于开发新功能
+
 - 修复分支（bugfix）：用于修复 bug
+
 - 发布分支（release）：用于准备发布
 
-# 7 代理
+## 7 代理
 
 在某些网络环境下，需要设置 Git 代理才能正常访问远程仓库。
 
-### 设置 HTTP 代理
+### 7.1 设置 HTTP 代理
 
 ```bash
 # 设置 HTTP 代理
@@ -225,7 +307,7 @@ git config --global http.proxy http://proxy.example.com:8080
 git config --global --unset http.proxy
 ```
 
-### 设置 HTTPS 代理
+### 7.2 设置 HTTPS 代理
 
 ```bash
 # 设置 HTTPS 代理
@@ -235,7 +317,7 @@ git config --global https.proxy https://proxy.example.com:8080
 git config --global --unset https.proxy
 ```
 
-### 设置 SOCKS5 代理
+### 7.3 设置 SOCKS5 代理
 
 ```bash
 # 设置 SOCKS5 代理
@@ -247,55 +329,168 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
 
-# 8 Gitee/Github 最佳实践
+## 8 同时使用 Gitee/Github 仓库
 
-### 仓库命名
+### 8.1 准备工作
 
-- 仓库名称应该简洁明了，反映项目的内容
-- 可以使用连字符（-）分隔单词，避免使用空格和特殊字符
+1. 在 Gitee 和 Github 上分别创建仓库：
+   
+   - 在 Gitee 上创建一个新仓库
+   
+   - 在 Github 上创建一个新仓库
+   
+   - 两个仓库的名称最好保持一致
 
-###  README.md
+### 8.2 初始化本地仓库
 
-每个仓库都应该包含一个 README.md 文件，用于说明项目的：
-- 项目简介
-- 安装方法
-- 使用方法
-- 贡献指南
-- 许可证信息
+```bash
+# 创建并进入项目目录
+mkdir project-name
+cd project-name
 
-### 提交信息
+# 初始化 Git 仓库
+git init
 
-- 提交信息应该清晰明了，说明本次提交的内容
-- 可以使用约定式提交（Conventional Commits）格式
-- 提交信息应该使用英文，便于国际化协作
+# 创建 README.md 文件
+echo "# Project Name" > README.md
 
-### 分支管理
+# 添加并提交文件
+git add .
+git commit -m "Initial commit"
+```
 
-- 使用主分支（main/master）存放稳定代码
-- 使用特性分支开发新功能
-- 使用修复分支修复 bug
-- 定期合并分支，保持代码的同步
+### 8.3 添加远程仓库
 
-### 代码规范
+1. 添加 Gitee 远程仓库
+    ```bash
+    git remote add gitee https://gitee.com/username/project-name.git
+    ```
+2. 添加 Github 远程仓库
+    ```bash
+    git remote add github https://github.com/username/project-name.git
+    ```
 
-- 制定并遵循代码规范
-- 使用代码格式化工具
-- 定期进行代码审查
+3. 查看远程仓库配置
+    ```bash
+    git remote -v
+    ```
 
-### 问题和 Pull Request
+::: tip
+`git remote -v` 输出应该类似：
+```
+gitee   https://gitee.com/username/project-name.git (fetch)
+gitee   https://gitee.com/username/project-name.git (push)
+github  https://github.com/username/project-name.git (fetch)
+github  https://github.com/username/project-name.git (push)
+```
+:::
 
-- 使用 Issue 跟踪问题和功能请求
-- 使用 Pull Request 提交代码变更
-- 在 Pull Request 中详细说明变更内容
-- 进行代码审查后再合并代码
+### 8.4 推送代码到两个仓库
 
-### 标签管理
+1. 分别推送到两个仓库
+    ```bash
+    # 推送到 Gitee
+    git push gitee main
 
-- 使用标签标记版本发布
-- 标签名称应该遵循语义化版本规范（Semantic Versioning）
+    # 推送到 Github
+    git push github main
+    ```
 
-### 持续集成/持续部署
+2. 为仓库别名添加第二个推送地址
+    ```bash
+    # 第一步：先给 origin 添加第一个推送地址（比如 Gitee，若已存在可跳过）
+    git remote set-url --add gitee https://gitee.com/username/project-name.git
 
-- 配置 CI/CD 流程
-- 自动运行测试
-- 自动部署代码
+    # 第二步：再添加第二个推送地址（GitHub）
+    git remote set-url --add github https://github.com/username/project-name.git
+    ```
+
+    验证配置是否成功
+    ```bash
+    git remote -v
+    ```
+    ```plaintext
+    gitee   https://gitee.com/username/project-name.git (fetch)  # 拉取仅从 Gitee
+    gitee   https://gitee.com/username/project-name.git (push)   # push 到 Gitee
+    github  https://github.com/username/project-name.git (push)  # push 到 GitHub
+    ```
+
+    配置成功后，每次推送代码时，会同时推送到 Gitee 和 Github 两个仓库。
+    ```bash
+    git push origin main
+    ```
+
+    ::: warning
+    若配置错误，执行以下命令移除错误地址：
+    ```bash
+    git remote set-url --delete origin https://错误的地址.git
+    ```
+    :::
+
+### 8.5 从两个仓库拉取代码
+
+```bash
+# 从 Gitee 拉取
+git pull gitee main
+
+# 从 Github 拉取
+git pull github main
+```
+
+::: warning
+如果两个仓库的代码不一致，拉取时可能会出现冲突，需要手动解决冲突后再提交。
+:::
+
+### 8.6 常见问题及解决方案
+
+1. 权限问题
+
+如果推送时出现权限错误，可能是因为：
+
+- 没有在 Gitee 或 Github 上添加 SSH 密钥
+
+- 账号密码不正确
+
+- 仓库权限设置不正确
+
+解决方案：
+
+- 检查 SSH 密钥是否正确添加
+
+- 确保账号密码正确
+
+- 检查仓库权限设置
+
+2. 推送失败
+
+如果推送失败，可能是因为：
+
+- 远程仓库有未同步的更改
+
+- 网络连接问题
+
+- 仓库大小超过限制
+
+解决方案：
+
+- 先拉取远程仓库的更改，解决冲突后再推送
+
+- 检查网络连接
+
+- 检查仓库大小，清理不必要的文件
+
+### 8.6.3 分支不同步
+
+如果两个仓库的分支不同步，可能是因为：
+
+- 只在一个仓库创建了新分支
+
+- 分支合并情况不同
+
+解决方案：
+
+- 在两个仓库都创建相同的分支
+
+- 确保分支合并操作在两个仓库都执行
+
+通过以上步骤，可以成功配置一个项目同时使用 Gitee 和 Github 仓库，实现一次推送同时更新两个仓库的目的。
