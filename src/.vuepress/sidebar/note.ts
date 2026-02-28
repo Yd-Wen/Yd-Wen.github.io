@@ -32,6 +32,7 @@ export const note = arraySidebar([
                     "set",
                     "keyword",
                     "inheritance",
+                    "polymorphism",
                 ]
             }
         ]
