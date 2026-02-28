@@ -1,6 +1,6 @@
 ---
 title: 6 Gitee/Github 实践
-icon: git
+icon: practice
 date: 2024-01-09
 category: 教程
 tag: 
