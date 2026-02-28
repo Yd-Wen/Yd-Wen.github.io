@@ -27,6 +27,7 @@ export const note = arraySidebar([
                     "concept",
                     "array",
                     "method",
+                    "class",
                 ]
             }
         ]
