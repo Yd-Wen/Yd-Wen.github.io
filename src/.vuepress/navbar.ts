@@ -14,8 +14,6 @@ export const zhNavbarConfig = navbar([
     ],
   },
   "/project/",              // 项目
-  // "/design/",
-  // "/code/",
   "/piece/",                // 随笔
-  "/software/",             // 教程
+  "/tutorial/",             // 教程
 ]);
