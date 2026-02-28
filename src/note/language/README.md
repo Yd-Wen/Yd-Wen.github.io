@@ -9,6 +9,8 @@ tag:
 
 本文列出了一些与编程语言相关的学习笔记。
 
+### [Markdown](markdown.md)
+
 ### [Latex](latex.md)
 
 ### [C++ STL 容器](cpp_stl.md)

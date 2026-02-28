@@ -13,6 +13,7 @@ export const note = arraySidebar([
         prefix: "language/",
         collapsible: true,
         children: [
+            "markdown",
             "latex",
             "cpp_stl",
             "python",
