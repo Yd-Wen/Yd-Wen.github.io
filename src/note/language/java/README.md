@@ -10,7 +10,7 @@ tag:
     - 基础
 ---
 
-## Java 项目
+## Java 项目结构
 
 IntelliJ IDEA 是一个功能强大的集成开发环境（IDE），用于Java开发。它提供了丰富的功能，帮助开发人员提高效率和质量。
 
@@ -45,3 +45,5 @@ IDEA项目结构：
 ### [包](package.md)
 
 ### [抽象类与内部类](abstract_inner_class.md)
+
+### [接口](interface.md)
