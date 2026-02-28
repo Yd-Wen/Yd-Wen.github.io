@@ -74,3 +74,9 @@ tag:
 ### [12 注意力机制](deep_learning/attention.md)
 
 ### [13 二值神经网络](deep_learning/bnn.md)
+
+## 其他
+
+### [信息内容安全](other/info_safe.md)
+
+### [最优化](other/optimization.md)

@@ -100,6 +100,7 @@ export const note = arraySidebar([
         collapsible: true,
         children: [
             "info_safe",
+            "optimization",
         ]
     },
 ]);
