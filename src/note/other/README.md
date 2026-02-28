@@ -1,5 +1,5 @@
 ---
-title: 其他笔记
+title: 其他
 icon: other
 date: 2026-02-27
 category: 其他
