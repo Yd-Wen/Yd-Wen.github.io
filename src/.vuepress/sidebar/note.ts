@@ -30,6 +30,7 @@ export const note = arraySidebar([
                     "class",
                     "string",
                     "set",
+                    "keyword",
                 ]
             }
         ]
