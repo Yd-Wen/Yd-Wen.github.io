@@ -31,6 +31,7 @@ export const note = arraySidebar([
                     "string",
                     "set",
                     "keyword",
+                    "inheritance",
                 ]
             }
         ]

@@ -37,3 +37,5 @@ IDEA项目结构：
 ### [集合](set.md)
 
 ### [关键字](keyword.md)
+
+### [继承](inheritance.md)
