@@ -34,6 +34,7 @@ export const note = arraySidebar([
                     "inheritance",
                     "polymorphism",
                     "package",
+                    "abstract_inner_class",
                 ]
             }
         ]

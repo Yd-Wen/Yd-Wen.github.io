@@ -43,3 +43,5 @@ IDEA项目结构：
 ### [多态](polymorphism.md)
 
 ### [包](package.md)
+
+### [抽象类与内部类](abstract_inner_class.md)
