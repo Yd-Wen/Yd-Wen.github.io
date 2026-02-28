@@ -22,28 +22,28 @@ IDEA项目结构：
 
 ## 目录
 
-### [Java 简介](intro.md)
+### [1 Java 简介](intro.md)
 
-### [基本概念](concept.md)
+### [2 基本概念](concept.md)
 
-### [数组](array.md)
+### [3 数组](array.md)
 
-### [方法](method.md)
+### [4 方法](method.md)
 
-### [类与对象](class.md)
+### [5 类与对象](class.md)
 
-### [字符串](string.md)
+### [6 字符串](string.md)
 
-### [集合](set.md)
+### [7 集合](set.md)
 
-### [关键字](keyword.md)
+### [8 关键字](keyword.md)
 
-### [继承](inheritance.md)
+### [9 继承](inheritance.md)
 
-### [多态](polymorphism.md)
+### [10 多态](polymorphism.md)
 
-### [包](package.md)
+### [11 包](package.md)
 
-### [抽象类与内部类](abstract_inner_class.md)
+### [12 抽象类与内部类](abstract_inner_class.md)
 
-### [接口](interface.md)
+### [13 接口](interface.md)

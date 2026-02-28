@@ -9,6 +9,16 @@ tag:
 
 这里是 Yd Wen 整理的一些软件教程。
 
-## [Git](/git)
+## Git
 
-<!-- ### [从两个仓库拉取代码](/git#85-从两个仓库拉取代码) -->
+### [1 Git 简介](/git/intro.md)
+
+### [2 仓库](/git/repo.md)
+
+### [3 忽略文件](/git/ignore.md)
+
+### [4 分支](/git/branch.md)
+
+### [5 代理](/git/proxy.md)
+
+### [6 Gitee/GitHub 实践](/git/gitee_github.md)
