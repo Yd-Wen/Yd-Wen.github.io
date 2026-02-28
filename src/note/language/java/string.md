@@ -7,7 +7,7 @@ tag:
     - Java
 ---
 
-## 7.1 概述
+## 6.1 概述
 
 - String 是 Java 定义好的一个类。定义在 Java.lang 包中，所以使用时不需要导包。
 
@@ -15,7 +15,7 @@ tag:
 
 - 字符串不可变，其值在创建后不可更改。
 
-## 7.2 创建
+## 6.2 创建
 
 - 直接赋值
 
@@ -30,7 +30,7 @@ tag:
 |   public String(char[] chs)    |  根据传入的字符数组，创建对象  |
 |  public String(byte[] bytes)   |  根据传入的字节数组，创建对象  |
 
-## 7.3 常用方法
+## 6.3 常用方法
 
 1. 比较
 
@@ -62,7 +62,7 @@ tag:
 
 - String toString()：StringBuilder 转换成 String。
 
-## 7.4 底层原理
+## 6.4 底层原理
 
 - 字符串存储
 
