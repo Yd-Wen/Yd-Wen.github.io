@@ -92,4 +92,14 @@ export const note = arraySidebar([
             "bnn"
         ],
     },
+    {
+        text: "其他",
+        icon: "other",
+        link: "other/",
+        prefix: "other/",
+        collapsible: true,
+        children: [
+            "info_safe",
+        ]
+    },
 ]);
