@@ -28,6 +28,7 @@ export const note = arraySidebar([
                     "array",
                     "method",
                     "class",
+                    "string",
                 ]
             }
         ]

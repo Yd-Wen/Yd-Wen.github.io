@@ -31,3 +31,5 @@ IDEA项目结构：
 ### [方法](method.md)
 
 ### [类与对象](class.md)
+
+### [字符串](string.md)
