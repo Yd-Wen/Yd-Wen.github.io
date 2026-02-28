@@ -21,4 +21,4 @@ tag:
 
 ### [5 代理](/git/proxy.md)
 
-### [6 Gitee/GitHub 实践](/git/gitee_github.md)
+### [6 Gitee/GitHub 实践](/git/practice.md)

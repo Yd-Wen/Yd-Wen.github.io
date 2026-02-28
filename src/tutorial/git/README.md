@@ -19,4 +19,4 @@ tag:
 
 ### [5 代理](proxy.md)
 
-### [6 Gitee/GitHub 实践](gitee_github.md)
+### [6 Gitee/GitHub 实践](practice.md)

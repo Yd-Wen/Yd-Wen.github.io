@@ -9,6 +9,16 @@ export const tutorial = arraySidebar([
     {
         text: "Git",
         icon: "git",
-        link: "git"
+        link: "git/",
+        prefix: "git/",
+        collapsible: true,
+        children: [
+            "intro",
+            "repo",
+            "ignore",
+            "branch",
+            "proxy",
+            "practice"
+        ]
     }
 ]);
