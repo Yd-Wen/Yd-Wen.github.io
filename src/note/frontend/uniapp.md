@@ -3,7 +3,6 @@ date: 2024-08-01
 title: Uniapp
 icon: uniapp
 category: 
-    - 编程语言
     - 前端开发
 tag: 
     - uniapp
