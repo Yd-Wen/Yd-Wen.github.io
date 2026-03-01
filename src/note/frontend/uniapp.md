@@ -18,8 +18,6 @@ uni-app 官方网站：[uni-app 官网](https://uniapp.dcloud.net.cn/)。
 
 - 具有 vue 和微信小程序开发经验，可快速上手。
 
----
-
 ## 2 环境搭建
 
 - 安装编辑器 HBuilderX：[HBuilderX 下载地址](https://dcloud.io/hbuilderx.html)
@@ -29,8 +27,6 @@ uni-app 官方网站：[uni-app 官网](https://uniapp.dcloud.net.cn/)。
 ::: tip
 HBuilderX 是通用的前端开发工具，但为 uni-app 做了特别强化。
 :::
-
----
 
 ## 3 项目结构
 
@@ -63,8 +59,6 @@ HBuilderX 是通用的前端开发工具，但为 uni-app 做了特别强化。
 - 数据绑定及事件处理同 Vue.js 规范，同时补充了 App 及页面的生命周期
 
 - 为兼容多端运行，建议使用 flex 布局开发
-
----
 
 ## 4 页面
 
@@ -161,8 +155,6 @@ HBuilderX 是通用的前端开发工具，但为 uni-app 做了特别强化。
 	]
 }
 ```
-
----
 
 ## 5 内置组件
 
@@ -481,8 +473,6 @@ vue 2 中 `<template>` 下只能且必须有一个根 `<view>` 组件； vue 
   ::: tip
   `v-slot` 可简写为 `#` 。
   :::
-
----
 
 ## 8 API
 
