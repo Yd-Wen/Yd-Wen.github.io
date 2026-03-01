@@ -7,7 +7,7 @@ tag:
     - README
 ---
 
-这里是 Yd Wen 整理的一些软件教程。
+这里是 Yd Wen 整理的一些教程。
 
 ## Git
 
