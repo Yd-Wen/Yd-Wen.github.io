@@ -21,6 +21,8 @@ tag:
 
 ## 大数据
 
+### [大数据技术原理与应用](big_data/big_data.md)
+
 ### [物联网](big_data/iot.md)
 
 ### [高级数据库系统](big_data/nosql.md)
@@ -80,3 +82,5 @@ tag:
 ### [信息内容安全](other/info_safe.md)
 
 ### [最优化](other/optimization.md)
+
+### [自然辩证法](other/dialectics.md)
