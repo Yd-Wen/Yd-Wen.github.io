@@ -9,6 +9,8 @@ tag:
 
 这里是 Yd Wen 整理的一些前端开发相关的笔记。
 
+### [Promise](promise.md)
+
 ### [Vue](vue.md)
 
 ### [React](react.md)
