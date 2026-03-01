@@ -23,6 +23,8 @@ tag:
 
 ### [大数据技术原理与应用](big_data/big_data.md)
 
+### [数据分析与数据挖掘](big_data/data_mining.md)
+
 ### [物联网](big_data/iot.md)
 
 ### [高级数据库系统](big_data/nosql.md)

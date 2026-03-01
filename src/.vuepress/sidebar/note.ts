@@ -49,6 +49,7 @@ export const note = arraySidebar([
         collapsible: true,
         children: [
             "big_data",
+            "data_mining",
             "iot",
             "nosql",
         ]
