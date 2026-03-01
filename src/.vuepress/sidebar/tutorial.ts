@@ -9,7 +9,7 @@ export const tutorial = arraySidebar([
     {
         text: "Linux",
         icon: "linux",
-        link: "linux/",
+        link: "linux",
     },
     {
         text: "Git",
