@@ -22,6 +22,16 @@ export const tutorial = arraySidebar([
         ]
     },
     {
+        text: "数据库",
+        icon: "database",
+        link: "database/",
+        prefix: "database/",
+        collapsible: true,
+        children: [
+            "mongodb"
+        ]
+    },
+    {
         text: "软著申请",
         icon: "software_copyright",
         link: "software_copyright",

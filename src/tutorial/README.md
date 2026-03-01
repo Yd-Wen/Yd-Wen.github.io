@@ -11,18 +11,22 @@ tag:
 
 ## Git
 
-### [1 Git 简介](/git/intro.md)
+### [1 Git 简介](git/intro.md)
 
-### [2 仓库](/git/repo.md)
+### [2 仓库](git/repo.md)
 
-### [3 忽略文件](/git/ignore.md)
+### [3 忽略文件](git/ignore.md)
 
-### [4 分支](/git/branch.md)
+### [4 分支](git/branch.md)
 
-### [5 代理](/git/proxy.md)
+### [5 代理](git/proxy.md)
 
-### [6 Gitee/GitHub 实践](/git/practice.md)
+### [6 Gitee/GitHub 实践](git/practice.md)
+
+## 数据库
+
+### [MongoDB](database/mongodb.md)
 
 ## 软著
 
-### [软著申请](/tutorial/software_copyright.md)
+### [软著申请](software_copyright.md)
