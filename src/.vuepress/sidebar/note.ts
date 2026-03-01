@@ -16,6 +16,9 @@ export const note = arraySidebar([
             "markdown",
             "latex",
             "cpp_stl",
+            "html",
+            "css",
+            "javascript",
             "python",
             {
                 text: "Java",
@@ -39,6 +42,30 @@ export const note = arraySidebar([
                     "interface",
                 ]
             }
+        ]
+    },
+    {
+        text: "前端开发",
+        icon: "frontend",
+        link: "frontend/",
+        prefix: "frontend/",
+        collapsible: true,
+        children: [
+            "vue",
+            "react",
+            "uniapp",
+        ]
+    },
+    {
+        text: "后端开发",
+        icon: "backend",
+        link: "backend/",
+        prefix: "backend/",
+        collapsible: true,
+        children: [
+            "spring_boot",
+            "fastapi",
+            "unicloud",
         ]
     },
     {
