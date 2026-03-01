@@ -12,3 +12,5 @@ tag:
 ### [信息内容安全](info_safe.md)
 
 ### [最优化](optimization.md)
+
+### [自然辩证法](dialectics.md)

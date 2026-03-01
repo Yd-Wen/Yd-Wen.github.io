@@ -101,6 +101,7 @@ export const note = arraySidebar([
         children: [
             "info_safe",
             "optimization",
+            "dialectics",
         ]
     },
 ]);

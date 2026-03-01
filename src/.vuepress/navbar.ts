@@ -11,6 +11,7 @@ export const zhNavbarConfig = navbar([
       "big_data/",          // 大数据
       "machine_learning/",  // 机器学习
       "deep_learning/",     // 深度学习
+      "other/",             // 其他
     ],
   },
   "/project/",              // 项目
