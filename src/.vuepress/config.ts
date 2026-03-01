@@ -26,5 +26,5 @@ export default <UserConfig>defineUserConfig({
         content: "no-referrer"
       }
     ],
-  ],
+  ]
 });
