@@ -9,6 +9,10 @@ tag:
 
 这里是 Yd Wen 整理的一些教程。
 
+## Linux
+
+### [Linux](linux.md)
+
 ## Git
 
 ### [1 Git 简介](git/intro.md)

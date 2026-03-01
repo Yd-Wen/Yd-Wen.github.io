@@ -7,6 +7,11 @@ export const tutorial = arraySidebar([
         link: "",
     },
     {
+        text: "Linux",
+        icon: "linux",
+        link: "linux/",
+    },
+    {
         text: "Git",
         icon: "git",
         link: "git/",
