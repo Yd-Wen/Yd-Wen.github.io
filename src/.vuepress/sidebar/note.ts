@@ -95,6 +95,20 @@ export const note = arraySidebar([
         ],
     },
     {
+        text: "AI 应用开发",
+        icon: "ai",
+        link: "ai/",
+        prefix: "ai/",
+        collapsible: true,
+        children: [
+            "preliminary",
+            "prompt",
+            "rag",
+            "langchain",
+            "agent",
+        ]
+    },
+    {
         text: "其他",
         icon: "other",
         link: "other/",
