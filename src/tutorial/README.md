@@ -27,6 +27,10 @@ tag:
 
 ### [6 Gitee/GitHub 实践](git/practice.md)
 
+## 云服务器
+
+### [云服务器](server.md)
+
 ## 数据库
 
 ### [MongoDB](database/mongodb.md)

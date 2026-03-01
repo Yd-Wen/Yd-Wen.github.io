@@ -27,6 +27,11 @@ export const tutorial = arraySidebar([
         ]
     },
     {
+        text: "云服务器",
+        icon: "server",
+        link: "server",
+    },
+    {
         text: "数据库",
         icon: "database",
         link: "database/",
