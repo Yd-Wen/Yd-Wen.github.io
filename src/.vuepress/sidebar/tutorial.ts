@@ -20,5 +20,10 @@ export const tutorial = arraySidebar([
             "proxy",
             "practice"
         ]
+    },
+    {
+        text: "软著申请",
+        icon: "software_copyright",
+        link: "software_copyright",
     }
 ]);
