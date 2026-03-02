@@ -697,3 +697,7 @@ label 标签包裹表单控件，不需要 `for` 属性：
 
 - 使用多个 `&nbsp;` 才能在网页中显示多个空格。
 :::
+
+## 拓展：Emmet 语法
+
+参考：[Emmet 语法](../language/css.md#拓展-emmet-写法)
