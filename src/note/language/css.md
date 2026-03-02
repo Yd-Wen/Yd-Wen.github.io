@@ -19,11 +19,11 @@ tag:
 ```html
 <title>Document</title>
 <style>
-        /* 选择器 {键值对} */
-        p {
-            color: red;
-            font-size: 30px;
-        }
+    /* 选择器 {键值对} */
+    p {
+        color: red;
+        font-size: 30px;
+    }
 </style>
 ```
 
@@ -45,7 +45,7 @@ CSS 引入方式有三种：
 
   - 在 HTML 中用 link 标签引入
 
-- 行内样式：**配合 JavaScript 使用**
+- 行内样式/内联样式：**配合 JavaScript 使用**
 
   - css 代码写在标签的 style 属性里面
 
@@ -65,11 +65,18 @@ div {
 <span style="color: red; font-size: 30px;">span标签</span>
 ```
 
+::: important 行内样式和内部样式表的区别
+- 行内样式：写在 HTML 标签的 style 属性，只能对当前标签生效。
+
+- 内部样式表：写在 HTML 头部的 style 标签内部，对当前页面所有标签生效。
+:::
+
 ## 2 选择器
 
 - 作用：查找标签，设置样式。
 
 - 基础选择器
+
   - 标签选择器
 
   - 类选择器
@@ -77,9 +84,12 @@ div {
   - id 选择器
 
   - 通配符选择器
+
 ### 2.1 标签选择器
+
 作用：使用**标签名**作为选择器，选中同名标签设置相同样式。
 例如：p/h1/div/a/img 等。
+
 ### 2.2 类选择器
 
 作用：查找标签，差异化设置标签的显示效果。
@@ -94,13 +104,13 @@ div {
 
 ```html
 <style>
-        /* 选择器 {键值对} */
-        .red {
-            color: red;
-        }
-        .size {
-            font-size: 30px;
-        }
+    /* 选择器 {键值对} */
+    .red {
+        color: red;
+    }
+    .size {
+        font-size: 30px;
+    }
 </style>
 <p class="red">1111111</p>
 <div class="red size">1111111</div>
@@ -125,20 +135,23 @@ div {
 场景：id 选择器一般配合 JavaScript 使用，很少用来设置 CSS 样式。
 
 步骤：
+
 - 定义 id 选择器：`#id名`
 
 - 使用 id 选择器：标签添加 `id="id名"`
 
-规则：**同一个 id 选择器在一个页面只能使用一次。**
+::: important 规则
+- **同一个 id 选择器在一个页面只能使用一次。**
+:::
 
 示例：
 
 ```html
 <style>
-        /* 选择器 {键值对} */
-        #red {
-            color: red;
-        }
+    /* 选择器 {键值对} */
+    #red {
+        color: red;
+    }
 </style>
 <p id="red">1111111</p>
 ```
@@ -152,10 +165,10 @@ div {
 
 ```html
 <style>
-        /* 选择器 {键值对} */
-        * {
-            color: red;
-        }
+    /* 选择器 {键值对} */
+    * {
+        color: red;
+    }
 </style>
 <p>1111111</p>
 <div>1111111</div>
