@@ -430,28 +430,58 @@ text-align 用于设置文本对齐。
 
 - right：右对齐。
 
-- justify：两端对齐。
-
 ::: tip
 - `text-align` 常用属性值为 center（居中对齐）。
 :::
 
 ::: important 图片居中对齐
+- `text-align` 本质是控制内容对齐方式，属性要设置给父容器。
+
 - 设置图片居中对齐：用父容器包裹图片，设置父容器 `text-align: center;`。
 :::
 
-- text-decoration：none 或 underline（常用，删除或添加下划线）。
+### 4.9 text-decoration 修饰线
 
-- color：颜色值四种表示方法如下表。
+text-decoration 用于设置修饰线（none 为无修饰线，underline 为下划线）。
 
+属性值：
+    
+- none（默认）：无修饰线。
+
+- underline：下划线。
+
+- line-through：删除线。
+
+- overline：上划线。
+
+::: tip
+- `text-decoration` 常用属性值为 underline（下划线）。
+:::
+
+### 4.10 color 颜色
+
+color 用于设置文本颜色。
+
+属性值：
+    
+- 关键字：red/green...
+
+- rgb：rgb(r, g, b)
+
+- rgba：rgba(r, g, b, a)
+
+- 十六进制：`#RRGGBB`
+
+::: important 颜色表示方法
 | 表示方式 | 属性值              | 说明                | 使用场景       |
 | ---- | ---------------- | ----------------- | ---------- |
 | 关键字  | 英文单词             | red/green...      | 学习测试       |
 | rgb  | rgb(r, g, b)     | 取值 0-255           | 了解         |
 | rgba | rgba(r, g, b, a) | a 表示透明度，取值 0-1      | 开发使用，实现透明色 |
-| 十六进制 | `#RRGGBB`        | `#00ff00` ，简写 #0f0 | 开发使用       |
+| 十六进制 | `#RRGGBB`        | `#00ff00` ，简写 #0f0 | 开发使用（从设计稿复制颜色值）       |
+:::
 
-更多属性参考：[CSS3 字体](https://www.runoob.com/css3/css3-fonts.html)
+更多属性参考：[CSS3 字体](https://www.runoob.com/css3/css3-fonts.html)。
 
 ## 5 背景属性
 
