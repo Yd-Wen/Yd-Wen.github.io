@@ -279,7 +279,7 @@ p.box {
 | ------------- | --------- |
 | E:first-child | 查找第一个 E 元素  |
 | E:last-child  | 查找最后一个 E 元素 |
-| E:nth-child   | 查找第 n 个 E 元素  |
+| E:nth-child(n)   | 查找第 n 个 E 元素  |
 
 ::: tip nth-child 公式
 - 2n：偶数标签
@@ -537,23 +537,35 @@ color 用于设置文本颜色。
 
 ## 4 背景属性
 
-| 描述      | 属性                    | 属性值                                                                          |
+| 描 述      | 属 性                    | 属性值                                                                          |
 | ------- | --------------------- | ---------------------------------------------------------------------------- |
 | 背景色     | background-color      | 颜色                                                                           |
-| 背景图     | background-image      | url(背景图URL)                                                                  |
+| 背景图     | background-image      | url (背景图 URL)                                                                  |
 | 背景图平铺方式 | background-repeat     | no-repeat 不平铺；repeat 平铺（默认）；repeat-x 沿水平方向平铺；repeat-y 沿垂直方向平铺                    |
 | 背景图位置   | background-position   | 关键字：left/right/center/top/bottom；坐标：数字（有正负）+px；两种混用                          |
-| 背景图缩放   | background-size       | 关键字：cover（覆盖，图片部分可能看不见）/contain（填充，背景部分可能空白）；百分比：根据盒子尺寸（宽度）计算图片大小；数字+px（不常用） |
+| 背景图缩放   | background-size       | 关键字：cover（覆盖，图片部分可能看不见）/ contain（填充，背景部分可能空白）；百分比：根据盒子尺寸（宽度）计算图片大小；数字+px（不常用） |
 | 背景图固定   | background-attachment | fixed（背景图不随内容滚动）                                                             |
 | 背景复合属性  | background            | 背景色 背景图 平铺方式 位置/缩放 固定（空格隔开，不区分先后顺序）                                          |
 
-::: tip
-背景图位置规则：
+::: tip 背景图位置规则
+- 示例：
+```css
+background-position: 0 0;
+background-position: left top;
+background-position: 50px center;
+background-position: bottom;
+background-position: 50px;
+```
 - 关键字取值方式写法，可以颠倒取值顺序。
-- 可以只写一个关键字，另一个方向默认居中；可以只写一个数字表示水平偏移量，垂直方向居中。
+
+- 可以只写一个关键字，另一个方向默认居中。
+
+- 可以只写一个数字表示水平偏移量，垂直方向居中。
 :::
 
 ## 5 显示模式
+
+显示模式是标签（元素）的显示方式。
 
 - 块级元素：div
 
@@ -569,7 +581,7 @@ color 用于设置文本颜色。
 
   - 尺寸包裹内容
 
-  - 添加宽高不生效
+  - **添加宽高不生效**
 
 - 行内块元素：img
 
@@ -577,13 +589,10 @@ color 用于设置文本颜色。
 
   - 尺寸包裹内容
 
-  - 添加宽高生效
+  - **添加宽高生效**
 
-转换显示模式
+使用 `display` 属性转换显示模式。属性值：
 
-属性：display
-
-属性值：
 - block 块级
 
 - inline-block 行内块
@@ -596,7 +605,8 @@ color 用于设置文本颜色。
 
 ### 6.1 组成
 
-组成部分：
+盒子组成包括：
+
 - 内容区域：width 和 height
 
 - 内边距：padding（内容和盒子边缘之间）
@@ -607,11 +617,12 @@ color 用于设置文本颜色。
 
 ### 6.2 边框线
 
-属性：border/border-left/border-right/border-top/border-bottom
+属性：`border` / `border-left` / `border-right` / `border-top` / `border-bottom`
 
-属性值：边框线粗细 线条样式 颜色（不区分顺序）
+属性值：`粗细 样式 颜色`（不区分顺序）
 
 常用线条样式：
+
 - solid：实线
 
 - dashed：虚线
@@ -620,11 +631,12 @@ color 用于设置文本颜色。
 
 ### 6.3 内边距
 
-属性：padding/p/padding-left/padding-right/padding-top/padding-bottom
+属性：`padding` / `padding-left` / `padding-right` / `padding-top` / `padding-bottom`   
 
 属性值：数字+px
 
 多值写法：
+
 - 一值：四个方向
 
 - 二值：上下，左右
@@ -633,7 +645,9 @@ color 用于设置文本颜色。
 
 - 四值：上，右，下，左
 
-记忆：从**上**开始**顺时针**赋值，没有取值的与对边取值相同。
+::: important 内边距规则
+- 从**左上角**开始**顺时针**赋值，没有取值的与对角取值相同。
+:::
 
 ### 6.4 尺寸计算
 
