@@ -843,9 +843,150 @@ span {
 
 - 顶对齐
 
-- 具备行内块显示模式特点。
+- 具备行内块显示模式特点
 
-- 脱离标准流，不占位。
+- 父级宽度不够，子级浮动元素会换行显示
+
+- **脱离标准流（脱标）**，不占用标准流布局位置
+
+**清除浮动**
+
+场景：如果父级没有高度，子级浮动元素会脱离标准流，导致无法撑开父级高度（可能导致页面布局错乱）。
+
+解决方法：清除浮动
+
+- 额外标签法：在父级元素内容最后添加一个块级元素，设置 CSS 属性 `clear: both` 清除浮动。
+
+- 单伪元素法：在父级元素内容最后添加一个伪元素，设置 CSS 属性 `clear: both` 清除浮动。
+
+- 双伪元素法（推荐）：在父级元素内容开头结尾添加两个伪元素，设置 CSS 属性 `clear: both` 清除浮动。
+
+- overflow：父元素添加 CSS 属性 `overflow: hidden` 清除浮动。
+
+```html
+<style>
+    .left {
+        float: left;
+        width: 50px;
+        height: 50px;
+        background-color: pink;
+    }
+
+    .right {
+        float: right;
+        width: 50px;
+        height: 50px;
+        background-color: red;
+    }
+
+    /* 额外标签法 */
+    .clearfix_child {
+        /* 清除浮动 */
+        clear: both;
+    }
+
+    /* 单伪元素法 */
+    .clearfix_parent::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    /* 双伪元素法 */
+    /* 解决外边距塌陷问题 */
+    .clearfix_parent::before,
+    .clearfix_parent::after {
+        content: "";
+        display: table;
+    }
+    /* 清除浮动 */
+    .clearfix_parent::after {
+        clear: both;
+    }
+
+    /* overflow */
+    .clearfix_parent {
+        overflow: hidden;
+    }
+</style>
+<div class="clearfix_parent">
+    <div class="left"></div>
+    <div class="right"></div>
+    <!-- 额外标签法 -->
+    <!-- <div style="clear: both;"></div> -->
+    <div class="clearfix_child"></div>
+</div>
+```
+
+### 7.3 Flex 布局
+
+Flex 布局也叫弹性布局，是一种一维布局模型，用于在容器中对齐和分布元素。非常适合结构化布局，提供了强大的分布和对齐能力。
+
+Flex 模型不会产生浮动布局中的脱离标准流的现象，布局网页更简单、更灵活。
+
+设置方式：给父元素设置 CSS 属性 `display: flex` 开启 Flex 布局，子元素可以自动挤压或拉伸。
+
+常用属性：
+
+| 描述                 | 属性                |
+| -------------------- | ------------------- |
+| 创建 flex 容器       | display: flex       |
+| 主轴对齐方式         | justify-content     |
+| 侧轴对齐方式         | align-items         |
+| 某个弹性盒子侧轴对齐方式 | align-self         |
+| 修改主轴方向         | flex-direction      |
+| 弹性伸缩比           | flex                |
+| 弹性盒子换行         | flex-wrap           |
+| 行对齐方式           | align-content       |
+
+#### 7.3.1 组成
+
+Flex 模型组成部分：
+
+- 弹性容器
+
+- 弹性盒子
+
+- 主轴：默认水平方向
+
+- 侧轴 / 交叉轴：默认垂直方向
+
+#### 7.3.2 主轴侧轴对齐
+
+1. 主轴对齐
+
+属性名： `justify-content`
+
+属性值：
+
+| 属性值          | 描述                                                         |
+| --------------- | ------------------------------------------------------------ |
+| flex-start      | 默认值，向主轴起始位置对齐                                   |
+| flex-end        | 向主轴结束位置对齐                                           |
+| center          | 向主轴中心对齐                                               |
+| space-between   | 向主轴两端对齐，项目之间间距相等                             |
+| space-around    | 向主轴两端对齐，项目之间间距相等，项目到容器边框的距离是项目之间间距的一半 |
+| space-evenly    | 向主轴两端对齐，项目之间间距相等，项目到容器边框的距离也相等 |
+
+2. 侧轴对齐
+
+属性名： 
+
+- `align-items`：所有弹性盒子的侧轴对齐方式（给弹性容器设置）
+
+- `align-self`：单独控制某个弹性盒子的侧轴对齐方式（给弹性盒子设置）
+
+属性值：
+
+- flex-start：默认值，向侧轴起始位置对齐
+
+- flex-end：向侧轴结束位置对齐
+
+- stretch：默认值，侧轴方向拉伸，占满侧轴方向空间
+
+- center：向侧轴中心对齐
+
+
 
 
 
