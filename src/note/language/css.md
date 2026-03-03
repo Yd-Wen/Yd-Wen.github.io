@@ -1191,3 +1191,45 @@ div {
 ## 拓展：字体图标
 
 参考 [字体图标](../frontend/iconfont.md)
+
+## 拓展：垂直对齐方式
+
+属性名：`vertical-align`
+
+属性值：
+
+- `baseline`：垂直对齐到基线（默认值）。
+
+- `top`：垂直对齐到顶部。
+
+- `middle`：垂直对齐到中间。
+
+- `bottom`：垂直对齐到底部。
+
+示例：
+
+```html
+<style>
+  div {
+    vertical-align: middle;
+  }
+</style>
+<body>
+  <div>
+    <img src="./iconfont/iconfont.svg" alt="">
+    文字内容
+  </div>
+<body>
+```
+
+::: tip
+- 垂直对齐方式而本质上是修改基线位置。
+
+- 浏览器把**行内块**、**行内**标签作为文字处理，默认按基线对齐。此时图片底部就有空白，将图片转块元素可以解决（适合只有图片的情况）。
+
+```css
+img {
+  display: block;
+}
+```
+:::
