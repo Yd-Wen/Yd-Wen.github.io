@@ -268,6 +268,6 @@ async onLoad() {
 如果直接使用 async 没有使用 await 不会报错，只是返回的函数是个 promise，但是没有意义，所以这两个一起使用才会发挥出它们本身重要的作用。
 :::
 
-## 5 参考资料
+## 参考资料
 
 - [ES6 Promise的用法 async/await异步处理同步化](https://www.bilibili.com/read/cv18799030/)
