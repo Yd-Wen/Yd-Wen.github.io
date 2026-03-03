@@ -51,6 +51,7 @@ export const note = arraySidebar([
         prefix: "frontend/",
         collapsible: true,
         children: [
+            "debug",
             "emmet",
             "css_sprite",
             "promise",

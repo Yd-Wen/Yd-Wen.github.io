@@ -41,6 +41,8 @@ tag:
 
 ## 目录
 
+### [前端调试工具](debug.md)
+
 ### [Emmet 写法](emmet.md)
 
 ### [CSS 精灵](css_sprite.md)
