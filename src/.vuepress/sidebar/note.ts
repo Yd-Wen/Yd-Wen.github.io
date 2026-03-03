@@ -51,6 +51,7 @@ export const note = arraySidebar([
         prefix: "frontend/",
         collapsible: true,
         children: [
+            "css_sprite",
             "promise",
             "vue",
             "react",
