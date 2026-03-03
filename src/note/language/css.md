@@ -1326,3 +1326,7 @@ div {
 ::: tip
 - 光标类型可以设置给**所有元素**，包括行内元素。
 ::: 
+
+## 参考资料
+
+- [前端Web开发HTML5+CSS3+移动web视频教程](https://www.bilibili.com/video/BV1kM4y127Li)
