@@ -41,6 +41,8 @@ tag:
 
 ## 目录
 
+### [Emmet 写法](emmet.md)
+
 ### [CSS 精灵](css_sprite.md)
 
 ### [Promise](promise.md)
