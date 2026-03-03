@@ -1187,3 +1187,7 @@ div {
 ## 拓展：CSS 精灵
 
 参考 [CSS 精灵](../frontend/css_sprite.md)
+
+## 拓展：字体图标
+
+参考 [字体图标](../frontend/iconfont.md)

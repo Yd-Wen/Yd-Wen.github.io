@@ -47,6 +47,8 @@ tag:
 
 ### [CSS 精灵](css_sprite.md)
 
+### [字体图标](iconfont.md)
+
 ### [Promise](promise.md)
 
 ### [Vue](vue.md)

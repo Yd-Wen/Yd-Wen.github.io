@@ -54,6 +54,7 @@ export const note = arraySidebar([
             "debug",
             "emmet",
             "css_sprite",
+            "iconfont",
             "promise",
             "vue",
             "react",
