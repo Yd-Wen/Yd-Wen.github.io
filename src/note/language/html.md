@@ -701,3 +701,7 @@ label 标签包裹表单控件，不需要 `for` 属性：
 ## 拓展：Emmet 语法
 
 参考：[Emmet 语法](../language/css.md#拓展-emmet-写法)
+
+## 参考资料
+
+- [前端Web开发HTML5+CSS3+移动web视频教程](https://www.bilibili.com/video/BV1kM4y127Li)
