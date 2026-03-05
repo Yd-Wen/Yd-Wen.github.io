@@ -63,7 +63,7 @@ github  https://github.com/username/project-name.git (push)
 
 ## 6.4 推送代码到两个仓库
 
-1. 分别推送到两个仓库
+**方法一：分别推送到两个仓库**
     ```bash
     # 推送到 Gitee
     git push gitee main
@@ -72,13 +72,13 @@ github  https://github.com/username/project-name.git (push)
     git push github main
     ```
 
-2. 为仓库别名添加第二个推送地址
+**方法二：为同一个仓库别名添加第二个推送地址**
     ```bash
     # 第一步：先给 origin 添加第一个推送地址（比如 Gitee，若已存在可跳过）
-    git remote set-url --add gitee https://gitee.com/username/project-name.git
+    git remote add orgin https://gitee.com/username/project-name.git
 
     # 第二步：再添加第二个推送地址（GitHub）
-    git remote set-url --add github https://github.com/username/project-name.git
+    git remote set-url --add orgin https://github.com/username/project-name.git
     ```
 
     验证配置是否成功
@@ -86,9 +86,9 @@ github  https://github.com/username/project-name.git (push)
     git remote -v
     ```
     ```plaintext
-    gitee   https://gitee.com/username/project-name.git (fetch)  # 拉取仅从 Gitee
-    gitee   https://gitee.com/username/project-name.git (push)   # push 到 Gitee
-    github  https://github.com/username/project-name.git (push)  # push 到 GitHub
+    orgin   https://gitee.com/username/project-name.git (fetch)  # 拉取仅从 Gitee
+    orgin   https://gitee.com/username/project-name.git (push)   # push 到 Gitee
+    orgin  https://github.com/username/project-name.git (push)  # push 到 GitHub
     ```
 
     配置成功后，每次推送代码时，会同时推送到 Gitee 和 Github 两个仓库。
