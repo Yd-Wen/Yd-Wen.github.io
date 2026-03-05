@@ -46,7 +46,7 @@ def read_item(item_id: int, q: Union[str, None] = None):
 
 - 访问项目：`http://127.0.0.1:8080/`
 
-- 访问交互式 API 文档：`http://127.0.0.1:8080:docs`
+- 访问交互式 API 文档：`http://127.0.0.1:8080/docs`
 
 ::: tip
 依赖项安装：[FastAPI 框架](https://fastapi.org.cn/#dependencies)
