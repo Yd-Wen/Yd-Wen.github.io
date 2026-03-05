@@ -42,7 +42,15 @@ def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 ```
 
-- 运行项目：开发——`fastapi dev main.py --reload` ；部署—— `fastapi run main.py --reload`
+- 运行项目：
+    - 开发
+    ```bash
+    fastapi dev main.py --reload
+    ```
+    - 部署
+    ```bash
+    fastapi run main.py --reload
+    ```
 
 - 访问项目：`http://127.0.0.1:8080/`
 
