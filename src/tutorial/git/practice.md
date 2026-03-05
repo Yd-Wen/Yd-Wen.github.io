@@ -64,44 +64,51 @@ github  https://github.com/username/project-name.git (push)
 ## 6.4 推送代码到两个仓库
 
 **方法一：分别推送到两个仓库**
-    ```bash
-    # 推送到 Gitee
-    git push gitee main
 
-    # 推送到 Github
-    git push github main
-    ```
+```bash
+# 推送到 Gitee
+git push gitee main
+
+# 推送到 Github
+git push github main
+```
 
 **方法二：为同一个仓库别名添加第二个推送地址**
-    ```bash
-    # 第一步：先给 origin 添加第一个推送地址（比如 Gitee，若已存在可跳过）
-    git remote add orgin https://gitee.com/username/project-name.git
 
-    # 第二步：再添加第二个推送地址（GitHub）
-    git remote set-url --add orgin https://github.com/username/project-name.git
-    ```
+```bash
+# 第一步：先给 origin 添加第一个推送地址（比如 Gitee，若已存在可跳过）
+git remote add orgin https://gitee.com/username/project-name.git
 
-    验证配置是否成功
-    ```bash
-    git remote -v
-    ```
-    ```plaintext
-    orgin   https://gitee.com/username/project-name.git (fetch)  # 拉取仅从 Gitee
-    orgin   https://gitee.com/username/project-name.git (push)   # push 到 Gitee
-    orgin  https://github.com/username/project-name.git (push)  # push 到 GitHub
-    ```
+# 第二步：再添加第二个推送地址（GitHub）
+git remote set-url --add orgin https://github.com/username/project-name.git
+```
 
-    配置成功后，每次推送代码时，会同时推送到 Gitee 和 Github 两个仓库。
-    ```bash
-    git push origin main
-    ```
+验证配置是否成功：
 
-    ::: warning
-    若配置错误，执行以下命令移除错误地址：
-    ```bash
-    git remote set-url --delete origin https://错误的地址.git
-    ```
-    :::
+```bash
+git remote -v
+```
+
+结果为：
+
+```plaintext
+orgin   https://gitee.com/username/project-name.git (fetch)  # 拉取仅从 Gitee
+orgin   https://gitee.com/username/project-name.git (push)   # push 到 Gitee
+orgin  https://github.com/username/project-name.git (push)  # push 到 GitHub
+```
+
+配置成功后，每次推送代码时，会同时推送到 Gitee 和 Github 两个仓库。
+
+```bash
+git push origin main
+```
+
+::: warning
+若配置错误，执行以下命令移除错误地址：
+```bash
+git remote set-url --delete origin https://错误的地址.git
+```
+:::
 
 ## 6.5 从两个仓库拉取代码
 
@@ -117,7 +124,64 @@ git pull github main
 如果两个仓库的代码不一致，拉取时可能会出现冲突，需要手动解决冲突后再提交。
 :::
 
-## 6.6 常见问题及解决方案
+## 6.6 分支管理
+
+1. 创建新分支
+    ```bash
+    git branch new-branch
+    ```
+
+2. 切换到新分支
+    ```bash
+    git checkout new-branch
+    ```
+
+3. 推送新分支到 origin 仓库的新分支
+    ```bash
+    git push origin new-branch
+    ```
+
+4. 查看分支信息
+    ```bash
+    git branch -vv
+    ```
+
+    结果为：
+
+    ```plaintext
+    * new-branch 5215b97 [origin/new-branch] 分支的最新提交信息
+    master  49ebe25 [origin/master] 分支的最新提交信息
+    ```
+
+5. 从 origin 仓库的新分支拉取代码
+    ```bash
+    git pull origin new-branch
+    ```
+
+## 6.7 设置上游分支
+
+第一次推送时，需要指定上游分支。
+```bash
+# 推送本地 develop 分支到 origin 远程的 develop 分支，并建立追踪关系
+git push -u origin develop
+```
+
+:::tip
+- `-u`：建立**本地** develop 分支和**远程** develop 分支的追踪关系。
+- 后续可以直接 git push/pull 即可操作该分支，不需要指定远程分支。
+:::
+
+如果第一次推送时没有指定上游分支，可通过以下命令设置：
+
+```bash
+# 切换到 develop 分支
+git checkout develop
+
+# 设置本地 develop 分支上游为 origin 仓库的 develop 分支
+git branch -u origin/develop
+```
+
+## 6.8 常见问题及解决方案
 
 1. 权限问题
 
