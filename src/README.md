@@ -15,7 +15,7 @@ head:
     - name: msvalidate.01
       content: BFA4352248B0F52F3D36FFB45E3ADF6E
 
-bgImage: http://oss.yindongwen.top/homepage/bg.jpg
+bgImage: https://oss.yindongwen.top/homepage/bg.jpg
 heroFullScreen: true
 bgImageStyle:
     background-attachment: fixed
