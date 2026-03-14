@@ -20,7 +20,7 @@ export const project = arraySidebar([
     },
     {
         text: "小闲小店",
-        icon: "base",
+        icon: "xxmall",
         link: "xxmall/",
         prefix: "xxmall/",
         collapsible: true,
@@ -45,7 +45,7 @@ export const project = arraySidebar([
     },
     {
         text: "小闲小店智能客服后端",
-        icon: "base",
+        icon: "rag-xxmall",
         link: "rag-xxmall/",
         prefix: "rag-xxmall/",
         collapsible: true,
