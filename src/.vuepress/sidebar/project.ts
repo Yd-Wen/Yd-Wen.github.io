@@ -20,7 +20,8 @@ export const project = arraySidebar([
                 prefix: "record/",
                 collapsible: true,
                 children: [
-                    "20260312"
+                    "20260312",
+                    "20260314"
                 ]
             },
             {
