@@ -7,6 +7,18 @@ export const project = arraySidebar([
         link: "",
     },
     {
+        text: "与你同行",
+        icon: "yntx",
+        link: "yntx/",
+        prefix: "yntx/"
+    },
+    {
+        text: "步步安",
+        icon: "harmonystride",
+        link: "harmonystride/",
+        prefix: "harmonystride/"
+    },
+    {
         text: "小闲小店",
         icon: "base",
         link: "xxmall/",
@@ -55,5 +67,4 @@ export const project = arraySidebar([
             }
         ]
     },
-
 ]);

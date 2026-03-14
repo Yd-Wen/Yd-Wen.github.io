@@ -1,7 +1,7 @@
 ---
 date: 2026-03-12
 title: 小闲小店
-icon: base
+icon: xxmall
 category: 项目
 tag: 
     - 小闲小店
