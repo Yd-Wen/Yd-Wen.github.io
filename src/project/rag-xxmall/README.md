@@ -1,6 +1,6 @@
 ---
 date: 2026-03-12
-title: 小闲小店智能客服接口
+title: 小闲小店智能客服后端
 icon: base
 category: 项目
 tag: 

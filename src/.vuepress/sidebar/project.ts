@@ -31,20 +31,29 @@ export const project = arraySidebar([
             }
         ]
     },
+    {
+        text: "小闲小店智能客服后端",
+        icon: "base",
+        link: "rag-xxmall/",
+        prefix: "rag-xxmall/",
+        collapsible: true,
+        children: [
+            {
+                text: "项目记录",
+                icon: "record",
+                link: "record/",
+                prefix: "record/",
+                collapsible: true,
+                children: [
+                    "20260313",
+                ]
+            },
+            {
+                text: "更新日志",
+                icon: "log",
+                link: "log",
+            }
+        ]
+    },
 
-    // {
-    //     text: "Git",
-    //     icon: "git",
-    //     link: "git/",
-    //     prefix: "git/",
-    //     collapsible: true,
-    //     children: [
-    //         "intro",
-    //         "repo",
-    //         "ignore",
-    //         "branch",
-    //         "proxy",
-    //         "practice"
-    //     ]
-    // }
 ]);
