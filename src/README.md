@@ -21,7 +21,7 @@ bgImageStyle:
     background-attachment: fixed
 actions:
   - text: 快捷导航
-    link: /article/
+    link: /nav/
     type: primary
   - text: 博客
     link: /article/

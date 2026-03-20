@@ -1,0 +1,38 @@
+// 主题色
+$theme-color: #f28e16;
+
+// 背景颜色 - 支持亮色/暗色模式
+$vp-c-bg: (
+  light: #ffffff,
+  dark: #1b1b1f,
+);
+
+// 替代背景色（侧边栏、卡片等）
+$vp-c-bg-alt: (
+  light: #f6f6f7,
+  dark: #161618,
+);
+
+// 提升背景色（弹窗、下拉菜单等）
+$vp-c-bg-elv: (
+  light: #ffffff,
+  dark: #202127,
+);
+
+// 文字颜色
+$vp-c-text: (
+  light: rgb(60, 60, 67),
+  dark: rgba(235, 235, 245, 0.86),
+);
+
+// 边框颜色
+$vp-c-border: (
+  light: #c2c2c4,
+  dark: #3c3f44,
+);
+
+// 分割线颜色
+$vp-c-divider: (
+  light: #e2e2e3,
+  dark: #2e2e32,
+);

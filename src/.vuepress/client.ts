@@ -4,9 +4,12 @@ import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunnin
 // import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js";
 import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentNavbar.js";
 // import "vuepress-theme-hope/presets/bounce-icon.scss";
-
+import NavPage from "./components/NavPage.vue";
 
 export default defineClientConfig({
+  enhance({ app }) {
+    app.component("NavPage", NavPage);
+  },
   setup() {
     setupTransparentNavbar({ type: "homepage" });
     setupRunningTimeFooter(

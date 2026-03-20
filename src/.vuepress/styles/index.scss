@@ -45,3 +45,104 @@
     margin-inline-end: 2rem;
   }
 }
+
+// 快捷导航页面样式
+.nav-page {
+  // 使用CSS变量，自动跟随主题切换
+  --nav-bg: var(--vp-c-bg);
+  --nav-bg-alt: var(--vp-c-bg-alt);
+  --nav-bg-elv: var(--vp-c-bg-elv);
+  --nav-text: var(--vp-c-text);
+  --nav-border: var(--vp-c-border);
+  --nav-divider: var(--vp-c-divider);
+  --nav-theme: var(--theme-color, #f28e16);
+
+  // 侧边栏样式
+  .nav-sidebar-left {
+    .nav-categories {
+      background: var(--nav-bg-alt);
+      border: 1px solid var(--nav-border);
+
+      .nav-category {
+        color: var(--nav-text);
+
+        &:hover {
+          background: var(--nav-bg);
+        }
+
+        &.active {
+          background: var(--nav-theme);
+          color: #fff;
+          border-color: var(--nav-theme);
+        }
+      }
+    }
+  }
+
+  // 搜索框样式
+  .search-box {
+    .search-input-wrapper {
+      background: var(--nav-bg-elv);
+      border-color: var(--nav-border);
+
+      &:focus-within {
+        border-color: var(--nav-theme);
+      }
+
+      .search-input {
+        color: var(--nav-text);
+
+        &::placeholder {
+          color: var(--vp-c-text-mute);
+        }
+      }
+
+      .search-btn {
+        background: var(--nav-theme);
+      }
+    }
+
+    .engine-dropdown {
+      background: var(--nav-bg-elv);
+      border-color: var(--nav-border);
+
+      .engine-option {
+        color: var(--nav-text);
+
+        &:hover {
+          background: var(--nav-bg-alt);
+        }
+
+        &.active {
+          background: rgba(from var(--nav-theme) r g b / 0.2);
+
+          .engine-option-name {
+            color: var(--nav-theme);
+          }
+        }
+
+        .engine-option-shortcut {
+          color: var(--vp-c-text-mute);
+        }
+      }
+    }
+  }
+
+  // 导航卡片样式
+  .nav-card {
+    background: var(--nav-bg-alt);
+    border-color: var(--nav-border);
+
+    &:hover {
+      border-color: var(--nav-theme);
+    }
+
+    .nav-card-title {
+      color: var(--nav-text);
+    }
+
+    .nav-card-icon.iconfont {
+      color: var(--nav-theme);
+    }
+  }
+}
