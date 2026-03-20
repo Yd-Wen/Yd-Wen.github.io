@@ -1,5 +1,6 @@
-import { onMounted } from "vue";
+import { onMounted, watch } from "vue";
 import { defineClientConfig } from "vuepress/client";
+import { useRoute } from "vue-router";
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
 // import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js";
 import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentNavbar.js";
@@ -22,18 +23,33 @@ export default defineClientConfig({
       true,
     );
     // setupSnowFall();
+
+    // 根据路由添加/移除 body 类名
+    const route = useRoute();
+    watch(
+      () => route.path,
+      (path) => {
+        if (path === "/nav/" || path === "/nav") {
+          document.body.classList.add("nav-page-active");
+        } else {
+          document.body.classList.remove("nav-page-active");
+        }
+      },
+      { immediate: true },
+    );
+
     onMounted(() => {
       console.log(String.raw`
 
-$$\     $$\     $$\       $$\      $$\                     
-\$$\   $$  |    $$ |      $$ | $\  $$ |                    
- \$$\ $$  /$$$$$$$ |      $$ |$$$\ $$ | $$$$$$\  $$$$$$$\  
-  \$$$$  /$$  __$$ |      $$ $$ $$\$$ |$$  __$$\ $$  __$$\ 
+$$\     $$\     $$\       $$\      $$\
+\$$\   $$  |    $$ |      $$ | $\  $$ |
+ \$$\ $$  /$$$$$$$ |      $$ |$$$\ $$ | $$$$$$\  $$$$$$$\
+  \$$$$  /$$  __$$ |      $$ $$ $$\$$ |$$  __$$\ $$  __$$\
    \$$  / $$ /  $$ |      $$$$  _$$$$ |$$$$$$$$ |$$ |  $$ |
     $$ |  $$ |  $$ |      $$$  / \$$$ |$$   ____|$$ |  $$ |
     $$ |  \$$$$$$$ |      $$  /   \$$ |\$$$$$$$\ $$ |  $$ |
     \__|   \_______|      \__/     \__| \_______|\__|  \__|
-                                           
+
 `);
     });
   },
