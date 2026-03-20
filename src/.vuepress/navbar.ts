@@ -3,8 +3,8 @@ import { navbar } from "vuepress-theme-hope";
 export const zhNavbarConfig = navbar([
   "/",
   {
-    text: "快捷导航",
-    icon: "link",
+    text: "导航",
+    icon: "nav",
     link: "/nav/",
   },
   {
@@ -13,8 +13,8 @@ export const zhNavbarConfig = navbar([
     prefix: "/note/",
     children: [
       "language/",          // 编程语言
-      "frontend/",           // 前端开发
-      "backend/",            // 后端开发
+      "frontend/",          // 前端开发
+      "backend/",           // 后端开发
       "big_data/",          // 大数据
       "machine_learning/",  // 机器学习
       "deep_learning/",     // 深度学习

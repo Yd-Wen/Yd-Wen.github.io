@@ -2,7 +2,7 @@
 date: 2026-02-24
 layout: Slides
 title: Yd Wen 介绍
-icon: people
+icon: info
 tag:
   - 个人介绍
 timeline: true

@@ -10,7 +10,7 @@ export default <UserConfig>defineUserConfig({
   base: "/",
   lang: "zh-CN",
   title: "Yd Wen",
-  description: "路漫漫其修远兮 吾将上下而求索",
+  description: "The morning sun never lasts a day.",
 
   theme,
 

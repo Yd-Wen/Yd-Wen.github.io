@@ -36,7 +36,7 @@ export default hopeTheme(
     footer:
       '主题使用 <a href="https://theme-hope.vuejs.press/zh/">VuePress Theme Hope</a> | <a href="https://yindongwen.top/about/site.html" target="_blank">关于网站</a>',
 
-    copyright: "基于 MIT 协议 ©2026-至今 Yd Wen",
+    copyright: "基于 MIT 协议 ©2026 Yd Wen",
 
     blog: {
       description: "学生，前端、后端、AI入门者",
@@ -107,7 +107,7 @@ export default hopeTheme(
       },
 
       icon: {
-        assets: "//at.alicdn.com/t/c/font_5129685_coz6ovbfrx.css",
+        assets: "//at.alicdn.com/t/c/font_5129685_bqe3ncwgtt7.css",
       },
 
       pwa: {
