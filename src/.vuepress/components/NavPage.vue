@@ -380,7 +380,7 @@ onUnmounted(() => {
   position: absolute;
   top: calc(100% + 12px);
   left: 10px;
-  min-width: 200px;
+  min-width: 150px;
   border-radius: 12px;
   padding: 8px;
   backdrop-filter: blur(20px);
