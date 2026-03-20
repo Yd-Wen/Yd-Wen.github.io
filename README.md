@@ -25,9 +25,9 @@ A personal blog using [VuePress2](https://vuejs.press/) and [VuePress Theme Hope
 
 ```
 .
-├── src/                          # 源代码目录
-│   ├── .vuepress/               # VuePress 配置
-│   │   ├── components/          # 自定义 Vue 组件
+├── src/                        # 源代码目录
+│   ├── .vuepress/              # VuePress 配置
+│   │   ├── components/         # 自定义 Vue 组件
 │   │   │   └── NavPage.vue     # 快捷导航页面组件
 │   │   ├── sidebar/            # 侧边栏配置
 │   │   ├── styles/             # 全局样式文件
@@ -50,7 +50,7 @@ A personal blog using [VuePress2](https://vuejs.press/) and [VuePress Theme Hope
 │   └── README.md               # 网站首页
 ├── dist/                       # 构建输出目录
 ├── package.json                # 项目依赖
-└── pnpm-lock.yaml             # pnpm 锁定文件
+└── pnpm-lock.yaml              # pnpm 锁定文件
 ```
 
 ---
