@@ -90,14 +90,46 @@
         </section>
       </main>
 
-      <!-- 右侧预留区 -->
-      <aside class="nav-sidebar-right"></aside>
+      <!-- 右侧壁纸按钮 -->
+      <aside class="nav-sidebar-right">
+        <div class="wallpaper-trigger" @click="openWallpaperModal">
+          <span class="iconfont icon-image"></span>
+        </div>
+      </aside>
     </div>
   </div>
+
+  <!-- 壁纸偏好弹窗 -->
+  <Teleport to="body">
+    <Transition name="modal-fade">
+      <div v-if="showWallpaperModal" class="wallpaper-modal-overlay" @click.self="closeWallpaperModal">
+        <div class="wallpaper-modal">
+          <!-- 弹窗头部 -->
+          <div class="modal-header">
+            <h3 class="modal-title">壁纸偏好</h3>
+            <span class="modal-close" @click="closeWallpaperModal">×</span>
+          </div>
+          <!-- 壁纸网格 -->
+          <div class="wallpaper-grid">
+            <div
+              v-for="wp in wallpapers"
+              :key="wp.id"
+              :class="['wallpaper-grid-item', { active: currentWallpaper === wp.id }]"
+              @click="selectWallpaper(wp.id)"
+            >
+              <img :src="wp.thumbnail" class="wallpaper-thumb" alt="">
+              <!-- 选中标记 -->
+              <div v-if="currentWallpaper === wp.id" class="wallpaper-check">✓</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Transition>
+  </Teleport>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 
 // 时间显示
 const currentTime = ref('')
@@ -224,6 +256,65 @@ const categories = [
   },
 ]
 
+// 壁纸配置
+const currentWallpaper = ref('default')
+const showWallpaperModal = ref(false)
+const STORAGE_KEY = 'nav-page-wallpaper'
+
+// 打开壁纸弹窗
+const openWallpaperModal = () => {
+  showWallpaperModal.value = true
+}
+
+// 关闭壁纸弹窗
+const closeWallpaperModal = () => {
+  showWallpaperModal.value = false
+}
+
+const wallpapers = [
+  { id: 'default', name: '默认主题', thumbnail: 'http://oss.yindongwen.top/homepage/bg.jpg' },
+  { id: 'bg1', name: '风景 1', url: '/assets/bg/001.jpg', thumbnail: '/assets/bg/001.jpg' },
+  { id: 'bg2', name: '风景 2', url: '/assets/bg/002.jpg', thumbnail: '/assets/bg/002.jpg' },
+  { id: 'bg3', name: '风景 3', url: '/assets/bg/003.jpg', thumbnail: '/assets/bg/003.jpg' },
+]
+
+// 应用壁纸到页面
+const applyWallpaper = (wpId) => {
+  const wp = wallpapers.find(w => w.id === wpId)
+  if (!wp) return
+
+  // 获取 theme-container 元素（与默认背景相同的容器）
+  const themeContainer = document.querySelector('.theme-container')
+  if (!themeContainer) return
+
+  if (wpId === 'default') {
+    // 恢复默认背景
+    themeContainer.style.backgroundImage = ''
+    document.body.classList.remove('has-custom-wallpaper')
+  } else {
+    themeContainer.style.backgroundImage = `url(${wp.url})`
+    document.body.classList.add('has-custom-wallpaper')
+  }
+}
+
+// 选择壁纸
+const selectWallpaper = (wpId) => {
+  currentWallpaper.value = wpId
+  localStorage.setItem(STORAGE_KEY, wpId)
+  applyWallpaper(wpId)
+  // 选中后不关闭弹窗，让用户可以看到选中状态
+}
+
+// 从 localStorage 加载壁纸设置
+const loadWallpaper = () => {
+  if (typeof window === 'undefined') return
+  const saved = localStorage.getItem(STORAGE_KEY)
+  if (saved && wallpapers.some(w => w.id === saved)) {
+    currentWallpaper.value = saved
+    applyWallpaper(saved)
+  }
+}
+
 const scrollToSection = (id) => {
   const element = document.getElementById(id)
   if (element) {
@@ -255,6 +346,8 @@ onMounted(() => {
   document.addEventListener('click', handleClickOutside)
   document.addEventListener('keydown', handleKeydown)
   handleScroll()
+  // 加载保存的壁纸设置
+  loadWallpaper()
 })
 
 onUnmounted(() => {
@@ -284,7 +377,7 @@ onUnmounted(() => {
   font-size: 5rem;
   font-weight: 200;
   color: #fff;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.3);
   margin-bottom: 30px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   letter-spacing: 4px;
@@ -481,7 +574,7 @@ onUnmounted(() => {
   margin-bottom: 30px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .nav-grid {
@@ -526,9 +619,11 @@ onUnmounted(() => {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* 右侧预留区 */
+/* 右侧壁纸按钮 */
 .nav-sidebar-right {
   width: 200px;
   flex-shrink: 0;
@@ -537,10 +632,217 @@ onUnmounted(() => {
   height: fit-content;
 }
 
+.wallpaper-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  margin-left: auto;
+}
+
+.wallpaper-trigger:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.wallpaper-trigger .icon-image {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* 弹窗遮罩层 */
+.wallpaper-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* 弹窗主体 */
+.wallpaper-modal {
+  background: #1a1a1a;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* 弹窗头部 */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+
+.modal-close {
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--theme-color, #f28e16);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  opacity: 0.8;
+}
+
+/* 壁纸网格 */
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(80vh - 60px);
+}
+
+.wallpaper-grid-item {
+  position: relative;
+  aspect-ratio: 16/10;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.wallpaper-grid-item:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.wallpaper-grid-item.active {
+  border-color: var(--theme-color, #f28e16);
+}
+
+.wallpaper-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 选中标记 */
+.wallpaper-check {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--theme-color, #f28e16);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 弹窗淡入淡出动画 */
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.modal-fade-enter-from,
+.modal-fade-leave-to {
+  opacity: 0;
+}
+
+.modal-fade-enter-from .wallpaper-modal,
+.modal-fade-leave-to .wallpaper-modal {
+  transform: scale(0.95);
+}
+
+
 /* 响应式 */
 @media (max-width: 1200px) {
   .nav-sidebar-right {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-sidebar-right {
+    display: none;
+  }
+
+  .clock {
+    font-size: 3.5rem;
+  }
+
+  .nav-header {
+    padding: 30px 15px 25px;
+  }
+
+  .search-input-wrapper {
+    height: 50px;
+  }
+
+  .engine-selector-btn,
+  .search-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .nav-content-wrapper {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-sidebar-left {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .nav-categories {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 12px;
+  }
+
+  .nav-category {
+    white-space: nowrap;
+    padding: 8px 16px;
+  }
+
+  .nav-section {
+    scroll-margin-top: 150px;
+  }
+
+  .nav-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+  }
+
+  .nav-card {
+    padding: 16px 12px;
+  }
+
+  .nav-card-icon {
+    width: 36px;
+    height: 36px;
   }
 }
 

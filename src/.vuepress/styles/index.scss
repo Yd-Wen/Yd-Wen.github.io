@@ -57,6 +57,7 @@
   --nav-divider: var(--vp-c-divider);
   --nav-theme: var(--theme-color, #f28e16);
 
+
   // 侧边栏样式 - 极简风格
   .nav-sidebar-left {
     .nav-categories {
@@ -64,8 +65,9 @@
       border: none;
 
       .nav-category {
-        color: var(--nav-text);
+        color: #fff;
         text-decoration: none;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 
         &:hover {
           background: transparent;
@@ -158,9 +160,10 @@
     }
 
     .nav-card-title {
-      color: var(--nav-text);
+      color: #fff;
       text-decoration: none !important;
       border-bottom: none !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     .nav-card-icon.iconfont {
