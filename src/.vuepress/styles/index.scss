@@ -65,9 +65,11 @@
 
       .nav-category {
         color: var(--nav-text);
+        text-decoration: none;
 
         &:hover {
           background: var(--nav-bg);
+          color: var(--nav-theme);
         }
 
         &.active {
@@ -98,7 +100,15 @@
       }
 
       .search-btn {
-        background: var(--nav-theme);
+        background: #fff;
+
+        .iconfont {
+          color: var(--nav-theme);
+        }
+      }
+
+      html[data-theme="dark"] & .search-btn {
+        background: #000;
       }
     }
 
@@ -132,13 +142,21 @@
   .nav-card {
     background: var(--nav-bg-alt);
     border-color: var(--nav-border);
+    text-decoration: none !important;
+    border-bottom: none !important;
 
     &:hover {
       border-color: var(--nav-theme);
+
+      .nav-card-title {
+        color: var(--nav-theme);
+      }
     }
 
     .nav-card-title {
       color: var(--nav-text);
+      text-decoration: none !important;
+      border-bottom: none !important;
     }
 
     .nav-card-icon.iconfont {

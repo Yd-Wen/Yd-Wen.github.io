@@ -78,7 +78,7 @@
               class="nav-card"
             >
               <img
-                v-if="item.icon.startsWith('http')"
+                v-if="item.icon.startsWith('http') || item.icon.startsWith('/')"
                 :src="item.icon"
                 :alt="item.name"
                 class="nav-card-icon"
@@ -219,7 +219,7 @@ const categories = [
       { name: '个人主页', url: '/', icon: '/logo.svg', external: false },
       { name: '项目展示', url: '/project/', icon: 'icon-project', external: false },
       { name: '笔记归档', url: '/note/', icon: 'icon-note', external: false },
-      { name: '关于我', url: '/about/', icon: 'icon-about', external: false },
+      { name: '关于我', url: '/about/', icon: '/logo.svg', external: false },
     ],
   },
 ]
@@ -371,7 +371,6 @@ onUnmounted(() => {
 }
 
 .search-btn .iconfont {
-  color: #fff;
   font-size: 20px;
 }
 
