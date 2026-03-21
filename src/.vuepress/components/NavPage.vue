@@ -447,7 +447,6 @@ onUnmounted(() => {
   gap: 8px;
   border-radius: 12px;
   padding: 16px;
-  backdrop-filter: blur(10px);
 }
 
 .nav-category {
@@ -459,7 +458,7 @@ onUnmounted(() => {
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: none;
 }
 
 .nav-category .iconfont {
@@ -501,12 +500,10 @@ onUnmounted(() => {
   border-radius: 16px;
   text-decoration: none;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
 }
 
 .nav-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
 }
 
 .nav-card-icon {

@@ -57,25 +57,25 @@
   --nav-divider: var(--vp-c-divider);
   --nav-theme: var(--theme-color, #f28e16);
 
-  // 侧边栏样式
+  // 侧边栏样式 - 极简风格
   .nav-sidebar-left {
     .nav-categories {
-      background: var(--nav-bg-alt);
-      border: 1px solid var(--nav-border);
+      background: transparent;
+      border: none;
 
       .nav-category {
         color: var(--nav-text);
         text-decoration: none;
 
         &:hover {
-          background: var(--nav-bg);
+          background: transparent;
           color: var(--nav-theme);
         }
 
         &.active {
-          background: var(--nav-theme);
-          color: #fff;
-          border-color: var(--nav-theme);
+          background: transparent;
+          color: var(--nav-theme);
+          font-weight: bold;
         }
       }
     }
@@ -138,15 +138,19 @@
     }
   }
 
-  // 导航卡片样式
+  // 导航卡片样式 - 极简风格
   .nav-card {
-    background: var(--nav-bg-alt);
-    border-color: var(--nav-border);
+    background: transparent;
+    border: none;
     text-decoration: none !important;
     border-bottom: none !important;
+    box-shadow: none;
+    backdrop-filter: none;
 
     &:hover {
-      border-color: var(--nav-theme);
+      border-color: transparent;
+      box-shadow: none;
+      transform: translateY(-4px);
 
       .nav-card-title {
         color: var(--nav-theme);
