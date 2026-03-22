@@ -1,10 +1,11 @@
 <template>
   <div class="nav-page">
-    <!-- 顶部时间和搜索区 -->
+    <!-- 顶部时间 - 始终显示 -->
     <header class="nav-header">
       <div class="clock">{{ currentTime }}</div>
 
-      <div class="search-box">
+      <!-- 搜索区 - 随按钮点击显示/隐藏 -->
+      <div v-if="showSearchBox" class="search-box">
         <div class="search-input-wrapper">
           <button class="engine-selector-btn" @click.stop="toggleEngineSelect">
             <img v-if="currentEngine.logo" :src="currentEngine.logo" class="engine-logo" alt="">
@@ -42,36 +43,13 @@
       </div>
     </header>
 
-    <!-- 主体内容区 -->
-    <div class="nav-content-wrapper">
-      <!-- 左侧分类导航 -->
-      <aside class="nav-sidebar-left">
-        <div class="nav-categories">
-          <a
-            v-for="cat in categories"
-            :key="cat.id"
-            :href="`#${cat.id}`"
-            :class="['nav-category', { active: activeCategory === cat.id }]"
-            @click.prevent="scrollToSection(cat.id)"
-          >
-            <span :class="['iconfont', cat.icon]"></span>
-            <span>{{ cat.name }}</span>
-          </a>
-        </div>
-      </aside>
-
-      <!-- 中间内容区 -->
-      <main ref="contentRef" class="nav-content">
-        <section
-          v-for="cat in categories"
-          :id="cat.id"
-          :key="cat.id"
-          class="nav-section"
-        >
-          <h2 class="section-title">{{ cat.name }}</h2>
+    <!-- 中间内容区 - 显示选中的分类卡片 -->
+    <main class="nav-content-area">
+      <div v-if="activeCategory" class="nav-cards-wrapper">
+        <div class="nav-cards-container">
           <div class="nav-grid">
             <a
-              v-for="item in cat.items"
+              v-for="item in currentCategoryItems"
               :key="item.url"
               :href="item.url"
               :target="item.external ? '_blank' : '_self'"
@@ -87,16 +65,26 @@
               <span class="nav-card-title">{{ item.name }}</span>
             </a>
           </div>
-        </section>
-      </main>
-
-      <!-- 右侧壁纸按钮 -->
-      <aside class="nav-sidebar-right">
-        <div class="wallpaper-trigger" @click="openWallpaperModal">
-          <span class="iconfont icon-image"></span>
         </div>
-      </aside>
-    </div>
+      </div>
+      <div v-else class="nav-empty-state"></div>
+    </main>
+
+    <!-- 底部五个功能按钮 -->
+    <footer class="nav-bottom-container">
+      <div class="nav-buttons-wrapper">
+        <div
+          v-for="btn in categoryButtons"
+          :key="btn.id"
+          class="nav-button-item"
+          @click="handleButtonClick(btn)"
+        >
+          <div class="nav-button">
+            <img :src="btn.icon" class="nav-button-icon" :alt="btn.name">
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 
   <!-- 壁纸偏好弹窗 -->
@@ -129,7 +117,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 // 时间显示
 const currentTime = ref('')
@@ -206,14 +194,20 @@ const handleKeydown = (e) => {
   }
 }
 
-// 分类导航
-const activeCategory = ref('dev-tools')
+// 分类按钮配置
+const categoryButtons = [
+  { id: 'dev-tools', name: '开发工具', icon: '/assets/icon/icon_develop.png' },
+  { id: 'learning', name: '学习资源', icon: '/assets/icon/icon_resource.png' },
+  { id: 'common', name: '常用网站', icon: '/assets/icon/icon_website.png' },
+  { id: 'personal', name: '个人收藏', icon: '/assets/icon/icon_favorite.png' },
+  { id: 'wallpaper', name: '壁纸切换', icon: '/assets/icon/icon_wallpaper.png', isWallpaper: true },
+]
 
+// 分类数据
 const categories = [
   {
     id: 'dev-tools',
     name: '开发工具',
-    icon: 'icon-tool',
     items: [
       { name: 'GitHub', url: 'https://github.com', icon: 'https://github.com/favicon.ico', external: true },
       { name: 'VS Code', url: 'https://code.visualstudio.com', icon: 'https://code.visualstudio.com/favicon.ico', external: true },
@@ -224,7 +218,6 @@ const categories = [
   {
     id: 'learning',
     name: '学习资源',
-    icon: 'icon-book',
     items: [
       { name: 'MDN', url: 'https://developer.mozilla.org/zh-CN/', icon: 'https://developer.mozilla.org/favicon-48x48.png', external: true },
       { name: 'VuePress', url: 'https://vuejs.press/zh/', icon: 'https://vuejs.press/images/hero.png', external: true },
@@ -235,7 +228,6 @@ const categories = [
   {
     id: 'common',
     name: '常用网站',
-    icon: 'icon-link',
     items: [
       { name: '掘金', url: 'https://juejin.cn', icon: 'https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/favicon-32x32.png', external: true },
       { name: '知乎', url: 'https://www.zhihu.com', icon: 'https://static.zhihu.com/heifetz/favicon.ico', external: true },
@@ -246,7 +238,6 @@ const categories = [
   {
     id: 'personal',
     name: '个人收藏',
-    icon: 'icon-star',
     items: [
       { name: '个人主页', url: '/', icon: '/logo.svg', external: false },
       { name: '项目展示', url: '/project/', icon: 'icon-project', external: false },
@@ -255,6 +246,42 @@ const categories = [
     ],
   },
 ]
+
+// 当前激活的分类
+const activeCategory = ref(null)
+
+// 搜索框显示状态
+const showSearchBox = ref(true)
+
+// 计算当前分类名称
+const currentCategoryName = computed(() => {
+  const cat = categories.find(c => c.id === activeCategory.value)
+  return cat ? cat.name : ''
+})
+
+// 计算当前分类的导航项
+const currentCategoryItems = computed(() => {
+  const cat = categories.find(c => c.id === activeCategory.value)
+  return cat ? cat.items : []
+})
+
+// 处理按钮点击
+const handleButtonClick = (btn) => {
+  if (btn.isWallpaper) {
+    openWallpaperModal()
+    return
+  }
+
+  if (activeCategory.value === btn.id) {
+    // 再次点击相同按钮：隐藏卡片，显示搜索框
+    activeCategory.value = null
+    showSearchBox.value = true
+  } else {
+    // 点击不同按钮：显示卡片，隐藏搜索框
+    activeCategory.value = btn.id
+    showSearchBox.value = false
+  }
+}
 
 // 壁纸配置
 const currentWallpaper = ref('default')
@@ -315,62 +342,40 @@ const loadWallpaper = () => {
   }
 }
 
-const scrollToSection = (id) => {
-  const element = document.getElementById(id)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
-}
-
-const handleScroll = () => {
-  const scrollTop = window.scrollY || document.documentElement.scrollTop
-  let current = categories[0].id
-
-  for (const cat of categories) {
-    const element = document.getElementById(cat.id)
-    if (element) {
-      const rect = element.getBoundingClientRect()
-      if (rect.top <= 150) {
-        current = cat.id
-      }
-    }
-  }
-
-  activeCategory.value = current
-}
-
 onMounted(() => {
   updateTime()
   timeInterval = setInterval(updateTime, 1000)
-  window.addEventListener('scroll', handleScroll)
   document.addEventListener('click', handleClickOutside)
   document.addEventListener('keydown', handleKeydown)
-  handleScroll()
   // 加载保存的壁纸设置
   loadWallpaper()
 })
 
 onUnmounted(() => {
   if (timeInterval) clearInterval(timeInterval)
-  window.removeEventListener('scroll', handleScroll)
   document.removeEventListener('click', handleClickOutside)
   document.removeEventListener('keydown', handleKeydown)
 })
 </script>
 
 <style scoped>
-/* 页面根容器 */
+/* 页面根容器 - 100% 高度（父容器已设置为 calc(100vh - 60px)） */
 .nav-page {
-  min-height: 100vh;
-  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px 20px 10px;
 }
 
 /* 顶部时间和搜索区 */
 .nav-header {
   text-align: center;
   padding: 40px 20px 30px;
-  max-width: 600px;
+  width: 50vw;
+  max-width: 90%;
   margin: 0 auto;
+  flex-shrink: 0;
 }
 
 .clock {
@@ -389,7 +394,7 @@ onUnmounted(() => {
   width: 100%;
 }
 
-/* 搜索输入框包装 - 样式通过index.scss中的CSS变量控制 */
+/* 搜索输入框包装 */
 .search-input-wrapper {
   display: flex;
   align-items: center;
@@ -517,61 +522,58 @@ onUnmounted(() => {
   font-family: monospace;
 }
 
-/* 主体布局 */
-.nav-content-wrapper {
-  display: flex;
-  max-width: 1400px;
-  margin: 0 auto;
-  gap: 20px;
-}
-
-/* 左侧分类导航 */
-.nav-sidebar-left {
-  width: 200px;
-  flex-shrink: 0;
-  position: sticky;
-  top: 80px;
-  height: fit-content;
-}
-
-.nav-categories {
+/* 中间内容区 - 可滚动 */
+.nav-content-area {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  border-radius: 12px;
-  padding: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-.nav-category {
+.nav-content-area::-webkit-scrollbar {
+  display: none;
+}
+
+/* 导航卡片包装器 - 50%视窗宽度，占满中间空间 */
+.nav-cards-wrapper {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-cards-container {
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav-cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-empty-state {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: none;
-}
-
-.nav-category .iconfont {
-  font-size: 18px;
-}
-
-/* 中间内容区 */
-.nav-content {
-  flex: 1;
-  padding-right: 10px;
-}
-
-.nav-section {
-  margin-bottom: 60px;
-  scroll-margin-top: 100px;
+  justify-content: center;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .section-title {
-  font-size: 1.8rem;
-  margin-bottom: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
   color: #fff;
   text-align: center;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.4);
@@ -579,8 +581,8 @@ onUnmounted(() => {
 
 .nav-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
 }
 
 /* 导航卡片 */
@@ -589,31 +591,37 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px 16px;
+  padding: 20px 12px;
   border-radius: 16px;
   text-decoration: none;
   transition: all 0.3s ease;
+  background: transparent;
+  border: none;
 }
 
 .nav-card:hover {
   transform: translateY(-4px);
 }
 
+.nav-card:hover .nav-card-title {
+  color: var(--theme-color, #f28e16);
+}
+
 .nav-card-icon {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .nav-card-icon.iconfont {
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 36px;
+  line-height: 40px;
   text-align: center;
 }
 
 .nav-card-title {
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -621,38 +629,78 @@ onUnmounted(() => {
   max-width: 100%;
   color: #fff;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease;
 }
 
-/* 右侧壁纸按钮 */
-.nav-sidebar-right {
-  width: 200px;
+/* 底部按钮容器 - 玻璃效果 */
+.nav-bottom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   flex-shrink: 0;
-  position: sticky;
-  top: 80px;
-  height: fit-content;
+  overflow: visible;
+  position: relative;
+  z-index: 100;
 }
 
-.wallpaper-trigger {
+/* 按钮包装器 - 玻璃效果 */
+.nav-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: visible;
+}
+
+/* 按钮项容器 */
+.nav-button-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+}
+
+/* 底部按钮 */
+.nav-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  position: relative;
   cursor: pointer;
-  transition: all 0.2s ease;
-  backdrop-filter: blur(10px);
-  margin-left: auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
-.wallpaper-trigger:hover {
-  background: rgba(0, 0, 0, 0.5);
+html[data-theme="light"] .nav-button {
+  background: #fff;
 }
 
-.wallpaper-trigger .icon-image {
-  font-size: 20px;
-  color: #fff;
+.nav-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* 按钮内图标 */
+.nav-button-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
 }
 
 /* 弹窗遮罩层 */
@@ -774,25 +822,19 @@ onUnmounted(() => {
   transform: scale(0.95);
 }
 
-
 /* 响应式 */
-@media (max-width: 1200px) {
-  .nav-sidebar-right {
-    display: none;
-  }
-}
-
 @media (max-width: 768px) {
-  .nav-sidebar-right {
-    display: none;
+  .nav-page {
+    padding: 15px;
   }
 
   .clock {
     font-size: 3.5rem;
+    margin-bottom: 20px;
   }
 
   .nav-header {
-    padding: 30px 15px 25px;
+    padding: 20px 15px;
   }
 
   .search-input-wrapper {
@@ -805,104 +847,91 @@ onUnmounted(() => {
     height: 42px;
   }
 
-  .nav-content-wrapper {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .nav-sidebar-left {
-    width: 100%;
-    position: relative;
-    top: 0;
-  }
-
-  .nav-categories {
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 12px;
-  }
-
-  .nav-category {
-    white-space: nowrap;
-    padding: 8px 16px;
-  }
-
-  .nav-section {
-    scroll-margin-top: 150px;
-  }
-
   .nav-grid {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 12px;
   }
 
   .nav-card {
-    padding: 16px 12px;
+    padding: 16px 10px;
   }
 
   .nav-card-icon {
     width: 36px;
     height: 36px;
   }
-}
 
-@media (max-width: 768px) {
-  .clock {
-    font-size: 3.5rem;
+  .nav-card-icon.iconfont {
+    font-size: 32px;
+    line-height: 36px;
   }
 
   .nav-header {
-    padding: 30px 15px 25px;
+    width: 70vw;
   }
 
-  .search-input-wrapper {
-    height: 50px;
+  .nav-cards-wrapper {
+    width: 70vw;
   }
 
-  .engine-selector-btn,
-  .search-btn {
-    width: 42px;
-    height: 42px;
+  .nav-bottom-container {
+    padding: 15px;
   }
 
-  .nav-content-wrapper {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .nav-sidebar-left {
-    width: 100%;
-    position: relative;
-    top: 0;
-  }
-
-  .nav-categories {
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 12px;
-  }
-
-  .nav-category {
-    white-space: nowrap;
-    padding: 8px 16px;
-  }
-
-  .nav-section {
-    scroll-margin-top: 150px;
-  }
-
-  .nav-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  .nav-buttons-wrapper {
     gap: 12px;
+    padding: 12px 20px;
   }
 
-  .nav-card {
-    padding: 16px 12px;
+  .nav-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
   }
 
-  .nav-card-icon {
-    width: 36px;
-    height: 36px;
+  .nav-button-icon {
+    width: 28px;
+    height: 28px;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-header {
+    width: 80vw;
+  }
+
+  .nav-cards-wrapper {
+    width: 80vw;
+  }
+
+  .nav-buttons-wrapper {
+    gap: 10px;
+    padding: 10px 16px;
+  }
+
+  .nav-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+
+  .nav-button-icon {
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .wallpaper-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 </style>

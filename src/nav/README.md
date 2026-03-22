@@ -43,4 +43,59 @@ body.nav-page-active .vp-main {
 body.nav-page-active .vp-content {
   background: transparent !important;
 }
+
+/* 导航页布局调整 - 100vh 不可滚动 */
+body.nav-page-active .theme-container {
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.nav-page-active .vp-main {
+  min-height: 100vh !important;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.nav-page-active .vp-page {
+  min-height: 100vh !important;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.nav-page-active .theme-hope-content {
+  min-height: 100vh !important;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 隐藏页面默认的padding和margin */
+body.nav-page-active .vp-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 显示footer，调整整体布局 */
+body.nav-page-active .vp-footer-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: transparent !important;
+  border: none !important;
+}
+
+body.nav-page-active .vp-footer-wrapper .vp-footer {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* 导航页组件容器 - 减去footer高度 */
+body.nav-page-active .nav-page {
+  height: calc(100vh - 80px) !important;
+  padding-bottom: 10px;
+}
 </style>
