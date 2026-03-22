@@ -17,10 +17,27 @@ tag:
 - 演示地址：[https://yindongwen.top/demo/xxmall](https://yindongwen.top/demo/xxmall)
 
 - 仓库地址：
-    
+  
     - [https://gitee.com/yindong-wen/xxmall](https://gitee.com/yindong-wen/xxmall)
     
     - [https://github.com/Yd-Wen/xxmall](https://github.com/Yd-Wen/xxmall)
+
+- 项目截图
+
+  - 店长推荐
+
+  ![店长推荐](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260322225252546.png)
+
+  - 邀请裂变：我的邀请人、我的邀请码、我邀请的人
+
+  ![邀请裂变](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260322225302092.png)
+
+  - 知识库
+    - 文件知识库：文件上传、下载、更新、删除后同步到知识库
+    - 商品知识库：增删改查后同步到知识库
+    - 推荐知识库：增删改查后同步到知识库
+
+  ![知识库](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260322225312163.png)
 
 ## 技术栈
 

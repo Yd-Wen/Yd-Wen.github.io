@@ -12,6 +12,14 @@ tag:
 
 本项目是使用 [VuePress2](https://vuejs.press/zh/) 与 [VuePress Theme Hope](https://theme-hope.vuejs.press/zh/) 搭建的个人博客。
 
+- 演示地址：[https://yindongwen.top](https://yindongwen.top)
+
+- 仓库地址：
+
+  - [https://gitee.com/yindong-wen/yindong-wen](https://gitee.com/yindong-wen/yindong-wen)
+
+  - [https://github.com/Yd-Wen/Yd-Wen.github.io](https://github.com/Yd-Wen/Yd-Wen.github.io)
+
 - 项目截图
 
   - 主页
@@ -21,14 +29,6 @@ tag:
   - 导航页
 
   ![项目导航页](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260322215809999.jpg)
-
-- 演示地址：[https://yindongwen.top](https://yindongwen.top)
-
-- 仓库地址：
-
-  - [https://gitee.com/yindong-wen/yindong-wen](https://gitee.com/yindong-wen/yindong-wen)
-
-  - [https://github.com/Yd-Wen/Yd-Wen.github.io](https://github.com/Yd-Wen/Yd-Wen.github.io)
 
 ## 技术栈
 
