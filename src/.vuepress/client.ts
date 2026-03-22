@@ -65,29 +65,38 @@ export default defineClientConfig({
 
     // 根据路由添加/移除 body 类名和背景图片
     const route = useRoute();
+
+    const updateBodyClassAndBackground = (path: string) => {
+      // SSR 环境下 document 不存在，直接返回
+      if (typeof document === 'undefined') return;
+
+      if (path === "/nav/" || path === "/nav") {
+        document.body.classList.add("nav-page-active");
+      } else {
+        document.body.classList.remove("nav-page-active");
+      }
+
+      // 只在主页和导航页面保留背景图片，其他页面清除
+      const themeContainer = document.querySelector('.theme-container') as HTMLElement | null;
+      if (themeContainer && path !== "/" && path !== "/nav/" && path !== "/nav") {
+        themeContainer.style.backgroundImage = '';
+        document.body.classList.remove('has-custom-wallpaper');
+      }
+
+      // 路由切换后延迟插入运行时间（等待 footer 渲染）
+      setTimeout(insertRunningTime, 300);
+    };
+
     watch(
       () => route.path,
       (path) => {
-        if (path === "/nav/" || path === "/nav") {
-          document.body.classList.add("nav-page-active");
-        } else {
-          document.body.classList.remove("nav-page-active");
-        }
-
-        // 只在主页和导航页面保留背景图片，其他页面清除
-        const themeContainer = document.querySelector('.theme-container') as HTMLElement | null;
-        if (themeContainer && path !== "/" && path !== "/nav/" && path !== "/nav") {
-          themeContainer.style.backgroundImage = '';
-          document.body.classList.remove('has-custom-wallpaper');
-        }
-
-        // 路由切换后延迟插入运行时间（等待 footer 渲染）
-        setTimeout(insertRunningTime, 300);
+        updateBodyClassAndBackground(path);
       },
-      { immediate: true },
     );
 
     onMounted(() => {
+      // 客户端挂载时执行一次
+      updateBodyClassAndBackground(route.path);
       console.log(String.raw`
 
 $$\     $$\     $$\       $$\      $$\
