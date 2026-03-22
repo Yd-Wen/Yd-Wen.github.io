@@ -68,4 +68,28 @@ export const project = arraySidebar([
             }
         ]
     },
+    {
+        text: "个人博客",
+        icon: "blog",
+        link: "blog/",
+        prefix: "blog/",
+        collapsible: true,
+        children: [
+            {
+                text: "项目记录",
+                icon: "record",
+                link: "record/",
+                prefix: "record/",
+                collapsible: true,
+                children: [
+                    "20260322",
+                ]
+            },
+            {
+                text: "更新日志",
+                icon: "log",
+                link: "log",
+            }
+        ]
+    }
 ]);
