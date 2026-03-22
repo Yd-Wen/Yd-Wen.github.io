@@ -43,8 +43,7 @@ export default hopeTheme(
       intro: "/about/",
       medias: {
         GitHub: "https://github.com/Yd-Wen",
-        Gitee: "https://gitee.com/yindong-wen",
-        BiliBili: "https://space.bilibili.com/1882044793"
+        Gitee: "https://gitee.com/yindong-wen"
       }
     },
 
