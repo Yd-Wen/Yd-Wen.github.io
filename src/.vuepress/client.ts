@@ -63,7 +63,7 @@ export default defineClientConfig({
       }
     };
 
-    // 根据路由添加/移除 body 类名
+    // 根据路由添加/移除 body 类名和背景图片
     const route = useRoute();
     watch(
       () => route.path,
@@ -73,6 +73,14 @@ export default defineClientConfig({
         } else {
           document.body.classList.remove("nav-page-active");
         }
+
+        // 只在主页和导航页面保留背景图片，其他页面清除
+        const themeContainer = document.querySelector('.theme-container') as HTMLElement | null;
+        if (themeContainer && path !== "/" && path !== "/nav/" && path !== "/nav") {
+          themeContainer.style.backgroundImage = '';
+          document.body.classList.remove('has-custom-wallpaper');
+        }
+
         // 路由切换后延迟插入运行时间（等待 footer 渲染）
         setTimeout(insertRunningTime, 300);
       },

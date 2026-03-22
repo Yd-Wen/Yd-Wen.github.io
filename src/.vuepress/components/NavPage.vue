@@ -8,7 +8,7 @@
     ></div>
 
     <!-- 顶部时间 - 始终显示 -->
-    <header class="nav-header">
+    <header :class="['nav-header', { 'collapsed': activeCategory }]">
       <div class="clock">{{ currentTime }}</div>
 
       <!-- 搜索区 - 随按钮点击显示/隐藏 -->
@@ -51,9 +51,9 @@
     </header>
 
     <!-- 中间内容区 - 显示选中的分类卡片 -->
-    <main class="nav-content-area">
-      <div v-if="activeCategory" class="nav-cards-wrapper">
-        <div class="nav-cards-container">
+    <main :class="['nav-content-area', { 'expanded': activeCategory }]">
+      <div v-if="activeCategory" class="nav-cards-wrapper" @click="closeCategoryView">
+        <div class="nav-cards-container" @click.stop>
           <div class="nav-grid">
             <a
               v-for="item in currentCategoryItems"
@@ -219,9 +219,56 @@ const categories = [
     name: '开发工具',
     items: [
       { name: 'GitHub', url: 'https://github.com', icon: 'https://github.com/favicon.ico', external: true },
+      { name: 'GitLab', url: 'https://gitlab.com', icon: 'https://gitlab.com/favicon.ico', external: true },
+      { name: 'Gitee', url: 'https://gitee.com', icon: 'https://gitee.com/favicon.ico', external: true },
       { name: 'VS Code', url: 'https://code.visualstudio.com', icon: 'https://code.visualstudio.com/favicon.ico', external: true },
+      { name: 'JetBrains', url: 'https://www.jetbrains.com', icon: 'https://www.jetbrains.com/favicon.ico', external: true },
       { name: 'Vue.js', url: 'https://vuejs.org', icon: 'https://vuejs.org/logo.svg', external: true },
+      { name: 'React', url: 'https://react.dev', icon: 'https://react.dev/favicon.ico', external: true },
       { name: 'Node.js', url: 'https://nodejs.org', icon: 'https://nodejs.org/static/images/favicons/favicon.png', external: true },
+      { name: 'Vite', url: 'https://vitejs.dev', icon: 'https://vitejs.dev/logo.svg', external: true },
+      { name: 'Webpack', url: 'https://webpack.js.org', icon: 'https://webpack.js.org/favicon.a326ef8cfc2a3f1d.ico', external: true },
+      { name: 'Rollup', url: 'https://rollupjs.org', icon: 'https://rollupjs.org/favicon.png', external: true },
+      { name: 'Docker', url: 'https://www.docker.com', icon: 'https://www.docker.com/favicon.ico', external: true },
+      { name: 'Kubernetes', url: 'https://kubernetes.io', icon: 'https://kubernetes.io/images/favicon.png', external: true },
+      { name: 'NPM', url: 'https://www.npmjs.com', icon: 'https://static.npmjs.com/favicon.ico', external: true },
+      { name: 'Yarn', url: 'https://yarnpkg.com', icon: 'https://yarnpkg.com/favicon.ico', external: true },
+      { name: 'pnpm', url: 'https://pnpm.io', icon: 'https://pnpm.io/favicon.ico', external: true },
+      { name: 'Postman', url: 'https://www.postman.com', icon: 'https://www.postman.com/favicon.ico', external: true },
+      { name: 'Insomnia', url: 'https://insomnia.rest', icon: 'https://insomnia.rest/images/favicon.ico', external: true },
+      { name: 'Vercel', url: 'https://vercel.com', icon: 'https://assets.vercel.com/image/upload/favicon.ico', external: true },
+      { name: 'Netlify', url: 'https://www.netlify.com', icon: 'https://www.netlify.com/favicon.ico', external: true },
+      { name: 'GitHub Actions', url: 'https://github.com/features/actions', icon: 'https://github.com/favicon.ico', external: true },
+      { name: 'Jenkins', url: 'https://www.jenkins.io', icon: 'https://www.jenkins.io/favicon.ico', external: true },
+      { name: 'Travis CI', url: 'https://www.travis-ci.com', icon: 'https://www.travis-ci.com/favicon.ico', external: true },
+      { name: 'ESLint', url: 'https://eslint.org', icon: 'https://eslint.org/favicon.ico', external: true },
+      { name: 'Prettier', url: 'https://prettier.io', icon: 'https://prettier.io/icon.png', external: true },
+      { name: 'Babel', url: 'https://babeljs.io', icon: 'https://babeljs.io/img/favicon.png', external: true },
+      { name: 'Sass', url: 'https://sass-lang.com', icon: 'https://sass-lang.com/favicon.ico', external: true },
+      { name: 'Tailwind CSS', url: 'https://tailwindcss.com', icon: 'https://tailwindcss.com/favicon.ico', external: true },
+      { name: 'Bootstrap', url: 'https://getbootstrap.com', icon: 'https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico', external: true },
+      { name: 'Element Plus', url: 'https://element-plus.org', icon: 'https://element-plus.org/images/element-plus-logo-small.svg', external: true },
+      { name: 'Ant Design', url: 'https://ant.design', icon: 'https://ant.design/favicon.ico', external: true },
+      { name: 'Redis', url: 'https://redis.io', icon: 'https://redis.io/favicon.ico', external: true },
+      { name: 'MongoDB', url: 'https://www.mongodb.com', icon: 'https://www.mongodb.com/favicon.ico', external: true },
+      { name: 'MySQL', url: 'https://www.mysql.com', icon: 'https://labs.mysql.com/common/themes/sakila/favicon.ico', external: true },
+      { name: 'PostgreSQL', url: 'https://www.postgresql.org', icon: 'https://www.postgresql.org/favicon.ico', external: true },
+      { name: 'GraphQL', url: 'https://graphql.org', icon: 'https://graphql.org/favicon.ico', external: true },
+      { name: 'Swagger', url: 'https://swagger.io', icon: 'https://swagger.io/favicon.ico', external: true },
+      { name: 'Figma', url: 'https://www.figma.com', icon: 'https://static.figma.com/app/icon/1/favicon.png', external: true },
+      { name: 'Dribbble', url: 'https://dribbble.com', icon: 'https://dribbble.com/favicon.ico', external: true },
+      { name: 'CodePen', url: 'https://codepen.io', icon: 'https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico', external: true },
+      { name: 'JSFiddle', url: 'https://jsfiddle.net', icon: 'https://jsfiddle.net/favicon.ico', external: true },
+      { name: 'Regex101', url: 'https://regex101.com', icon: 'https://regex101.com/favicon.ico', external: true },
+      { name: 'Can I Use', url: 'https://caniuse.com', icon: 'https://caniuse.com/img/favicon-128.png', external: true },
+      { name: 'W3C Validator', url: 'https://validator.w3.org', icon: 'https://validator.w3.org/images/favicon.ico', external: true },
+      { name: 'Lighthouse', url: 'https://developer.chrome.com/docs/lighthouse', icon: 'https://developer.chrome.com/images/meta/favicon-32x32.png', external: true },
+      { name: 'PageSpeed', url: 'https://pagespeed.web.dev', icon: 'https://www.gstatic.com/pagespeed/insights/ui/favicon.ico', external: true },
+      { name: 'Sentry', url: 'https://sentry.io', icon: 'https://sentry.io/favicon.ico', external: true },
+      { name: 'LogRocket', url: 'https://logrocket.com', icon: 'https://logrocket.com/favicon.ico', external: true },
+      { name: 'Cloudflare', url: 'https://www.cloudflare.com', icon: 'https://www.cloudflare.com/favicon.ico', external: true },
+      { name: 'Nginx', url: 'https://nginx.org', icon: 'https://nginx.org/favicon.ico', external: true },
+      { name: 'Apache', url: 'https://httpd.apache.org', icon: 'https://httpd.apache.org/favicon.ico', external: true },
     ],
   },
   {
@@ -274,8 +321,18 @@ const currentCategoryItems = computed(() => {
   return cat ? cat.items : []
 })
 
+// 防止双击标志
+let isProcessingClick = false
+
 // 处理按钮点击
 const handleButtonClick = (btn) => {
+  // 防止快速双击
+  if (isProcessingClick) return
+  isProcessingClick = true
+  setTimeout(() => {
+    isProcessingClick = false
+  }, 300)
+
   if (btn.isWallpaper) {
     openWallpaperModal()
     return
@@ -375,6 +432,13 @@ onUnmounted(() => {
   if (timeInterval) clearInterval(timeInterval)
   document.removeEventListener('click', handleClickOutside)
   document.removeEventListener('keydown', handleKeydown)
+
+  // 离开导航页面时清除背景图片
+  const themeContainer = document.querySelector('.theme-container')
+  if (themeContainer) {
+    themeContainer.style.backgroundImage = ''
+    document.body.classList.remove('has-custom-wallpaper')
+  }
 })
 </script>
 
@@ -404,36 +468,58 @@ onUnmounted(() => {
 /* 顶部时间和搜索区 */
 .nav-header {
   text-align: center;
-  padding: 40px 20px 30px;
-  width: 50vw;
+  padding: 20px 20px 30px;
+  width: 40vw;
   max-width: 90%;
   margin: 0 auto;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+
+/* 当显示分类卡片时，收缩顶部区域 */
+.nav-header.collapsed {
+  padding: 10px 20px 20px;
+  opacity: 0.7;
+  gap: 12px;
+}
+
+.nav-header.collapsed .search-box {
+  margin-top: 0;
 }
 
 .clock {
   font-size: 5rem;
   font-weight: 200;
   color: #fff;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.3);
-  margin-bottom: 30px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   letter-spacing: 4px;
+  margin: 0;
+}
+
+/* 暗黑模式：时间文字黑色 */
+html[data-theme="dark"] .clock {
+  color: #000;
 }
 
 /* 搜索框容器 */
 .search-box {
   position: relative;
   width: 100%;
+  margin-top: 80px;
 }
 
 /* 搜索输入框包装 */
 .search-input-wrapper {
   display: flex;
   align-items: center;
-  height: 56px;
-  border-radius: 28px;
-  padding: 4px;
+  height: 44px;
+  border-radius: 22px;
+  padding: 3px;
   backdrop-filter: blur(20px);
   transition: all 0.3s ease;
 }
@@ -447,8 +533,8 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -487,8 +573,8 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -572,10 +658,17 @@ onUnmounted(() => {
   display: none;
 }
 
-/* 导航卡片包装器 - 50%视窗宽度，占满中间空间 */
+/* 当显示分类卡片时，扩展内容区域 */
+.nav-content-area.expanded {
+  flex: 2;
+  padding-top: 5px;
+}
+
+/* 导航卡片包装器 - 40%视窗宽度，占满中间空间 */
 .nav-cards-wrapper {
-  width: 50vw;
+  width: 40vw;
   height: 100%;
+  max-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -586,7 +679,8 @@ onUnmounted(() => {
 
 .nav-cards-container {
   width: 100%;
-  max-height: 100%;
+  height: 520px;
+  max-height: 60vh;
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -696,6 +790,10 @@ html[data-theme="light"] .nav-card-title {
   overflow: visible;
   position: relative;
   z-index: 200;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 /* 按钮包装器 - 玻璃效果 */
@@ -712,6 +810,10 @@ html[data-theme="light"] .nav-card-title {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: visible;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 /* 按钮项容器 */
@@ -721,6 +823,10 @@ html[data-theme="light"] .nav-card-title {
   flex-direction: column;
   align-items: center;
   overflow: visible;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 /* 底部按钮 */
@@ -737,6 +843,10 @@ html[data-theme="light"] .nav-card-title {
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html[data-theme="light"] .nav-button {
@@ -923,13 +1033,13 @@ html[data-theme="light"] .nav-button {
   }
 
   .search-input-wrapper {
-    height: 50px;
+    height: 40px;
   }
 
   .engine-selector-btn,
   .search-btn {
-    width: 42px;
-    height: 42px;
+    width: 34px;
+    height: 34px;
   }
 
   .nav-grid {
@@ -952,7 +1062,11 @@ html[data-theme="light"] .nav-button {
   }
 
   .nav-header {
-    width: 70vw;
+    width: 60vw;
+  }
+
+  .search-box {
+    margin-top: 30px;
   }
 
   .nav-cards-wrapper {
@@ -996,7 +1110,11 @@ html[data-theme="light"] .nav-button {
 
 @media (max-width: 480px) {
   .nav-header {
-    width: 80vw;
+    width: 70vw;
+  }
+
+  .search-box {
+    margin-top: 24px;
   }
 
   .nav-cards-wrapper {
