@@ -1,5 +1,12 @@
 <template>
   <div class="nav-page">
+    <!-- 背景点击捕获层 - 透明，用于点击关闭卡片 -->
+    <div
+      v-if="activeCategory"
+      class="nav-overlay"
+      @click="closeCategoryView"
+    ></div>
+
     <!-- 顶部时间 - 始终显示 -->
     <header class="nav-header">
       <div class="clock">{{ currentTime }}</div>
@@ -285,6 +292,12 @@ const handleButtonClick = (btn) => {
   }
 }
 
+// 关闭分类视图
+const closeCategoryView = () => {
+  activeCategory.value = null
+  showSearchBox.value = true
+}
+
 // 壁纸配置
 const currentWallpaper = ref('default')
 const showWallpaperModal = ref(false)
@@ -300,18 +313,21 @@ const closeWallpaperModal = () => {
   showWallpaperModal.value = false
 }
 
-const wallpapers = [
-  { id: 'default', name: '默认主题', thumbnail: '/assets/bg/default.jpg' },
-  { id: 'bg1', name: '风景 1', url: '/assets/bg/001.jpg', thumbnail: '/assets/bg/001.jpg' },
-  { id: 'bg2', name: '风景 2', url: '/assets/bg/002.jpg', thumbnail: '/assets/bg/002.jpg' },
-  { id: 'bg3', name: '风景 3', url: '/assets/bg/003.jpg', thumbnail: '/assets/bg/003.jpg' },
-]
+// 导入壁纸配置
+import wallpapersConfig from './wallpapers.json'
+
+// 生成壁纸列表（从 JSON 配置转换）
+const wallpapers = computed(() => {
+  return wallpapersConfig.wallpapers.map(wp => ({
+    id: wp.id,
+    name: wp.name,
+    url: `/assets/bg/${wp.file}`,
+    thumbnail: `/assets/bg/${wp.file}`
+  }))
+})
 
 // 应用壁纸到页面
 const applyWallpaper = (wpId) => {
-  const wp = wallpapers.find(w => w.id === wpId)
-  if (!wp) return
-
   // 获取 theme-container 元素（与默认背景相同的容器）
   const themeContainer = document.querySelector('.theme-container')
   if (!themeContainer) return
@@ -321,6 +337,8 @@ const applyWallpaper = (wpId) => {
     themeContainer.style.backgroundImage = ''
     document.body.classList.remove('has-custom-wallpaper')
   } else {
+    const wp = wallpapers.value.find(w => w.id === wpId)
+    if (!wp) return
     themeContainer.style.backgroundImage = `url(${wp.url})`
     document.body.classList.add('has-custom-wallpaper')
   }
@@ -338,7 +356,7 @@ const selectWallpaper = (wpId) => {
 const loadWallpaper = () => {
   if (typeof window === 'undefined') return
   const saved = localStorage.getItem(STORAGE_KEY)
-  if (saved && wallpapers.some(w => w.id === saved)) {
+  if (saved && wallpapers.value.some(w => w.id === saved)) {
     currentWallpaper.value = saved
     applyWallpaper(saved)
   }
@@ -368,6 +386,19 @@ onUnmounted(() => {
   flex-direction: column;
   overflow: hidden;
   padding: 20px 20px 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 背景点击捕获层 - 透明，用于点击关闭卡片 */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 1;
 }
 
 /* 顶部时间和搜索区 */
@@ -549,6 +580,8 @@ onUnmounted(() => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 200;
 }
 
 .nav-cards-container {
@@ -557,6 +590,13 @@ onUnmounted(() => {
   overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding: 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .nav-cards-container::-webkit-scrollbar {
@@ -597,12 +637,18 @@ onUnmounted(() => {
   border-radius: 16px;
   text-decoration: none;
   transition: all 0.3s ease;
-  background: transparent;
+  /* 暗黑模式：黑色背景，明亮模式：白色背景 */
+  background: #000;
   border: none;
+}
+
+html[data-theme="light"] .nav-card {
+  background: #fff;
 }
 
 .nav-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .nav-card:hover .nav-card-title {
@@ -629,9 +675,15 @@ onUnmounted(() => {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+  /* 暗黑模式：白色文字，明亮模式：黑色文字 */
   color: #fff;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   transition: color 0.3s ease;
+}
+
+html[data-theme="light"] .nav-card-title {
+  color: #000;
+  text-shadow: none;
 }
 
 /* 底部按钮容器 - 玻璃效果 */
@@ -643,7 +695,7 @@ onUnmounted(() => {
   flex-shrink: 0;
   overflow: visible;
   position: relative;
-  z-index: 100;
+  z-index: 200;
 }
 
 /* 按钮包装器 - 玻璃效果 */
