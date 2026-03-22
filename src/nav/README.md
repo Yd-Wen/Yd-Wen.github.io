@@ -35,22 +35,26 @@ categories:
         url: https://github.com
         icon: https://github.com/favicon.ico
         external: true
-      - name: GitLab
-        url: https://gitlab.com
-        icon: https://gitlab.com/favicon.ico
-        external: true
       - name: Gitee
         url: https://gitee.com
         icon: https://gitee.com/favicon.ico
         external: true
-      - name: VS Code
-        url: https://code.visualstudio.com
-        icon: https://code.visualstudio.com/favicon.ico
+      - name: Docker
+        url: https://www.docker.com
+        icon: https://www.docker.com/favicon.ico
         external: true
-      - name: JetBrains
-        url: https://www.jetbrains.com
-        icon: https://www.jetbrains.com/favicon.ico
+      - name: Figma
+        url: https://www.figma.com
+        icon: https://static.figma.com/app/icon/1/favicon.png
         external: true
+      - name: Iconfont
+        url: https://www.iconfont.cn
+        icon: https://www.iconfont.cn/favicon.ico
+        external: true
+  - id: learning
+    name: 学习资源
+    icon: /assets/icon/icon_resource.png
+    items:
       - name: Vue.js
         url: https://vuejs.org
         icon: https://vuejs.org/logo.svg
@@ -67,92 +71,25 @@ categories:
         url: https://vitejs.dev
         icon: https://vitejs.dev/logo.svg
         external: true
-      - name: Docker
-        url: https://www.docker.com
-        icon: https://www.docker.com/favicon.ico
-        external: true
-      - name: NPM
-        url: https://www.npmjs.com
-        icon: https://static.npmjs.com/favicon.ico
-        external: true
-      - name: pnpm
-        url: https://pnpm.io
-        icon: https://pnpm.io/favicon.ico
-        external: true
-      - name: Postman
-        url: https://www.postman.com
-        icon: https://www.postman.com/favicon.ico
-        external: true
-      - name: Vercel
-        url: https://vercel.com
-        icon: https://assets.vercel.com/image/upload/favicon.ico
-        external: true
-      - name: Redis
-        url: https://redis.io
-        icon: https://redis.io/favicon.ico
-        external: true
-      - name: MongoDB
-        url: https://www.mongodb.com
-        icon: https://www.mongodb.com/favicon.ico
-        external: true
-      - name: MySQL
-        url: https://www.mysql.com
-        icon: https://labs.mysql.com/common/themes/sakila/favicon.ico
-        external: true
-      - name: Figma
-        url: https://www.figma.com
-        icon: https://static.figma.com/app/icon/1/favicon.png
-        external: true
-      - name: CodePen
-        url: https://codepen.io
-        icon: icon-code
-        external: true
-      - name: Regex101
-        url: https://regex101.com
-        icon: icon-regex
-        external: true
-
-  - id: learning
-    name: 学习资源
-    icon: /assets/icon/icon_resource.png
-    items:
-      - name: MDN
-        url: https://developer.mozilla.org/zh-CN/
-        icon: https://developer.mozilla.org/favicon-48x48.png
-        external: true
-      - name: VuePress
-        url: https://vuejs.press/zh/
-        icon: https://vuejs.press/images/hero.png
-        external: true
-      - name: Theme Hope
-        url: https://theme-hope.vuejs.press/zh/
-        icon: https://theme-hope-assets.vuejs.press/logo.svg
-        external: true
       - name: TypeScript
         url: https://www.typescriptlang.org/zh/
         icon: https://www.typescriptlang.org/favicon-32x32.png
         external: true
-      - name: React
-        url: https://react.dev
-        icon: https://react.dev/favicon.ico
+      - name: Uniapp
+        url: https://uniapp.dcloud.net.cn
+        icon: https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/uni.png
+      - name: UniCloud
+        url: https://uniapp.dcloud.net.cn/uniCloud/
+        icon: https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png
         external: true
-      - name: Node.js
-        url: https://nodejs.org
-        icon: https://nodejs.org/static/images/favicons/favicon.png
+      - name: FastAPI
+        url: https://fastapi.org.cn
+        icon: https://fastapi.org.cn/img/icon-white.svg
         external: true
-      - name: Webpack
-        url: https://webpack.js.org
-        icon: https://webpack.js.org/favicon.a326ef8cfc2a3f1d.ico
-        external: true
-
   - id: common
     name: 常用网站
     icon: /assets/icon/icon_website.png
     items:
-      - name: 掘金
-        url: https://juejin.cn
-        icon: https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/favicon-32x32.png
-        external: true
       - name: 知乎
         url: https://www.zhihu.com
         icon: https://static.zhihu.com/heifetz/favicon.ico
@@ -161,15 +98,26 @@ categories:
         url: https://www.bilibili.com
         icon: https://www.bilibili.com/favicon.ico
         external: true
+      - name: 掘金
+        url: https://juejin.cn
+        icon: https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/favicon-32x32.png
+        external: true
+      - name: CSDN
+        url: https://so.csdn.net
+        icon: https://csdnimg.cn/public/favicon.ico
+        external: true
       - name: Stack Overflow
         url: https://stackoverflow.com
         icon: https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico
         external: true
-      - name: GitHub Trending
-        url: https://github.com/trending
-        icon: https://github.com/favicon.ico
+      - name: 豆包
+        url: https://www.douban.com
+        icon: https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/samantha/logo-icon-white-bg.png
         external: true
-
+      - name: KIMI
+        url: https://kimi.com
+        icon: https://kimi.com/favicon.ico
+        external: true
   - id: personal
     name: 个人收藏
     icon: /assets/icon/icon_favorite.png
@@ -188,7 +136,7 @@ categories:
         external: false
       - name: 关于我
         url: /about/
-        icon: icon-about
+        icon: /logo.svg
         external: false
 
 # 壁纸配置
