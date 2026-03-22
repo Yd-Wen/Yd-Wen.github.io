@@ -364,12 +364,27 @@ const closeWallpaperModal = () => {
   showWallpaperModal.value = false
 }
 
-// 导入壁纸配置
-import wallpapersConfig from './wallpapers.json'
+// 默认壁纸配置
+const defaultWallpapers = [
+  { id: 'default', name: '默认主题', file: 'default.jpg' },
+  { id: '001', name: '风景 001', file: '001.jpg' },
+  { id: '002', name: '风景 002', file: '002.jpg' },
+  { id: '003', name: '风景 003', file: '003.jpg' },
+  { id: '004', name: '风景 004', file: '004.jpg' },
+  { id: '005', name: '风景 005', file: '005.jpg' },
+  { id: '006', name: '风景 006', file: '006.jpg' },
+  { id: '007', name: '风景 007', file: '007.jpg' },
+  { id: '008', name: '风景 008', file: '008.jpg' },
+]
 
-// 生成壁纸列表（从 JSON 配置转换）
+// 从 frontmatter 或默认配置获取壁纸列表
 const wallpapers = computed(() => {
-  return wallpapersConfig.wallpapers.map(wp => ({
+  const fmWallpapers = frontmatter.value?.wallpapers
+  const wpList = Array.isArray(fmWallpapers) && fmWallpapers.length > 0
+    ? fmWallpapers
+    : defaultWallpapers
+
+  return wpList.map(wp => ({
     id: wp.id,
     name: wp.name,
     url: `/assets/bg/${wp.file}`,

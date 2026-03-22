@@ -12,14 +12,19 @@ navbar: true
 # 在此配置导航卡片内容，修改后页面会自动更新
 #
 # 配置说明：
-# - id: 分类唯一标识（对应底部按钮）
-# - name: 分类显示名称
-# - icon: 按钮图标路径（相对于 public 目录）
-# - items: 该分类下的导航卡片列表
-#   - name: 卡片名称
-#   - url: 链接地址
-#   - icon: 图标（URL、/开头的路径、或iconfont类名）
-#   - external: 是否外部链接（true/false）
+# - categories: 导航分类配置
+#   - id: 分类唯一标识（对应底部按钮）
+#   - name: 分类显示名称
+#   - icon: 按钮图标路径（相对于 public 目录）
+#   - items: 该分类下的导航卡片列表
+#     - name: 卡片名称
+#     - url: 链接地址
+#     - icon: 图标（URL、/开头的路径、或iconfont类名）
+#     - external: 是否外部链接（true/false）
+# - wallpapers: 壁纸配置
+#   - id: 壁纸唯一标识（default 为默认主题）
+#   - name: 壁纸显示名称
+#   - file: 壁纸文件名（位于 /assets/bg/ 目录下）
 
 categories:
   - id: dev-tools
@@ -185,6 +190,38 @@ categories:
         url: /about/
         icon: icon-about
         external: false
+
+# 壁纸配置
+# id: default 为默认主题背景（恢复到主题默认背景）
+# id: 001-008 为自定义壁纸（对应 /assets/bg/ 目录下的图片文件）
+wallpapers:
+  - id: default
+    name: 默认主题
+    file: default.jpg
+  - id: '001'
+    name: 风景 001
+    file: 001.jpg
+  - id: '002'
+    name: 风景 002
+    file: 002.jpg
+  - id: '003'
+    name: 风景 003
+    file: 003.jpg
+  - id: '004'
+    name: 风景 004
+    file: 004.jpg
+  - id: '005'
+    name: 风景 005
+    file: 005.jpg
+  - id: '006'
+    name: 风景 006
+    file: 006.jpg
+  - id: '007'
+    name: 风景 007
+    file: 007.jpg
+  - id: '008'
+    name: 风景 008
+    file: 008.jpg
 ---
 
 <NavPage />

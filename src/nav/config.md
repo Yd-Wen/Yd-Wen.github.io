@@ -64,9 +64,44 @@ categories:
 
 直接从 `items` 数组中删除对应条目即可。
 
+## 壁纸配置
+
+壁纸列表也在 frontmatter 中配置，使用 `wallpapers` 字段：
+
+```yaml
+wallpapers:
+  - id: default
+    name: 默认主题
+    file: default.jpg
+  - id: '001'
+    name: 风景 001
+    file: 001.jpg
+```
+
+### 配置说明
+
+| 字段 | 说明 |
+|------|------|
+| `id` | 壁纸唯一标识，`default` 表示恢复主题默认背景 |
+| `name` | 壁纸在弹窗中显示的名称 |
+| `file` | 壁纸文件名，位于 `/assets/bg/` 目录下 |
+
+### 添加新壁纸
+
+1. 将图片放入 `public/assets/bg/` 目录（如 `009.jpg`）
+2. 在 frontmatter 中添加配置：
+
+```yaml
+wallpapers:
+  - id: '009'
+    name: 我的壁纸
+    file: 009.jpg
+```
+
 ## 注意事项
 
 1. 配置位于 `nav/README.md` 的 frontmatter 中（`---` 包裹的区域）
 2. 修改保存后，开发服务器会自动刷新
 3. `id` 字段在同一页面内必须唯一
-4. 最后一个按钮（壁纸切换）是固定的，不需要在配置中定义
+4. 最后一个按钮（壁纸切换）是固定的，不需要在 `categories` 中定义
+5. 如果删除 `wallpapers` 配置或配置为空，将使用默认壁纸列表
