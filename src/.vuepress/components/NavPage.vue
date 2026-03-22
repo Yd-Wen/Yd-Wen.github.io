@@ -79,6 +79,8 @@
           class="nav-button-item"
           @click="handleButtonClick(btn)"
         >
+          <!-- 提示文字 -->
+          <div class="nav-button-tooltip">{{ btn.name }}</div>
           <div class="nav-button">
             <img :src="btn.icon" class="nav-button-icon" :alt="btn.name">
           </div>
@@ -694,6 +696,37 @@ html[data-theme="light"] .nav-button {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
+/* 按钮提示文字 - 玻璃效果 */
+.nav-button-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+/* 悬停时显示提示 */
+.nav-button-item:hover .nav-button-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-14px);
+}
+
 /* 按钮内图标 */
 .nav-button-icon {
   width: 32px;
@@ -896,6 +929,12 @@ html[data-theme="light"] .nav-button {
     user-select: none;
   }
 
+  .nav-button-tooltip {
+    bottom: calc(100% + 10px);
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
   .wallpaper-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -928,6 +967,12 @@ html[data-theme="light"] .nav-button {
     height: 24px;
     pointer-events: none;
     user-select: none;
+  }
+
+  .nav-button-tooltip {
+    bottom: calc(100% + 8px);
+    font-size: 11px;
+    padding: 4px 8px;
   }
 
   .wallpaper-grid {
