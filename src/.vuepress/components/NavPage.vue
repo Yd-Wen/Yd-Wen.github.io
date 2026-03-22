@@ -741,12 +741,12 @@ html[data-theme="dark"] .clock {
   text-decoration: none;
   transition: all 0.3s ease;
   /* 暗黑模式：黑色背景，明亮模式：白色背景 */
-  background: #000;
+  background: rgba(0, 0, 0, 0.6);
   border: none;
 }
 
 html[data-theme="light"] .nav-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .nav-card:hover {
