@@ -220,8 +220,13 @@ wallpapers:
     name: 风景 007
     file: 007.jpg
   - id: '008'
-    name: 风景 008
     file: 008.jpg
+  - id: '009'
+    name: 风景 009
+    file: 009.jpg
+  - id: '010'
+    name: 风景 009
+    file: 010.jpg
 ---
 
 <NavPage />
