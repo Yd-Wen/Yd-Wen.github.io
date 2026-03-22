@@ -3,9 +3,10 @@ date: 2024-08-01
 title: Uniapp
 icon: uniapp
 category: 
-    - 前端开发
+  - 笔记
+  - 前端开发
 tag: 
-    - uniapp
+  - uniapp
 ---
 
 ## 1 简介

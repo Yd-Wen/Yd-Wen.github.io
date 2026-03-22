@@ -3,6 +3,7 @@ date: 2025-01-23
 title: 8 模型评估
 icon: evaluation
 category:
+  - 笔记
   - 深度学习
 tag:
   - 模型评估

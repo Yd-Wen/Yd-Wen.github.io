@@ -3,9 +3,10 @@ date: 2026-01-26
 title: Vue
 icon: vue
 category: 
-    - 前端开发
+  - 笔记
+  - 前端开发
 tag: 
-    - vue
+  - vue
 ---
 
 ## 1 简介

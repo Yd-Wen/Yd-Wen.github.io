@@ -2,10 +2,12 @@
 title: 1 Java 简介
 icon: base
 date: 2024-01-27
-category: 编程语言
+category: 
+  - 笔记
+  - 编程语言
 tag: 
-    - Java
-    - 基础
+  - Java
+  - 基础
 ---
 
 ## 1.1 历史

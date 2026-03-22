@@ -3,6 +3,7 @@ date: 2023-10-11
 title: 3 线性回归
 icon: linear_regression
 category:
+  - 笔记
   - 机器学习
 tag:
   - 线性回归

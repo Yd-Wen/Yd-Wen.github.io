@@ -3,6 +3,7 @@ date: 2025-02-06
 title: 10 卷积神经网络
 icon: cnn
 category:
+  - 笔记
   - 深度学习
 tag:
   - PyTorch

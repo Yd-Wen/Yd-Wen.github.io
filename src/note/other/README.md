@@ -2,9 +2,11 @@
 title: 其他
 icon: other
 date: 2026-02-27
-category: 其他
+category: 
+  - 笔记
+  - 其他
 tag: 
-    - README
+  - README
 ---
 
 本文列出了一些与“其他”分类的学习笔记。

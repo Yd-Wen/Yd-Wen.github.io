@@ -2,7 +2,9 @@
 title: Latex
 icon: latex
 date: 2025-07-06
-category: 编程语言
+category:
+  - 笔记
+  - 编程语言
 tag: Latex
 ---
 

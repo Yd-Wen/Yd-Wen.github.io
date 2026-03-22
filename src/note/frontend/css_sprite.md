@@ -3,7 +3,8 @@ date: 2026-03-03
 title: CSS 精灵
 icon: css
 category: 
-    - 前端开发
+  - 笔记
+  - 前端开发
 ---
 
 ## CSS 精灵

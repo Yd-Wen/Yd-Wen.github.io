@@ -3,9 +3,10 @@ date: 2026-03-03
 title: 字体图标
 icon: iconfont
 category: 
-    - 前端开发
+  - 笔记
+  - 前端开发
 tag: 
-    - icon
+  - icon
 ---
 
 ## 字体图标

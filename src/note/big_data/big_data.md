@@ -2,7 +2,9 @@
 title: 大数据技术原理与应用
 icon: big_data
 date: 2023-09-24
-category: 大数据
+category:
+    - 笔记
+    - 大数据
 tag: 
     - SQL 数据库
     - NoSQL 数据库

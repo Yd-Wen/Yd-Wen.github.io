@@ -2,7 +2,9 @@
 title: 编程语言
 icon: language
 date: 2026-02-27
-category: 编程语言
+category: 
+  - 笔记
+  - 编程语言
 tag: 
     - README
 ---

@@ -3,10 +3,11 @@ date: 2026-02-24
 title: CSS
 icon: css
 category: 
-    - 编程语言
-    - 前端开发
+  - 笔记
+  - 编程语言
+  - 前端开发
 tag: 
-    - css
+  - css
 ---
 
 ## 1 简介

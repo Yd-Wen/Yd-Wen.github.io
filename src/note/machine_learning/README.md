@@ -2,7 +2,9 @@
 title: 机器学习
 icon: machine_learning 
 date: 2023-09-24
-category: 机器学习
+category: 
+  - 笔记
+  - 机器学习
 tag: 
     - README
 ---

@@ -2,7 +2,9 @@
 date: 2026-02-13
 title: AI 应用开发
 icon: ai
-category: AI 应用开发
+category: 
+    - 笔记
+    - AI 应用开发
 tag: 
     - README
 ---

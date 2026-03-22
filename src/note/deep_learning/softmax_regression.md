@@ -3,6 +3,7 @@ date: 2024-12-29
 title: 6 Softmax 回归
 icon: softmax_regression
 category:
+  - 笔记
   - 深度学习
 tag:
   - Softmax

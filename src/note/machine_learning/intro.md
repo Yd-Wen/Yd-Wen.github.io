@@ -3,6 +3,7 @@ date: 2023-09-24
 title: 1 机器学习简介
 icon: base
 category:
+  - 笔记
   - 机器学习
 tag:
   - 基础

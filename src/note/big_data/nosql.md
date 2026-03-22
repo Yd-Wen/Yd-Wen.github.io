@@ -2,7 +2,9 @@
 title: 高级数据库系统
 icon: nosql
 date: 2025-03-07
-category: 大数据
+category: 
+  - 笔记
+  - 大数据
 tag: 
   - NoSQL 数据库
   - 分布式数据库

@@ -2,7 +2,9 @@
 title: 自然辩证法
 icon: dialectics
 date: 2025-01-14
-category: 其他
+category: 
+  - 笔记
+  - 其他
 ---
 
 ## 1 绪论

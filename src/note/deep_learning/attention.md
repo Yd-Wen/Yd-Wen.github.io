@@ -3,6 +3,7 @@ date: 2025-03-21
 title: 12 注意力机制
 icon: attention
 category:
+  - 笔记
   - 深度学习
 tag:
   - PyTorch

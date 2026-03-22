@@ -2,7 +2,11 @@
 title: 大数据
 icon: big_data
 date: 2023-02-20
-category: 大数据
+category: 
+  - 笔记
+  - 大数据
+tag:
+  - README
 ---
 
 本文列出了一些与大数据相关的学习笔记。

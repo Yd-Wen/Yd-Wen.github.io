@@ -3,6 +3,7 @@ date: 2024-12-25
 title: 5 线性回归
 icon: linear_regression
 category:
+  - 笔记
   - 深度学习
 tag:
   - 线性回归

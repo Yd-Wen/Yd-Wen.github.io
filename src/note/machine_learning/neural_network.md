@@ -3,6 +3,7 @@ date: 2023-10-23
 title: 5 神经网络
 icon: neural_network
 category:
+  - 笔记
   - 机器学习
 tag:
   - 神经网络

@@ -3,6 +3,7 @@ date: 2024-12-22
 title: 4 梯度、反向传播与优化算法
 icon: gradient_descent
 category:
+  - 笔记
   - 深度学习
 tag:
   - 梯度
@@ -196,8 +197,8 @@ $$
 
 $$
 \begin{align} 
-v&=0.8v+0.2\nabla w, &v表示当前梯度，\nabla w表示前一次梯度 \\
-w&=w-\alpha v,&\alpha 表示学习率
+v&=0.8v+0.2\nabla w, &v\text{表示当前梯度，}\nabla w\text{表示前一次梯度} \\
+w&=w-\alpha v,&\alpha \text{表示学习率}
 \end{align}
 $$
 
@@ -206,7 +207,7 @@ $$
 $$
 \begin{align}
 v&=history\_v+(\nabla w)^2\\
-w&=w-\frac{\alpha}{\sqrt v + \delta}\nabla w, \delta大约取10^{-7}
+w&=w-\frac{\alpha}{\sqrt v + \delta}\nabla w, \delta\text{大约取}10^{-7}
 \end{align}
 $$
 
@@ -215,7 +216,7 @@ $$
 $$
 \begin{align}
 v&=0.8\cdot history\_v+0.2\cdot(\nabla w)^2\\
-w&=w-\frac{\alpha}{\sqrt v + \delta}\nabla w, \delta大约取10^{-7}
+w&=w-\frac{\alpha}{\sqrt v + \delta}\nabla w, \delta\text{大约取}10^{-7}
 \end{align}
 $$
 

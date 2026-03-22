@@ -2,7 +2,9 @@
 title: 数据分析与数据挖掘
 icon: data_mining
 date: 2023-09-15
-category: 大数据
+category: 
+    - 笔记
+    - 大数据
 tag: 
     - 数据挖掘
     - 决策树

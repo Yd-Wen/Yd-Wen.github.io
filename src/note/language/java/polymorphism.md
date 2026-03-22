@@ -2,9 +2,11 @@
 title: 10 多态
 icon: polymorphism
 date: 2024-03-17
-category: 编程语言
+category: 
+  - 笔记
+  - 编程语言
 tag: 
-    - Java
+  - Java
 ---
 
 ## 10.1 概述

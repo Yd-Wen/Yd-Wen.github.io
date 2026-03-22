@@ -3,6 +3,7 @@ date: 2023-11-15
 title: 8 集成学习
 icon: ensemble_learning
 category:
+  - 笔记
   - 机器学习
 tag:
   - 集成学习

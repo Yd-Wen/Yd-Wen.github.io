@@ -3,6 +3,7 @@ date: 2023-11-27
 title: 9 聚类
 icon: clustering
 category:
+  - 笔记
   - 机器学习
 tag:
   - 聚类

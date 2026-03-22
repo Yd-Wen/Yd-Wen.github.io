@@ -3,6 +3,7 @@ date: 2025-01-31
 title: 9 深度学习计算
 icon: computation
 category:
+  - 笔记
   - 深度学习
 tag:
   - 深度学习计算

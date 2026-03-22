@@ -3,6 +3,7 @@ date: 2025-01-12
 title: 7 神经网络
 icon: neural_network
 category:
+  - 笔记
   - 深度学习
 tag:
   - 神经网络

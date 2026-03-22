@@ -2,9 +2,11 @@
 title: 9 继承
 icon: inheritance
 date: 2024-03-14
-category: 编程语言
+category: 
+  - 笔记
+  - 编程语言
 tag: 
-    - Java
+  - Java
 ---
 
 ## 9.1 概述

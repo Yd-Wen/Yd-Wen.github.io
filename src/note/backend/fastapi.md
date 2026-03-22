@@ -3,6 +3,7 @@ date: 2026-02-21
 title: FastAPI
 icon: fastapi
 category: 
+    - 笔记
     - 后端开发
 tag: 
     - fastapi

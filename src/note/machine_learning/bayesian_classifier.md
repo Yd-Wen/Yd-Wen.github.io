@@ -3,6 +3,7 @@ date: 2023-10-31
 title: 7 贝叶斯分类器
 icon: bayesian_classifier
 category:
+  - 笔记
   - 机器学习
 tag:
   - 贝叶斯

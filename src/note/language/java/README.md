@@ -2,12 +2,14 @@
 title: Java
 icon: java
 date: 2024-01-27
-category: 编程语言
+category: 
+  - 笔记
+  - 编程语言
 tag: 
-    - Java
-    - IntelliJ IDEA
-    - README
-    - 基础
+  - Java
+  - IntelliJ IDEA
+  - README
+  - 基础
 ---
 
 ## Java 项目结构

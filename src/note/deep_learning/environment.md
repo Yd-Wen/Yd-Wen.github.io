@@ -3,6 +3,7 @@ date: 2024-12-17
 title: 2 深度学习环境配置
 icon: environment
 category:
+  - 笔记
   - 深度学习
 tag:
   - 配置

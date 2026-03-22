@@ -2,9 +2,11 @@
 title: 8 关键字
 icon: keyword
 date: 2024-03-11
-category: 编程语言
+category: 
+  - 笔记
+  - 编程语言
 tag: 
-    - Java
+  - Java
 ---
 
 ## 8.1 什么是关键字

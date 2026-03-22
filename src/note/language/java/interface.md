@@ -2,9 +2,11 @@
 title: 13 接口
 icon: interface
 date: 2024-03-31
-category: 编程语言
+category: 
+  - 笔记
+  - 编程语言
 tag: 
-    - Java
+  - Java
 ---
 
 ## 15.1 概述

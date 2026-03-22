@@ -3,6 +3,7 @@ date: 2024-12-19
 title: 3 PyTorch 基础
 icon: pytorch
 category:
+  - 笔记
   - 深度学习
 tag:
   - PyTorch

@@ -3,7 +3,8 @@ date: 2026-03-03
 title: Emmet 写法
 icon: emmet
 category: 
-    - 前端开发
+  - 笔记
+  - 前端开发
 ---
 
 Emmet 写法是代码的简写方式，输入缩写 VS Code 会自动生成对应代码。

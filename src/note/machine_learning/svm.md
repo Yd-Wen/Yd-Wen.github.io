@@ -3,6 +3,7 @@ date: 2023-10-27
 title: 6 支持向量机
 icon: svm
 category:
+  - 笔记
   - 机器学习
 tag:
   - SVM

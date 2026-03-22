@@ -2,7 +2,9 @@
 title: Markdown
 icon: markdown
 date: 2024-01-03
-category: 编程语言
+category: 
+  - 笔记
+  - 编程语言
 tag: Markdown
 ---
 

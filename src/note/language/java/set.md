@@ -2,9 +2,11 @@
 title: 7 集合
 icon: set
 date: 2024-03-10
-category: 编程语言
+category:   
+  - 笔记
+  - 编程语言
 tag: 
-    - Java
+  - Java
 ---
 
 Java 集合框架是 Java 中用于存储和操作对象的工具类集合，提供了一套统一的接口和实现，使数据结构的使用更加方便和高效。

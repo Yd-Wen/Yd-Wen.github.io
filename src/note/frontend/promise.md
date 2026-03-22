@@ -3,9 +3,10 @@ date: 2026-01-27
 title: Promise
 icon: promise
 category: 
-    - 前端开发
+  - 笔记
+  - 前端开发
 tag: 
-    - promise
+  - promise
 ---
 
 ## 1 异步与同步

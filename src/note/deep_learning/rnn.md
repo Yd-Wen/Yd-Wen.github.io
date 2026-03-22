@@ -3,6 +3,7 @@ date: 2025-02-12
 title: 11 循环神经网络
 icon: rnn
 category:
+  - 笔记
   - 深度学习
 tag:
   - PyTorch

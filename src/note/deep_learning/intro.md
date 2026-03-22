@@ -3,6 +3,7 @@ date: 2024-12-17
 title: 1 深度学习简介
 icon: base
 category:
+  - 笔记
   - 深度学习
 tag:
   - 基础

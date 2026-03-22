@@ -3,10 +3,11 @@ date: 2026-02-23
 title: HTML
 icon: html
 category: 
-    - 编程语言
-    - 前端开发
+  - 笔记
+  - 编程语言
+  - 前端开发
 tag: 
-    - html
+  - html
 ---
 
 ## 1 HTML简介

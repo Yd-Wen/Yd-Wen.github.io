@@ -3,6 +3,7 @@ date: 2025-04-17
 title: 13 二值神经网络
 icon: bnn
 category:
+  - 笔记
   - 深度学习
 tag:
   - PyTorch

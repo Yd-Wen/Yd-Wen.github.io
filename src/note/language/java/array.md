@@ -2,10 +2,12 @@
 title: 3 数组
 icon: array
 date: 2024-02-02
-category: 编程语言
+category: 
+  - 笔记
+  - 编程语言
 tag: 
-    - Java
-    - 数组
+  - Java
+  - 数组
 ---
 
 ## 3.1 数组基础

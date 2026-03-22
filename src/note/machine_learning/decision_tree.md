@@ -3,6 +3,7 @@ date: 2023-10-17
 title: 4 决策树
 icon: decision_tree
 category:
+  - 笔记
   - 机器学习
 tag:
   - 决策树

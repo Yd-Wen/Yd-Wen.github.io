@@ -3,6 +3,7 @@ date: 2023-09-30
 title: 2 模型评估
 icon: evaluation
 category:
+  - 笔记
   - 机器学习
 tag:
   - 模型评估

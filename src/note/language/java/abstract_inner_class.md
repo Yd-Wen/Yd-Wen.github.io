@@ -2,9 +2,11 @@
 title: 12 抽象类与内部类
 icon: abstract
 date: 2024-03-29
-category: 编程语言
+category: 
+  - 笔记
+  - 编程语言
 tag: 
-    - Java
+  - Java
 ---
 
 ## 12.1 抽象类与抽象方法
