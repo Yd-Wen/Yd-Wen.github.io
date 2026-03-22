@@ -1,7 +1,7 @@
 ---
 date: 2026-03-22
 title: 个人博客
-icon: base
+icon: blog
 category: 项目
 tag: 
     - 博客

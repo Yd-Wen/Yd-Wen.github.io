@@ -26,46 +26,40 @@ export const project = arraySidebar([
         collapsible: true,
         children: [
             {
-                text: "项目记录",
-                icon: "record",
-                link: "record/",
-                prefix: "record/",
-                collapsible: true,
-                children: [
-                    "20260312",
-                    "20260313",
-                    "20260314"
-                ]
-            },
-            {
-                text: "更新日志",
-                icon: "log",
-                link: "log",
+                text: "项目介绍",
+                icon: "xxmall",
+                link: ""
+            }, {
+                text: "邀请链长度检查方案",
+                icon: "chain",
+                link: "20260312"
+            }, {
+                text: "自动滚动到底部",
+                icon: "scroll-bottom",
+                link: "20260313"
+            }, {
+                text: "uni.request 配置流式输出",
+                icon: "uniapp",
+                link: "20260314"
             }
         ]
     },
     {
-        text: "小闲小店智能客服后端",
+        text: "小闲小店智能客服",
         icon: "rag-xxmall",
         link: "rag-xxmall/",
         prefix: "rag-xxmall/",
         collapsible: true,
         children: [
             {
-                text: "项目记录",
-                icon: "record",
-                link: "record/",
-                prefix: "record/",
-                collapsible: true,
-                children: [
-                    "20260313",
-                ]
+                text: "项目介绍",
+                icon: "rag-xxmall",
+                link: ""
+            }, {
+                text: "fastapi 项目部署",
+                icon: "fastapi",
+                link: "20260313"
             },
-            {
-                text: "更新日志",
-                icon: "log",
-                link: "log",
-            }
         ]
     },
     {
@@ -77,14 +71,13 @@ export const project = arraySidebar([
         children: [
             {
                 text: "项目介绍",
-                icon: "base",
+                icon: "blog",
                 link: ""
             }, {
                 text: "导航页开发",
                 icon: "nav",
                 link: "20260322"
-            },
-
+            }
         ]
     }
 ]);
