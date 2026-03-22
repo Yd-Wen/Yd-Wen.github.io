@@ -8,13 +8,17 @@ tag:
     - README
 ---
 
-## 项目简介
+## 个人博客
 
 本项目是使用 [VuePress2](https://vuejs.press/zh/) 与 [VuePress Theme Hope](https://theme-hope.vuejs.press/zh/) 搭建的个人博客。
 
 - 演示地址：[https://yindongwen.top](https://yindongwen.top)
 
-- 仓库地址：[https://github.com/Yd-Wen/Yd-Wen.github.io](https://github.com/Yd-Wen/Yd-Wen.github.io)
+- 仓库地址：
+  
+  - [https://gitee.com/yindong-wen/yindong-wen](https://gitee.com/yindong-wen/yindong-wen)
+
+  - [https://github.com/Yd-Wen/Yd-Wen.github.io](https://github.com/Yd-Wen/Yd-Wen.github.io)
 
 ## 技术栈
 
@@ -96,6 +100,12 @@ pnpm build
 # 预览构建结果
 pnpm preview
 ```
+
+## 开源协议
+
+本项目基于 MIT License 开源。
+
+Copyright (C) 2026 - present by Yd Wen
 
 ## 更新日志
 
