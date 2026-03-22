@@ -272,7 +272,7 @@ const closeWallpaperModal = () => {
 }
 
 const wallpapers = [
-  { id: 'default', name: '默认主题', thumbnail: 'http://oss.yindongwen.top/homepage/bg.jpg' },
+  { id: 'default', name: '默认主题', thumbnail: '/assets/bg/default.jpg' },
   { id: 'bg1', name: '风景 1', url: '/assets/bg/001.jpg', thumbnail: '/assets/bg/001.jpg' },
   { id: 'bg2', name: '风景 2', url: '/assets/bg/002.jpg', thumbnail: '/assets/bg/002.jpg' },
   { id: 'bg3', name: '风景 3', url: '/assets/bg/003.jpg', thumbnail: '/assets/bg/003.jpg' },
