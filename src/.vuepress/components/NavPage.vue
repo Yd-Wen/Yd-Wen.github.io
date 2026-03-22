@@ -127,6 +127,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { usePageFrontmatter } from '@vuepress/client'
 
 // 时间显示
 const currentTime = ref('')
@@ -203,123 +204,13 @@ const handleKeydown = (e) => {
   }
 }
 
-// 分类按钮配置
-const categoryButtons = [
-  { id: 'dev-tools', name: '开发工具', icon: '/assets/icon/icon_develop.png' },
-  { id: 'learning', name: '学习资源', icon: '/assets/icon/icon_resource.png' },
-  { id: 'common', name: '常用网站', icon: '/assets/icon/icon_website.png' },
-  { id: 'personal', name: '个人收藏', icon: '/assets/icon/icon_favorite.png' },
-  { id: 'wallpaper', name: '壁纸切换', icon: '/assets/icon/icon_wallpaper.png', isWallpaper: true },
-]
-
-// 分类数据
-const categories = [
-  {
-    id: 'dev-tools',
-    name: '开发工具',
-    items: [
-      { name: 'GitHub', url: 'https://github.com', icon: 'https://github.com/favicon.ico', external: true },
-      { name: 'GitLab', url: 'https://gitlab.com', icon: 'https://gitlab.com/favicon.ico', external: true },
-      { name: 'Gitee', url: 'https://gitee.com', icon: 'https://gitee.com/favicon.ico', external: true },
-      { name: 'VS Code', url: 'https://code.visualstudio.com', icon: 'https://code.visualstudio.com/favicon.ico', external: true },
-      { name: 'JetBrains', url: 'https://www.jetbrains.com', icon: 'https://www.jetbrains.com/favicon.ico', external: true },
-      { name: 'Vue.js', url: 'https://vuejs.org', icon: 'https://vuejs.org/logo.svg', external: true },
-      { name: 'React', url: 'https://react.dev', icon: 'https://react.dev/favicon.ico', external: true },
-      { name: 'Node.js', url: 'https://nodejs.org', icon: 'https://nodejs.org/static/images/favicons/favicon.png', external: true },
-      { name: 'Vite', url: 'https://vitejs.dev', icon: 'https://vitejs.dev/logo.svg', external: true },
-      { name: 'Webpack', url: 'https://webpack.js.org', icon: 'https://webpack.js.org/favicon.a326ef8cfc2a3f1d.ico', external: true },
-      { name: 'Rollup', url: 'https://rollupjs.org', icon: 'https://rollupjs.org/favicon.png', external: true },
-      { name: 'Docker', url: 'https://www.docker.com', icon: 'https://www.docker.com/favicon.ico', external: true },
-      { name: 'Kubernetes', url: 'https://kubernetes.io', icon: 'https://kubernetes.io/images/favicon.png', external: true },
-      { name: 'NPM', url: 'https://www.npmjs.com', icon: 'https://static.npmjs.com/favicon.ico', external: true },
-      { name: 'Yarn', url: 'https://yarnpkg.com', icon: 'https://yarnpkg.com/favicon.ico', external: true },
-      { name: 'pnpm', url: 'https://pnpm.io', icon: 'https://pnpm.io/favicon.ico', external: true },
-      { name: 'Postman', url: 'https://www.postman.com', icon: 'https://www.postman.com/favicon.ico', external: true },
-      { name: 'Insomnia', url: 'https://insomnia.rest', icon: 'https://insomnia.rest/images/favicon.ico', external: true },
-      { name: 'Vercel', url: 'https://vercel.com', icon: 'https://assets.vercel.com/image/upload/favicon.ico', external: true },
-      { name: 'Netlify', url: 'https://www.netlify.com', icon: 'https://www.netlify.com/favicon.ico', external: true },
-      { name: 'GitHub Actions', url: 'https://github.com/features/actions', icon: 'https://github.com/favicon.ico', external: true },
-      { name: 'Jenkins', url: 'https://www.jenkins.io', icon: 'https://www.jenkins.io/favicon.ico', external: true },
-      { name: 'Travis CI', url: 'https://www.travis-ci.com', icon: 'https://www.travis-ci.com/favicon.ico', external: true },
-      { name: 'ESLint', url: 'https://eslint.org', icon: 'https://eslint.org/favicon.ico', external: true },
-      { name: 'Prettier', url: 'https://prettier.io', icon: 'https://prettier.io/icon.png', external: true },
-      { name: 'Babel', url: 'https://babeljs.io', icon: 'https://babeljs.io/img/favicon.png', external: true },
-      { name: 'Sass', url: 'https://sass-lang.com', icon: 'https://sass-lang.com/favicon.ico', external: true },
-      { name: 'Tailwind CSS', url: 'https://tailwindcss.com', icon: 'https://tailwindcss.com/favicon.ico', external: true },
-      { name: 'Bootstrap', url: 'https://getbootstrap.com', icon: 'https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico', external: true },
-      { name: 'Element Plus', url: 'https://element-plus.org', icon: 'https://element-plus.org/images/element-plus-logo-small.svg', external: true },
-      { name: 'Ant Design', url: 'https://ant.design', icon: 'https://ant.design/favicon.ico', external: true },
-      { name: 'Redis', url: 'https://redis.io', icon: 'https://redis.io/favicon.ico', external: true },
-      { name: 'MongoDB', url: 'https://www.mongodb.com', icon: 'https://www.mongodb.com/favicon.ico', external: true },
-      { name: 'MySQL', url: 'https://www.mysql.com', icon: 'https://labs.mysql.com/common/themes/sakila/favicon.ico', external: true },
-      { name: 'PostgreSQL', url: 'https://www.postgresql.org', icon: 'https://www.postgresql.org/favicon.ico', external: true },
-      { name: 'GraphQL', url: 'https://graphql.org', icon: 'https://graphql.org/favicon.ico', external: true },
-      { name: 'Swagger', url: 'https://swagger.io', icon: 'https://swagger.io/favicon.ico', external: true },
-      { name: 'Figma', url: 'https://www.figma.com', icon: 'https://static.figma.com/app/icon/1/favicon.png', external: true },
-      { name: 'Dribbble', url: 'https://dribbble.com', icon: 'https://dribbble.com/favicon.ico', external: true },
-      { name: 'CodePen', url: 'https://codepen.io', icon: 'https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico', external: true },
-      { name: 'JSFiddle', url: 'https://jsfiddle.net', icon: 'https://jsfiddle.net/favicon.ico', external: true },
-      { name: 'Regex101', url: 'https://regex101.com', icon: 'https://regex101.com/favicon.ico', external: true },
-      { name: 'Can I Use', url: 'https://caniuse.com', icon: 'https://caniuse.com/img/favicon-128.png', external: true },
-      { name: 'W3C Validator', url: 'https://validator.w3.org', icon: 'https://validator.w3.org/images/favicon.ico', external: true },
-      { name: 'Lighthouse', url: 'https://developer.chrome.com/docs/lighthouse', icon: 'https://developer.chrome.com/images/meta/favicon-32x32.png', external: true },
-      { name: 'PageSpeed', url: 'https://pagespeed.web.dev', icon: 'https://www.gstatic.com/pagespeed/insights/ui/favicon.ico', external: true },
-      { name: 'Sentry', url: 'https://sentry.io', icon: 'https://sentry.io/favicon.ico', external: true },
-      { name: 'LogRocket', url: 'https://logrocket.com', icon: 'https://logrocket.com/favicon.ico', external: true },
-      { name: 'Cloudflare', url: 'https://www.cloudflare.com', icon: 'https://www.cloudflare.com/favicon.ico', external: true },
-      { name: 'Nginx', url: 'https://nginx.org', icon: 'https://nginx.org/favicon.ico', external: true },
-      { name: 'Apache', url: 'https://httpd.apache.org', icon: 'https://httpd.apache.org/favicon.ico', external: true },
-    ],
-  },
-  {
-    id: 'learning',
-    name: '学习资源',
-    items: [
-      { name: 'MDN', url: 'https://developer.mozilla.org/zh-CN/', icon: 'https://developer.mozilla.org/favicon-48x48.png', external: true },
-      { name: 'VuePress', url: 'https://vuejs.press/zh/', icon: 'https://vuejs.press/images/hero.png', external: true },
-      { name: 'Theme Hope', url: 'https://theme-hope.vuejs.press/zh/', icon: 'https://theme-hope-assets.vuejs.press/logo.svg', external: true },
-      { name: 'TypeScript', url: 'https://www.typescriptlang.org/zh/', icon: 'https://www.typescriptlang.org/favicon-32x32.png', external: true },
-    ],
-  },
-  {
-    id: 'common',
-    name: '常用网站',
-    items: [
-      { name: '掘金', url: 'https://juejin.cn', icon: 'https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/favicon-32x32.png', external: true },
-      { name: '知乎', url: 'https://www.zhihu.com', icon: 'https://static.zhihu.com/heifetz/favicon.ico', external: true },
-      { name: '哔哩哔哩', url: 'https://www.bilibili.com', icon: 'https://www.bilibili.com/favicon.ico', external: true },
-      { name: 'Stack Overflow', url: 'https://stackoverflow.com', icon: 'https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico', external: true },
-    ],
-  },
-  {
-    id: 'personal',
-    name: '个人收藏',
-    items: [
-      { name: '个人主页', url: '/', icon: '/logo.svg', external: false },
-      { name: '项目展示', url: '/project/', icon: 'icon-project', external: false },
-      { name: '笔记归档', url: '/note/', icon: 'icon-note', external: false },
-      { name: '关于我', url: '/about/', icon: '/logo.svg', external: false },
-    ],
-  },
-]
+// （配置已从 frontmatter 动态读取，详见下方 computed 属性）
 
 // 当前激活的分类
 const activeCategory = ref(null)
 
 // 搜索框显示状态
 const showSearchBox = ref(true)
-
-// 计算当前分类名称
-const currentCategoryName = computed(() => {
-  const cat = categories.find(c => c.id === activeCategory.value)
-  return cat ? cat.name : ''
-})
-
-// 计算当前分类的导航项
-const currentCategoryItems = computed(() => {
-  const cat = categories.find(c => c.id === activeCategory.value)
-  return cat ? cat.items : []
-})
 
 // 防止双击标志
 let isProcessingClick = false
@@ -354,6 +245,109 @@ const closeCategoryView = () => {
   activeCategory.value = null
   showSearchBox.value = true
 }
+
+// 获取页面 frontmatter
+const frontmatter = usePageFrontmatter()
+
+// 默认分类按钮配置
+const defaultCategoryButtons = [
+  { id: 'dev-tools', name: '开发工具', icon: '/assets/icon/icon_develop.png' },
+  { id: 'learning', name: '学习资源', icon: '/assets/icon/icon_resource.png' },
+  { id: 'common', name: '常用网站', icon: '/assets/icon/icon_website.png' },
+  { id: 'personal', name: '个人收藏', icon: '/assets/icon/icon_favorite.png' },
+  { id: 'wallpaper', name: '壁纸切换', icon: '/assets/icon/icon_wallpaper.png', isWallpaper: true },
+]
+
+// 默认分类数据
+const defaultCategories = [
+  {
+    id: 'dev-tools',
+    name: '开发工具',
+    items: [
+      { name: 'GitHub', url: 'https://github.com', icon: 'https://github.com/favicon.ico', external: true },
+      { name: 'VS Code', url: 'https://code.visualstudio.com', icon: 'https://code.visualstudio.com/favicon.ico', external: true },
+      { name: 'Vue.js', url: 'https://vuejs.org', icon: 'https://vuejs.org/logo.svg', external: true },
+      { name: 'Node.js', url: 'https://nodejs.org', icon: 'https://nodejs.org/static/images/favicons/favicon.png', external: true },
+    ],
+  },
+  {
+    id: 'learning',
+    name: '学习资源',
+    items: [
+      { name: 'MDN', url: 'https://developer.mozilla.org/zh-CN/', icon: 'https://developer.mozilla.org/favicon-48x48.png', external: true },
+      { name: 'VuePress', url: 'https://vuejs.press/zh/', icon: 'https://vuejs.press/images/hero.png', external: true },
+    ],
+  },
+  {
+    id: 'common',
+    name: '常用网站',
+    items: [
+      { name: '掘金', url: 'https://juejin.cn', icon: 'https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/favicon-32x32.png', external: true },
+      { name: '知乎', url: 'https://www.zhihu.com', icon: 'https://static.zhihu.com/heifetz/favicon.ico', external: true },
+    ],
+  },
+  {
+    id: 'personal',
+    name: '个人收藏',
+    items: [
+      { name: '个人主页', url: '/', icon: '/logo.svg', external: false },
+      { name: '项目展示', url: '/project/', icon: 'icon-project', external: false },
+    ],
+  },
+]
+
+// 从 frontmatter 或默认配置获取分类按钮
+const categoryButtons = computed(() => {
+  const fmCategories = frontmatter.value?.categories
+  if (Array.isArray(fmCategories) && fmCategories.length > 0) {
+    // 将 frontmatter 中的 categories 转换为按钮配置
+    const buttons = fmCategories.map(cat => ({
+      id: cat.id,
+      name: cat.name,
+      icon: cat.icon,
+      isWallpaper: false
+    }))
+    // 添加壁纸切换按钮
+    buttons.push({
+      id: 'wallpaper',
+      name: '壁纸切换',
+      icon: '/assets/icon/icon_wallpaper.png',
+      isWallpaper: true
+    })
+    return buttons
+  }
+  return defaultCategoryButtons
+})
+
+// 从 frontmatter 或默认配置获取分类数据
+const categories = computed(() => {
+  const fmCategories = frontmatter.value?.categories
+  if (Array.isArray(fmCategories) && fmCategories.length > 0) {
+    return fmCategories.map(cat => ({
+      id: cat.id,
+      name: cat.name,
+      items: (cat.items || []).map(item => ({
+        name: item.name,
+        url: item.url,
+        icon: item.icon,
+        external: item.external !== false // 默认为 true
+      }))
+    }))
+  }
+  return defaultCategories
+})
+
+// 计算当前分类名称
+const currentCategoryName = computed(() => {
+  const cat = categories.value.find(c => c.id === activeCategory.value)
+  return cat ? cat.name : ''
+})
+
+// 计算当前分类的导航项
+const currentCategoryItems = computed(() => {
+  const cat = categories.value.find(c => c.id === activeCategory.value)
+  return cat ? cat.items : []
+})
 
 // 壁纸配置
 const currentWallpaper = ref('default')

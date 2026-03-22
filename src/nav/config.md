@@ -1,117 +1,72 @@
+# 导航页配置说明
+
+导航卡片的内容通过在 `nav/README.md` 文件的 **frontmatter** 中配置来实现。
+
+## 配置文件位置
+
+打开 `src/nav/README.md`，修改 frontmatter 中的 `categories` 字段。
+
+## 配置结构
+
+```yaml
 ---
-date: 2026-03-20
-# 快捷导航配置文件
-# 在此文件中配置导航链接，修改后页面会自动更新
+categories:
+  - id: dev-tools           # 分类唯一标识（用于匹配按钮和卡片）
+    name: 开发工具          # 底部按钮显示名称
+    icon: /assets/icon/...  # 按钮图标路径（相对于 public 目录）
+    items:                  # 该分类下的导航卡片列表
+      - name: GitHub
+        url: https://github.com
+        icon: https://github.com/favicon.ico   # 支持 URL、本地路径、iconfont 类名
+        external: true      # 是否在新窗口打开
 ---
+```
 
-<!-- #region dev-tools -->
+## 图标格式说明
 
-- **GitHub**
+`icon` 字段支持三种格式：
 
-  代码托管平台
+1. **完整 URL**: `https://example.com/favicon.ico`
+2. **本地路径**: `/assets/icon/icon.png`（相对于 public 目录）
+3. **iconfont 类名**: `icon-github`（需要在项目中引入对应字体图标）
 
-  [访问](https://github.com)
+## 操作示例
 
-- **VS Code**
+### 添加新导航项
 
-  强大的代码编辑器
+在对应分类的 `items` 数组中添加：
 
-  [访问](https://code.visualstudio.com)
+```yaml
+items:
+  - name: 百度
+    url: https://baidu.com
+    icon: https://www.baidu.com/favicon.ico
+    external: true
+```
 
-- **Vue.js**
+### 添加新分类
 
-  渐进式 JavaScript 框架
+在 `categories` 数组中添加新对象：
 
-  [访问](https://vuejs.org)
+```yaml
+categories:
+  - id: tools
+    name: 工具集
+    icon: /assets/icon/tools.png
+    items:
+      - name: 示例工具
+        url: https://example.com
+        icon: icon-tool
+        external: true
+```
 
-- **Node.js**
+### 删除导航项
 
-  JavaScript 运行时环境
+直接从 `items` 数组中删除对应条目即可。
 
-  [访问](https://nodejs.org)
+## 注意事项
 
-<!-- #endregion dev-tools -->
-
-<!-- #region learning -->
-
-- **MDN Web Docs**
-
-  Web 技术权威文档
-
-  [访问](https://developer.mozilla.org/zh-CN/)
-
-- **VuePress**
-
-  Vue 驱动的静态网站生成器
-
-  [访问](https://vuejs.press/zh/)
-
-- **VuePress Theme Hope**
-
-  功能强大的 VuePress 主题
-
-  [访问](https://theme-hope.vuejs.press/zh/)
-
-- **TypeScript**
-
-  JavaScript 的超集
-
-  [访问](https://www.typescriptlang.org/zh/)
-
-<!-- #endregion learning -->
-
-<!-- #region common -->
-
-- **掘金**
-
-  技术社区和博客平台
-
-  [访问](https://juejin.cn)
-
-- **知乎**
-
-  中文问答社区
-
-  [访问](https://www.zhihu.com)
-
-- **哔哩哔哩**
-
-  视频学习平台
-
-  [访问](https://www.bilibili.com)
-
-- **Stack Overflow**
-
-  程序员问答社区
-
-  [访问](https://stackoverflow.com)
-
-<!-- #endregion common -->
-
-<!-- #region personal -->
-
-- **个人主页**
-
-  Yd Wen 的个人博客
-
-  [访问](/)
-
-- **项目展示**
-
-  我的开源项目
-
-  [访问](/project/)
-
-- **笔记归档**
-
-  技术学习笔记
-
-  [访问](/note/)
-
-- **关于我**
-
-  了解更多关于我
-
-  [访问](/about/)
-
-<!-- #endregion personal -->
+1. 配置位于 `nav/README.md` 的 frontmatter 中（`---` 包裹的区域）
+2. 修改保存后，开发服务器会自动刷新
+3. `id` 字段在同一页面内必须唯一
+4. 最后一个按钮（壁纸切换）是固定的，不需要在配置中定义
