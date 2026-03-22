@@ -114,7 +114,7 @@ pnpm preview
     - `src/.vuepress/client.ts` - 添加路由监听，动态切换 body 类名
     - `src/nav/README.md` - 使用 `body.nav-page-active` 限定样式作用域
 
-### 2026-03-20
+### 2026-03-19
 - ✨ **新增**: 初始化快捷导航页面
   - 创建 `NavPage.vue` 组件
   - 添加搜索引擎切换功能

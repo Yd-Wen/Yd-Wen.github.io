@@ -76,20 +76,15 @@ export const project = arraySidebar([
         collapsible: true,
         children: [
             {
-                text: "项目记录",
-                icon: "record",
-                link: "record/",
-                prefix: "record/",
-                collapsible: true,
-                children: [
-                    "20260322",
-                ]
+                text: "项目介绍",
+                icon: "base",
+                link: ""
+            }, {
+                text: "导航页开发",
+                icon: "nav",
+                link: "20260322"
             },
-            {
-                text: "更新日志",
-                icon: "log",
-                link: "log",
-            }
+
         ]
     }
 ]);
