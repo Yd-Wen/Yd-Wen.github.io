@@ -6,7 +6,7 @@ category:
   - 笔记
   - 前端开发
 tag: 
-  - vue
+  - Vue
 ---
 
 ## 1 简介

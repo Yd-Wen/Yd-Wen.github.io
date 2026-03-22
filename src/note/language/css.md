@@ -7,7 +7,7 @@ category:
   - 编程语言
   - 前端开发
 tag: 
-  - css
+  - CSS
 ---
 
 ## 1 简介
