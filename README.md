@@ -6,6 +6,24 @@ A personal blog using [VuePress2](https://vuejs.press/) and [VuePress Theme Hope
 
 ## [博客地址](https://yindongwen.top) | [Blog link](https://yindongwen.top)
 
+- 项目截图
+
+  - 主页
+
+  ![项目主页](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260322215751775.jpg)
+
+  - 导航页
+
+  ![项目导航页](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260322215809999.jpg)
+
+- 演示地址：[https://yindongwen.top](https://yindongwen.top)
+
+- 仓库地址：
+  
+  - [https://gitee.com/yindong-wen/yindong-wen](https://gitee.com/yindong-wen/yindong-wen)
+
+  - [https://github.com/Yd-Wen/Yd-Wen.github.io](https://github.com/Yd-Wen/Yd-Wen.github.io)
+
 ---
 
 ## 技术栈 / Tech Stack
@@ -132,7 +150,9 @@ pnpm preview
 
 ## 许可证 / License
 
-[MIT](LICENSE)
+本项目基于 [MIT License](./LICENSE) 开源。
+
+Copyright (C) 2026 - present by Yd Wen
 
 ---
 
