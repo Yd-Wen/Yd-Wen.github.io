@@ -41,6 +41,10 @@ export const project = arraySidebar([
                 text: "uni.request 配置流式输出",
                 icon: "uniapp",
                 link: "20260314"
+            }, {
+                text: "uniapp / uniCloud 的文件操作",
+                icon: "file",
+                link: "20260323"
             }
         ]
     },
@@ -59,7 +63,7 @@ export const project = arraySidebar([
                 text: "fastapi 项目部署",
                 icon: "fastapi",
                 link: "20260313"
-            },
+            }
         ]
     },
     {
