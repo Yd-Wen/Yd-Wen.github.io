@@ -5,6 +5,7 @@ date: 2024-06-25
 category: 教程
 tag: 
     - 云服务器
+    - 阿里云
     - Java
     - MySQL
 ---
