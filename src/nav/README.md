@@ -103,7 +103,7 @@ categories:
         icon: https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/favicon-32x32.png
         external: true
       - name: CSDN
-        url: https://so.csdn.net
+        url: https://www.csdn.net
         icon: https://csdnimg.cn/public/favicon.ico
         external: true
       - name: Stack Overflow
