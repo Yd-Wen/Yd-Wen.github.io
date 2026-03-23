@@ -292,3 +292,5 @@ Copyright (C) 2026 - present by Yd Wen
 ## 开发记录
 
 ### [fastapi 项目部署](./20260313.md)
+
+### [fastapi 项目不挂断运行](./20260323.md)

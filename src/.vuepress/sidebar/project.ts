@@ -63,6 +63,10 @@ export const project = arraySidebar([
                 text: "fastapi 项目部署",
                 icon: "fastapi",
                 link: "20260313"
+            }, {
+                text: "fastapi 后台不挂断运行",
+                icon: "fastapi",
+                link: "20260323"
             }
         ]
     },
