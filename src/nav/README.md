@@ -177,7 +177,9 @@ wallpapers:
     file: 010.jpg
 ---
 
-<NavPage />
+<ClientOnly>
+  <NavPage />
+</ClientOnly>
 
 <style>
 /* 只在快捷导航页面隐藏 hero 信息区域
