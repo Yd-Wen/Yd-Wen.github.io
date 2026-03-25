@@ -53,6 +53,7 @@ tag:
 - **云函数**: Node.js
 - **数据库**: MongoDB (uniCloud 云数据库)
 - **智能客服后端**: FastAPI (独立部署，项目外)
+- ::: tip 详见 [小闲小店智能客服](../rag-xxmall/) 
 
 ### 部署平台
 - 微信小程序
