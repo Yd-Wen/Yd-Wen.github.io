@@ -22,6 +22,12 @@ tag:
 
 本项目为客户端部分，基于 UniApp 跨平台框架开发，一套代码可同时发布到 Android、iOS 以及微信小程序等多个平台。
 
+- 仓库地址：
+  
+    - [https://gitee.com/yindong-wen/SafeStep-Client](https://gitee.com/yindong-wen/SafeStep-Client)
+    
+    - [https://github.com/Yd-Wen/SafeStep-Client](https://github.com/Yd-Wen/SafeStep-Client)
+
 ## 技术栈
 
 ### 前端客户端
