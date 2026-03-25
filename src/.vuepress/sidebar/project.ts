@@ -14,9 +14,8 @@ export const project = arraySidebar([
     },
     {
         text: "步步安",
-        icon: "harmonystride",
+        icon: "safestep",
         link: "safestep/",
-        prefix: "safestep/"
     },
     {
         text: "小闲小店",
