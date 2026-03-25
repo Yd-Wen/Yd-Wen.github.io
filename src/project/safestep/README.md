@@ -290,7 +290,7 @@ uni.connectSocket({
 
 ## 许可证
 
-本项目基于 [MIT](LICENSE) License 开源。
+本项目基于 MIT License 开源。
 
 Copyright (C) 2026 - present by Yd Wen
 
