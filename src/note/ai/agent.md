@@ -15,6 +15,12 @@ tag:
 
 AI Agent 时基于 LLM 的能够自主理解、规划、决策、执行复杂任务的智能体。其设计目的是为了处理那些简单的语言模型可能无法直接解决的问题，尤其是当这些任务涉及多个步骤或需要外部数据源的情况。
 
+- 没有 Agent 时，LLM 只能基于自身训练数据回答问题，遇到需要实时数据、复杂计算、外部工具调用的场景就会卡壳
+- 有了 Agent 时，LLM 就像一个“指挥官”，能思考任务步骤 -> 选择合适工具 -> 执行工具调用 -> 根据结果调整策略，直到完成任务
+- Agent = LLM（大脑） + 工具（手脚） + 决策逻辑（思维），是让 LLM 从“只会回答“升级为”会做事（影响现实世界）“的智能助手
+
+![Agent](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260328094207858.png)
+
 ### 1.1 流程图
 
 ![Agent 流程图](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260301181643706.png)
