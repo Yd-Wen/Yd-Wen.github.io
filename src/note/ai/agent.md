@@ -70,3 +70,24 @@ AI Agent 可以通过调用外部 API 来获取模型权重（预训练后难以
 ReAct 框架由[ReAct](https://arxiv.org/pdf/2210.03629)论文提出，通过结合推理（Reasoning）和行动（Acting）来提高推理和决策效果。
 
 ![ReAct 框架](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260301181854816.png)
+
+Agent ReAct 是大模型智能体的核心思考和行动框架，全称 Reasoning + Acting （推理 + 行动），是让 Agent 像人一样思考问题 -> 制定策略 -> 执行行动 -> 验证结果的关键逻辑。
+
+简单来说，ReAct 让 Agent 不再是”直接回答问题“，而是通过”自然语言思考过程“指导工具调用，一步步解决复杂问题，完美适配需要多步推理、工具协作的场景（如智能客服、报告生成、任务规划等）。
+
+一个典型的 ReAct 范式如图所示：
+
+- 思考 Reasoning：分析问题，判断现有信息是否足够，明确下一步，即模型决策是否需要调用外部工具获取更多信息用来回答问题
+
+- 行动 Acting：执行思考阶段指定的策略，即基于模型决策结果，调用工具获取信息
+
+- 观察 Observation：获取行动的结果，提取有效信息，即获取工具返回值，为下一轮思考提供信息
+
+- （再）思考 -> （再）行动 -> （再）观察 -> 循环往复直到结束
+
+  ![ReAct 范式](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260328120506220.png)
+
+
+
+
+
