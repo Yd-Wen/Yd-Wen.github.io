@@ -61,6 +61,19 @@ github  https://github.com/username/project-name.git (push)
 ```
 :::
 
+::: tip
+- 删除远程仓库（不会删除远程服务器上的代码，只是断开本地仓库和远程仓库的关联）：
+```bash
+git remote rm remote_name
+# 或者
+git remote remove remote_name
+```
+- 重命名远程仓库别名
+```bash
+git remote rename old_name new_name
+```
+:::
+
 ## 6.4 推送代码到两个仓库
 
 **方法一：分别推送到两个仓库**
