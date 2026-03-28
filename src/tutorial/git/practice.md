@@ -76,6 +76,17 @@ git remote rename old_name new_name
 
 ## 6.4 推送代码到两个仓库
 
+::: important 第一次推送
+```bash
+git add .
+git commit -m "初始化项目"
+# 把当前本地分支 强制重命名为 main
+git branch -M main  
+# 把本地 main 分支推送到远程 origin，并把它们永久关联起来
+git push --set-upstream origin main 
+``` 
+:::
+
 **方法一：分别推送到两个仓库**
 
 ```bash
