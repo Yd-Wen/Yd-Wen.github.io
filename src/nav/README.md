@@ -114,7 +114,7 @@ categories:
         url: https://www.douban.com
         icon: https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/samantha/logo-icon-white-bg.png
         external: true
-      - name: KIMI
+      - name: KiMi
         url: https://kimi.com
         icon: https://kimi.com/favicon.ico
         external: true
