@@ -27,6 +27,16 @@ export const piece = arraySidebar([
         icon: "poem",
         link: "20190924",
       },
+      {
+        text: "卜算子·咏梅",
+        icon: "poem",
+        link: "20190925",
+      },
+      {
+        text: "卜算子·伊人",
+        icon: "poem",
+        link: "20190927",
+      },
     ],
   },
 ]);
