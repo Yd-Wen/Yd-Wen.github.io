@@ -22,6 +22,11 @@ export const piece = arraySidebar([
         icon: "poem",
         link: "20190921",
       },
+      {
+        text: "钗头凤",
+        icon: "poem",
+        link: "20190924",
+      },
     ],
   },
 ]);
