@@ -18,11 +18,11 @@ A personal blog using [VuePress2](https://vuejs.press/) and [VuePress Theme Hope
 
   - 主页
 
-  ![项目主页](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260322215751775.jpg)
+  ![项目主页](/assets/img/homepage.jpg)
 
   - 导航页
 
-  ![项目导航页](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260322215809999.jpg)
+  ![项目导航页](/assets/img/navpage.jpg)
 
 ## 技术栈 / Tech Stack
 
