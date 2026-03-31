@@ -1051,13 +1051,24 @@ html[data-theme="light"] .nav-button {
     height: 34px;
   }
 
+  .nav-cards-container {
+    padding: 20px;
+  }
+
   .nav-grid {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 12px;
+    gap: 20px;
+  }
+
+  .nav-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 16px;
+    justify-items: center;
   }
 
   .nav-card {
     padding: 16px 10px;
+    width: 110px;
   }
 
   .nav-card-icon {
@@ -1112,8 +1123,12 @@ html[data-theme="light"] .nav-button {
 
   .wallpaper-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 15px;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .wallpaper-grid-item {
+    aspect-ratio: 16/9;
   }
 }
 
@@ -1128,6 +1143,19 @@ html[data-theme="light"] .nav-button {
 
   .nav-cards-wrapper {
     width: 80vw;
+  }
+
+  .nav-cards-container {
+    padding: 16px;
+  }
+
+  .nav-grid {
+    gap: 12px;
+    justify-items: center;
+  }
+
+  .nav-card {
+    width: 110px;
   }
 
   .nav-buttons-wrapper {
@@ -1156,6 +1184,12 @@ html[data-theme="light"] .nav-button {
 
   .wallpaper-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .wallpaper-grid-item {
+    aspect-ratio: 16/9;
   }
 }
 </style>

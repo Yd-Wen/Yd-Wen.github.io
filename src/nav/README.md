@@ -167,14 +167,6 @@ wallpapers:
   - id: '007'
     name: 风景 007
     file: 007.jpg
-  - id: '008'
-    file: 008.jpg
-  - id: '009'
-    name: 风景 009
-    file: 009.jpg
-  - id: '010'
-    name: 风景 009
-    file: 010.jpg
 ---
 
 <ClientOnly>
@@ -191,7 +183,7 @@ body.nav-page-active .vp-hero-info {
 
 /* 设置 main-content 背景图片 */
 body.nav-page-active .theme-container {
-  background-image: url('http://oss.yindongwen.top/homepage/bg.jpg');
+  background-image: url('/assets/bg/007.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
