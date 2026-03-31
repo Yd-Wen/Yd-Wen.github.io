@@ -183,7 +183,7 @@ body.nav-page-active .vp-hero-info {
 
 /* 设置 main-content 背景图片 */
 body.nav-page-active .theme-container {
-  background-image: url('/assets/bg/007.jpg');
+  background-image: url('/assets/bg/default.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
