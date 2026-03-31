@@ -18,11 +18,11 @@ A personal blog using [VuePress2](https://vuejs.press/) and [VuePress Theme Hope
 
   - 主页
 
-  ![项目主页](/assets/img/homepage.jpg)
+  ![项目主页](/src/.vuepress/public/assets/img/homepage.jpg)
 
   - 导航页
 
-  ![项目导航页](/assets/img/navpage.jpg)
+  ![项目导航页](/src/.vuepress/public/assets/img/navpage.jpg)
 
 ## 技术栈 / Tech Stack
 
