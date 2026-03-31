@@ -97,6 +97,9 @@ export default hopeTheme(
         appId: "S6OIOX9FNH",
         apiKey: "0909cd8b2d0a6d30a20118db53d63182",
         indexName: "Yd-Wen-Crawler",
+        searchParameters: {
+          facetFilters: ["lang:zh-CN"],
+        },
       },
 
       feed: {
