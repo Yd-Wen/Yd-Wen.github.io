@@ -7,10 +7,12 @@ category: 项目
 
 这里是 Yd Wen 的一些项目笔记，包括项目介绍、项目笔记、更新日志等。
 
-## 小闲小店
+## [与你同行](./harmonystride/README.md)
 
-### [项目介绍](./xxmall/README.md)
+## [步步安](./safestep/README.md)
 
-### [项目记录](./xxmall/record/README.md)
+## [小闲小店](./xxmall/README.md)
 
-### [更新日志](./xxmall/log.md)
+## [小闲小店智能客服](./rag-xxmall/README.md)
+
+## [个人博客](./blog/README.md)
