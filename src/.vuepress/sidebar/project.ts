@@ -8,9 +8,9 @@ export const project = arraySidebar([
     },
     {
         text: "与你同行",
-        icon: "yntx",
-        link: "yntx/",
-        prefix: "yntx/"
+        icon: "harmonystride",
+        link: "harmonystride/",
+        prefix: "harmonystride/"
     },
     {
         text: "步步安",

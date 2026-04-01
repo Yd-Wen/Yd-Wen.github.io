@@ -302,5 +302,5 @@ Copyright (C) 2026 - present by Yd Wen
   - [个人主页](https://yindongwen.top)
 
 ::: center
-  **步步安，让独居老人的每一步都平安**
+**步步安，让独居老人的每一步都平安**
 :::

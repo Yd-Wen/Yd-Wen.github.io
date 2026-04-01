@@ -11,6 +11,7 @@ export const piece = arraySidebar([
     icon: "poem",
     link: "poem/",
     prefix: "poem/",
+    collapsible: true,
     children: [
       {
         text: "衡阳与梦得分路赠别",
