@@ -74,7 +74,13 @@
           </div>
         </div>
       </div>
-      <div v-else class="nav-empty-state"></div>
+      <!-- GitHub 贡献图 -->
+      <GitHubContributions
+        v-else
+        :username="githubUsername"
+        :theme-color="themeColor"
+        :months="githubContributionsMonths"
+      />
     </main>
 
     <!-- 底部五个功能按钮 -->
@@ -128,6 +134,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { usePageFrontmatter } from '@vuepress/client'
+import GitHubContributions from './GitHubContributions.vue'
 
 // 时间显示
 const currentTime = ref('')
@@ -336,6 +343,23 @@ const categories = computed(() => {
   }
   return defaultCategories
 })
+
+// GitHub 配置
+const githubUsername = computed(() => {
+  return frontmatter.value?.githubUsername || ''
+})
+
+// GitHub 贡献图显示的月份数 (2-12，默认2)
+const githubContributionsMonths = computed(() => {
+  const months = frontmatter.value?.githubContributionsMonths
+  if (months && typeof months === 'number' && months >= 2 && months <= 12) {
+    return months
+  }
+  return 2
+})
+
+// 主题色 - 与 src/.vuepress/styles/config.scss 中的 $theme-color 保持一致
+const themeColor = 'f28e16'
 
 // 计算当前分类名称
 const currentCategoryName = computed(() => {

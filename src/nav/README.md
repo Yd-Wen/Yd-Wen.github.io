@@ -12,6 +12,11 @@ navbar: true
 # 在此配置导航卡片内容，修改后页面会自动更新
 #
 # 配置说明：
+# - githubUsername: GitHub 用户名（用于显示贡献图）
+# - githubContributionsMonths: GitHub贡献图显示的月份数（2-11，默认2）
+#   - 显示逻辑：完整显示前 (n-1) 个月的贡献 + 当月已过日期的贡献
+#   - 例如设置为2：完整显示上个月 + 本月已过日期
+#   - 例如设置为3：完整显示上上月、上月 + 本月已过日期
 # - categories: 导航分类配置
 #   - id: 分类唯一标识（对应底部按钮）
 #   - name: 分类显示名称
@@ -25,6 +30,12 @@ navbar: true
 #   - id: 壁纸唯一标识（default 为默认主题）
 #   - name: 壁纸显示名称
 #   - file: 壁纸文件名（位于 /assets/bg/ 目录下）
+
+# GitHub 用户名配置
+githubUsername: Yd-Wen
+
+# GitHub 贡献图显示月份数（2-12，默认为2）
+githubContributionsMonths: 11
 
 categories:
   - id: dev-tools
