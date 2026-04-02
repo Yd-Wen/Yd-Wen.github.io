@@ -19,12 +19,12 @@ tag:
 **与你同行**（HarmonyStride）是一款专为残障人士、志愿者和用人单位打造的Android社交应用。用户可以在平台上发布帖子（求职、招聘、求助、志愿活动），申请感兴趣的帖子，并通过即时通讯功能进行沟通交流。
 
 - 仓库地址：
-  - https://github.com/Yd-Wen/HarmonyStride
-  - https://gitee.com/yindong-wen/HarmonyStride
+  - [https://github.com/Yd-Wen/HarmonyStride](https://github.com/Yd-Wen/HarmonyStride)
+  - [https://gitee.com/yindong-wen/HarmonyStride](https://gitee.com/yindong-wen/HarmonyStride)
 
 - 功能演示
-  - https://oss.yindongwen.top/demo/HarmonyStride_01.mp4
-  - https://oss.yindongwen.top/demo/HarmonyStride_02.mp4
+  - [https://oss.yindongwen.top/demo/HarmonyStride_01.mp4](https://oss.yindongwen.top/demo/HarmonyStride_01.mp4)
+  - [https://oss.yindongwen.top/demo/HarmonyStride_02.mp4](https://oss.yindongwen.top/demo/HarmonyStride_02.mp4)
 
 ### 核心功能
 

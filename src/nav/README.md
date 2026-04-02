@@ -110,6 +110,10 @@ categories:
         url: https://stackoverflow.com
         icon: https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico
         external: true
+      - name: Stack Overflow
+        url: https://translate.google.com/
+        icon: https://translate.google.com/favicon.ico
+        external: true
       - name: 豆包
         url: https://www.douban.com
         icon: https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/samantha/logo-icon-white-bg.png

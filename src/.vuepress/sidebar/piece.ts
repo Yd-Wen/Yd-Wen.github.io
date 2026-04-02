@@ -38,6 +38,16 @@ export const piece = arraySidebar([
         icon: "poem",
         link: "20190927",
       },
+      {
+        text: "水调歌头",
+        icon: "poem",
+        link: "20191001",
+      },
+      {
+        text: "水调歌头",
+        icon: "poem",
+        link: "20191002",
+      },
     ],
   },
 ]);
