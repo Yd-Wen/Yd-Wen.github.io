@@ -43,11 +43,13 @@
       </div>
     </div>
 
-    <!-- Tooltip -->
-    <div v-if="tooltip.visible" class="contribution-tooltip" :style="{ left: tooltip.x + 'px', top: tooltip.y + 'px' }">
-      <div class="tooltip-date">{{ tooltip.date }}</div>
-      <div class="tooltip-count">{{ tooltip.count }} contributions</div>
-    </div>
+    <!-- Tooltip - Teleported to body to avoid z-index issues -->
+    <Teleport to="body">
+      <div v-if="tooltip.visible" class="contribution-tooltip" :style="{ left: tooltip.x + 'px', top: tooltip.y + 'px' }">
+        <div class="tooltip-date">{{ tooltip.displayDate }}</div>
+        <div class="tooltip-count">{{ tooltip.count }} contributions</div>
+      </div>
+    </Teleport>
   </div>
 </template>
 
@@ -75,10 +77,11 @@ const error = ref('')
 const allContributions = ref([])
 const tooltip = ref({
   visible: false,
+  rawDate: '',  // 原始日期用于比较
+  displayDate: '',  // 格式化后的日期用于显示
+  count: 0,
   x: 0,
-  y: 0,
-  date: '',
-  count: 0
+  y: 0
 })
 
 // 缓存配置
@@ -309,19 +312,20 @@ const formatDate = (date) => {
 const showTooltip = (event, day) => {
   const rect = event.target.getBoundingClientRect()
   const date = new Date(day.date)
-
   tooltip.value = {
     visible: true,
-    x: rect.left + rect.width / 2 - 60,
-    y: rect.top - 50,
-    date: formatDate(date),
-    count: day.count
+    rawDate: day.date,  // 保存原始日期用于比较
+    displayDate: formatDate(date),  // 格式化后的日期用于显示
+    count: day.count,
+    x: rect.left + rect.width / 2,  // 水平居中
+    y: rect.top - 8  // 在色块上方
   }
 }
 
 // 隐藏 tooltip
 const hideTooltip = () => {
   tooltip.value.visible = false
+  tooltip.value.rawDate = ''
 }
 
 onMounted(() => {
@@ -425,6 +429,7 @@ onMounted(() => {
   border-radius: 2px;
   cursor: pointer;
   transition: all 0.2s ease;
+  position: relative;
 }
 
 .day-cell:hover {
@@ -440,6 +445,30 @@ onMounted(() => {
 .day-cell.empty:hover {
   transform: none;
   box-shadow: none;
+}
+
+/* Tooltip - teleported to body */
+.contribution-tooltip {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.95);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  white-space: nowrap;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+}
+
+.contribution-tooltip .tooltip-date {
+  margin-bottom: 2px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contribution-tooltip .tooltip-count {
+  font-weight: 600;
 }
 
 /* 使用主题色的贡献等级 */
@@ -478,29 +507,6 @@ onMounted(() => {
   width: 10px;
   height: 10px;
   border-radius: 2px;
-}
-
-/* Tooltip */
-.contribution-tooltip {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.9);
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  pointer-events: none;
-  z-index: 1000;
-  white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.tooltip-date {
-  margin-bottom: 4px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.tooltip-count {
-  font-weight: 600;
 }
 
 /* 响应式 */

@@ -35,7 +35,7 @@ navbar: true
 githubUsername: Yd-Wen
 
 # GitHub 贡献图显示月份数（2-12，默认为2）
-githubContributionsMonths: 11
+githubContributionsMonths: 10
 
 categories:
   - id: dev-tools
