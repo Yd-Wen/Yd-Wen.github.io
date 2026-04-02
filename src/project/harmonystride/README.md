@@ -14,9 +14,11 @@ tag:
 **一个连接残障人士、志愿者与用人单位的社交平台**
 :::
 
-## 📖 与你同行 (HarmonyStride)
+## 与你同行 (HarmonyStride)
 
 **与你同行**（HarmonyStride）是一款专为残障人士、志愿者和用人单位打造的Android社交应用。用户可以在平台上发布帖子（求职、招聘、求助、志愿活动），申请感兴趣的帖子，并通过即时通讯功能进行沟通交流。
+
+### 项目地址
 
 - 仓库地址：
   - [https://github.com/Yd-Wen/HarmonyStride](https://github.com/Yd-Wen/HarmonyStride)
@@ -34,7 +36,7 @@ tag:
 - 📝 **申请管理**：帖子申请与审批流程
 - 🔔 **版本更新**：内置应用更新检测与下载功能
 
-## 🛠 技术栈
+## 技术栈
 
 | 类别       | 技术                                        |
 | ---------- | ------------------------------------------- |
@@ -50,7 +52,7 @@ tag:
 | 云存储     | 阿里云OSS                                   |
 | UI组件     | Material Design, SmartRefreshLayout, Banner |
 
-## 📁 项目结构
+## 项目结构
 
 ```
 HarmonyStride/
@@ -93,7 +95,7 @@ HarmonyStride/
 └── README.md                  # 本文件
 ```
 
-## 📦 项目依赖
+## 项目依赖
 
 ### 核心依赖
 
@@ -256,7 +258,7 @@ implementation 'com.aliyun.dpa:oss-android-sdk:2.9.13'
 implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.28'
 ```
 
-## 🚀 部署步骤
+## 部署步骤
 
 ### 环境要求
 
@@ -317,7 +319,7 @@ gradlew.bat assembleDebug
 app/release/app-release.apk
 ```
 
-## ⚙️ 后端服务
+## 后端服务
 
 本项目需要配合后端服务使用，后端API默认地址配置在 `HTTPUtil.java` 中：
 
@@ -332,7 +334,7 @@ public static final String IP = "your-backend-address";
 - **文件存储**：阿里云OSS
 - **即时通讯**：融云IM
 
-## 📝 更新日志
+## 更新日志
 
 ### [Unreleased] - 2026-04-01
 
@@ -421,7 +423,7 @@ public static final String IP = "your-backend-address";
 - 实现用户登录注册
 - 实现基础即时通讯功能
 
-## 🤝 开源协议
+## 开源协议
 
 本项目采用 [Apache License 2.0](LICENSE) 协议开源。
 
@@ -458,7 +460,7 @@ limitations under the License.
 2. **修改声明**：修改文件时需添加显著声明，说明文件已被更改
 3. **归属声明**：必须在源代码形式中保留所有版权、专利、商标和归属声明
 
-## 👨‍💻 作者
+## 作者
 
 **HarmonyStride Team**
 
@@ -468,7 +470,7 @@ limitations under the License.
   - https://github.com/Yd-Wen/HarmonyStride
   - https://gitee.com/yindong-wen/HarmonyStride
 
-## 🙏 致谢
+## 致谢
 
 感谢以下开源项目和库：
 

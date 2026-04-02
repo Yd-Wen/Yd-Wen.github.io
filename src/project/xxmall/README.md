@@ -8,19 +8,27 @@ tag:
     - README
 ---
 
+::: center
+<img src="/assets/img/xxmall.png" alt="与你同行" width="100"/>
+
+**支持智能客服的跨端电商小程序/网页应用**
+:::
+
 ## 小闲小店 (XX-Mall)
 
 小闲小店项目是一个基于 Uniapp + UniCloud 开发的跨端电商小程序/网页应用，支持智能客服功能。在[咸虾米 uniPay 商城](https://gitee.com/qingnian8/XXMuniPayMall)基础上新增轮播图 / 推荐管理、邀请裂变、智能客服功能。
 
 小闲小店是一款轻量级电商解决方案，采用前后端分离架构，可同时部署到微信小程序和 H5 网页端。项目集成了商品管理、订单系统、地址管理、智能客服等核心电商功能，并配备完整的后台管理系统。智能客服模块基于 RAG（检索增强生成）技术，支持知识库管理，为用户提供精准的商品咨询和导购服务。
 
-- 演示地址：[https://yindongwen.top/demo/xxmall](https://yindongwen.top/demo/xxmall)
-
 - 仓库地址：
   
     - [https://gitee.com/yindong-wen/xxmall](https://gitee.com/yindong-wen/xxmall)
     
     - [https://github.com/Yd-Wen/xxmall](https://github.com/Yd-Wen/xxmall)
+
+- 演示地址：
+    
+    - [https://yindongwen.top/demo/xxmall](https://yindongwen.top/demo/xxmall)
 
 - 项目截图
 

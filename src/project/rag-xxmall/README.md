@@ -8,17 +8,25 @@ tag:
     - README
 ---
 
+::: center
+<img src="/assets/img/xxmall.png" alt="与你同行" width="100"/>
+
+**基于 FastAPI + LangChain + Chroma 的 RAG 后端系统**
+:::
+
 ## 小闲小店智能客服（RAG-XXMALL）
 
 小闲小店智能客服项目是基于 FastAPI + LangChain + Chroma 的 RAG（检索增强生成）AI 客服后端系统，即为前端应用提供接口的 AI 智能客服后端系统，采用 RAG 技术架构，结合向量检索与大语言模型，实现基于知识库的智能问答服务。
 
-- 演示地址：[https://api-xxmall.yindongwen.top/docs](https://api-xxmall.yindongwen.top/docs)
-
 - 仓库地址：
   
-    - [https://gitee.com/yindong-wen/rag-xxmall](https://gitee.com/yindong-wen/rag-xxmall)
+  - [https://gitee.com/yindong-wen/rag-xxmall](https://gitee.com/yindong-wen/rag-xxmall)
     
-    - [https://github.com/Yd-Wen/rag-xxmall](https://github.com/Yd-Wen/rag-xxmall)
+  - [https://github.com/Yd-Wen/rag-xxmall](https://github.com/Yd-Wen/rag-xxmall)
+
+- 演示地址：
+
+  - [https://api-xxmall.yindongwen.top/docs](https://api-xxmall.yindongwen.top/docs)
 
 ## 技术栈
 

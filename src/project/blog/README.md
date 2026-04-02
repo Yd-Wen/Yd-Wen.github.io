@@ -8,17 +8,25 @@ tag:
     - README
 ---
 
+::: center
+<img src="/assets/img/blog.png" alt="与你同行" width="100"/>
+
+**基于 VuePress2 与 VuePress Theme Hope 搭建的个人博客**
+:::
+
 ## 个人博客
 
 本项目是使用 [VuePress2](https://vuejs.press/zh/) 与 [VuePress Theme Hope](https://theme-hope.vuejs.press/zh/) 搭建的个人博客。
-
-- 演示地址：[https://yindongwen.top](https://yindongwen.top)
 
 - 仓库地址：
 
   - [https://gitee.com/yindong-wen/yindong-wen](https://gitee.com/yindong-wen/yindong-wen)
 
   - [https://github.com/Yd-Wen/Yd-Wen.github.io](https://github.com/Yd-Wen/Yd-Wen.github.io)
+
+- 演示地址：
+
+  - [https://yindongwen.top](https://yindongwen.top)
 
 - 项目截图
 
@@ -118,6 +126,15 @@ pnpm preview
 Copyright (C) 2026 - present by Yd Wen
 
 ## 更新日志
+
+### 2026-04-02
+- ✨ **新增**: 导航页新增 GitHub 贡献图展示
+
+### 2026-03-31
+- 🐛 **修复**: 修复搜素功能失效的问题
+
+### 2026-03-25
+- 🐛 **修复**: 修复客户端水合不匹配的问题
 
 ### 2026-03-22
 - ✨ **新增**: 导航页底部按钮添加悬停提示文字
