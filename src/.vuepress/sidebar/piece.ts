@@ -5,8 +5,24 @@ export const piece = arraySidebar([
     text: "所有随笔",
     icon: "piece",
     link: "",
-  },
-  {
+  }, {
+    text: "学习碎片",
+    icon: "fragment",
+    link: "fragment/",
+    prefix: "fragment/",
+    collapsible: true,
+    children: [
+      {
+        text: "Claude Code 源码解析：11 大核心设计与 Agent 架构精髓",
+        icon: "claude",
+        link: "20260401",
+      }, {
+        text: "Claude Code 源码看 Agent 架构之争",
+        icon: "claude",
+        link: "20260402",
+      }
+    ]
+  }, {
     text: "收藏的诗歌",
     icon: "poem",
     link: "poem/",

@@ -6,7 +6,8 @@ category:
   - 笔记
   - AI 应用开发
 tag: 
-    - Agent
+  - Agent
+  - ReAct
 ---
 
 ## 1 概念

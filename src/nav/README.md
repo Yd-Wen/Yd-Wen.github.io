@@ -110,7 +110,11 @@ categories:
         url: https://stackoverflow.com
         icon: https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico
         external: true
-      - name: Stack Overflow
+      - name: 编程导航
+        url: https://www.codefather.cn/
+        icon: https://www.codefather.cn/favicon.ico
+        external: true
+      - name: 谷歌翻译
         url: https://translate.google.com/
         icon: https://translate.google.com/favicon.ico
         external: true
