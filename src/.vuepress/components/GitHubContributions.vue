@@ -283,7 +283,11 @@ const visibleMonths = computed(() => {
     lastMonth.width = ((totalWeeks - lastMonth.startWeek) * cellWidth) + 'px'
   }
 
-  return months
+  // 过滤掉宽度太小的月份（至少要有2周才显示）
+  return months.filter(month => {
+    const widthInWeeks = (parseInt(month.width) / cellWidth)
+    return widthInWeeks >= 2
+  })
 })
 
 // 获取贡献等级
@@ -521,6 +525,13 @@ onMounted(() => {
   .day-cell {
     width: 8px;
     height: 8px;
+  }
+}
+
+/* 移动端隐藏贡献图 */
+@media (max-width: 768px) {
+  .github-contributions-wrapper {
+    display: none;
   }
 }
 </style>
