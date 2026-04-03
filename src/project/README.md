@@ -11,6 +11,8 @@ category: 项目
 
 ## [步步安](./safestep/README.md)
 
+## [SleepNet](./sleepnet/README.md)
+
 ## [小闲小店](./xxmall/README.md)
 
 ## [小闲小店智能客服](./rag-xxmall/README.md)

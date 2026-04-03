@@ -8,8 +8,6 @@ tag:
     - README
 ---
 
-# 步步安 - 独居老人跌倒检测客户端
-
 ::: center
 <img src="/assets/img/welcome_safestep.png" width="200" alt="步步安APP">
 

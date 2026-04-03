@@ -18,6 +18,11 @@ export const project = arraySidebar([
         link: "safestep/",
     },
     {
+        text: "SleepNet",
+        icon: "base",
+        link: "sleepnet/",
+    },
+    {
         text: "小闲小店",
         icon: "xxmall",
         link: "xxmall/",
