@@ -4,8 +4,9 @@ title: 小闲小店
 icon: xxmall
 category: 项目
 tag: 
-    - 小闲小店
-    - README
+  - 小闲小店
+  - README
+star: true
 ---
 
 ::: center

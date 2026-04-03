@@ -4,8 +4,9 @@ title: 小闲小店智能客服
 icon: rag-xxmall
 category: 项目
 tag: 
-    - 小闲小店
-    - README
+  - 小闲小店
+  - README
+star: true
 ---
 
 ::: center

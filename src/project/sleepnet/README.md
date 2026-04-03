@@ -4,8 +4,9 @@ title: SleepNet
 icon: base
 category: 项目
 tag: 
-    - SleepNet
-    - README
+  - SleepNet
+  - README
+star: true
 ---
 
 ::: center

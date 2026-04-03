@@ -4,7 +4,8 @@ icon: practice
 date: 2024-01-09
 category: 教程
 tag: 
-    - Git
+  - Git
+star: true
 ---
 
 ## 6.1 准备工作

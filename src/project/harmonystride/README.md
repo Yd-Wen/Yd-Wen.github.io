@@ -4,8 +4,9 @@ title: 与你同行
 icon: harmonystride
 category: 项目
 tag: 
-    - 与你同行
-    - README
+  - 与你同行
+  - README
+star: true
 ---
 
 ::: center

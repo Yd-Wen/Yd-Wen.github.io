@@ -4,8 +4,9 @@ title: 步步安
 icon: safestep
 category: 项目
 tag: 
-    - 步步安
-    - README
+  - 步步安
+  - README
+star: true
 ---
 
 ::: center

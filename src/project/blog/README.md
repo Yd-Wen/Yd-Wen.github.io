@@ -4,8 +4,9 @@ title: 个人博客
 icon: blog
 category: 项目
 tag: 
-    - 博客
-    - README
+  - 博客
+  - README
+star: true
 ---
 
 ::: center

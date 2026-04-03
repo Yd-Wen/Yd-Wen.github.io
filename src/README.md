@@ -1,7 +1,7 @@
 ---
 date: 2026-02-24
 home: true
-# layout: Blog
+layout: Blog
 icon: home
 title: 主页
 heroImage: /logo.svg
