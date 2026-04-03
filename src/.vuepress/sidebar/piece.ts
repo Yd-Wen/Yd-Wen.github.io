@@ -13,6 +13,10 @@ export const piece = arraySidebar([
     collapsible: true,
     children: [
       {
+        text: "CLI 对比 MCP 有哪些优势",
+        icon: "cli",
+        link: "20260331",
+      }, {
         text: "Claude Code 源码解析：11 大核心设计与 Agent 架构精髓",
         icon: "claude",
         link: "20260401",

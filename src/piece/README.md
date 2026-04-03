@@ -11,6 +11,8 @@ tag:
 
 ## 学习碎片
 
+### [CLI 对比 MCP 有哪些优势](./fragment/20260331.md)
+
 ### [Claude Code 源码解析：11 大核心设计与 Agent 架构精髓](./fragment/20260401.md)
 
 ### [Claude Code 源码看 Agent 架构之争](./fragment/20260402.md)
