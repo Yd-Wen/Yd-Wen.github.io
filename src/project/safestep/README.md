@@ -28,6 +28,16 @@ tag:
     
     - [https://github.com/Yd-Wen/SafeStep-Client](https://github.com/Yd-Wen/SafeStep-Client)
 
+- 项目截图：
+
+    - 基本功能：注册、登录、密码、查看设备/联系人、查看活动/报警历史
+
+        ![图片1](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260403121046613.png)
+
+    - 核心功能：管理设备/联系人、报警反馈
+
+        ![核心功能](https://gitee.com/yindong-wen/mypicgo_img/raw/master/image/20260403120508302.png)
+
 ## 技术栈
 
 ### 前端客户端
