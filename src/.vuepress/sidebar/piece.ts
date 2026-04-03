@@ -24,6 +24,10 @@ export const piece = arraySidebar([
         text: "Claude Code 源码看 Agent 架构之争",
         icon: "claude",
         link: "20260402",
+      }, {
+        text: "注意力残差",
+        icon: "attention",
+        link: "20260403",
       }
     ]
   }, {

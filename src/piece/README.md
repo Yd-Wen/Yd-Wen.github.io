@@ -17,6 +17,8 @@ tag:
 
 ### [Claude Code 源码看 Agent 架构之争](./fragment/20260402.md)
 
+### [注意力残差](./fragment/20260403.md)
+
 ## 收藏的诗歌
 
 ### [衡阳衡阳与梦得分路赠别](./fragment/20190913.md)

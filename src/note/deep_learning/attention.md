@@ -7,7 +7,7 @@ category:
   - 深度学习
 tag:
   - PyTorch
-  - 注意力机制
+  - Attention
 ---
 
 ## 12.1 简介
