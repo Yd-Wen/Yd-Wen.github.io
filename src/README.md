@@ -41,5 +41,36 @@ actions:
   - text: 关于我
     link: /about/
 
+projects:
+  - name: HarmonyStride
+    desc: 连接残障人士、志愿者与用人单位的社交平台
+    link: ./project/harmonystride/
+    icon: /assets/img/harmonystride.png
+
+  - name: SafeStep
+    desc: 基于毫米波雷达的独居老人跌倒检测与报警客户端
+    link: ./project/safestep/
+    icon: /assets/img/safestep.png
+
+  - name: SleepNet
+    desc: 毫米波雷达稀疏点云序列识别模型
+    link: ./project/sleepnet/
+    icon: /assets/img/sleepnet.png
+
+  - name: XX-Mall
+    desc: 智能客服支持的跨端电商小程序/网页应用
+    link: ./project/xxmall/
+    icon: /assets/img/xxmall.png
+
+  - name: RAG-XXMall
+    desc: 基于 FastAPI + LangChain + Chroma 的 RAG 后端系统
+    link: ./project/rag-xxmall/
+    icon: /assets/img/xxmall.png
+
+  - name: Personal Blog
+    desc: 基于 VuePress2 与 VuePress Theme Hope 搭建的个人博客
+    link: ./project/blog/
+    icon: /assets/img/blog.png
+
 footer: '<a href="http://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank" style="color:inherit;text-decoration:none;white-space:nowrap;">赣ICP备2024024210号-1</a> | <a href="/about/site.html">关于网站</a>'
 ---

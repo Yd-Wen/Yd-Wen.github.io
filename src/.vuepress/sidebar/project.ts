@@ -19,7 +19,7 @@ export const project = arraySidebar([
     },
     {
         text: "SleepNet",
-        icon: "base",
+        icon: "sleepnet",
         link: "sleepnet/",
     },
     {

@@ -1,7 +1,7 @@
 ---
 date: 2026-04-03
 title: SleepNet
-icon: base
+icon: sleepnet
 category: 项目
 tag: 
   - SleepNet
