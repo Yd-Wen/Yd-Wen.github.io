@@ -116,6 +116,7 @@ export default hopeTheme(
         themeColor: "#5c92d1",
         cacheHTML: false,
         maxSize: 3072,
+        update: "available",
         apple: {
           icon: "/assets/icon/apple-touch-icon.png",
         },
