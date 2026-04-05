@@ -71,6 +71,11 @@ projects:
     desc: 基于 VuePress2 与 VuePress Theme Hope 搭建的个人博客
     link: ./project/blog/
     icon: /assets/img/blog.png
+  
+  - name: Video2Note
+    desc: 基于 OpenAI Whisper 和 qwen3-max 的视频转笔记命令行工具
+    link: ./project/vide2note/
+    icon: /assets/img/video2note.png
 
 footer: '<a href="http://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank" style="color:inherit;text-decoration:none;white-space:nowrap;">赣ICP备2024024210号-1</a> | <a href="/about/site.html">关于网站</a>'
 ---
