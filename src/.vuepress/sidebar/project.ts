@@ -91,5 +91,10 @@ export const project = arraySidebar([
                 link: "20260322"
             }
         ]
+    },
+    {
+        text: "视频转笔记工具",
+        icon: "video2note",
+        link: "video2note/",
     }
 ]);

@@ -18,3 +18,5 @@ category: 项目
 ## [小闲小店智能客服](./rag-xxmall/README.md)
 
 ## [个人博客](./blog/README.md)
+
+## [视频转笔记工具](./video2note/README.md)
