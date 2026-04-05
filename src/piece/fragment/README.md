@@ -14,3 +14,5 @@ tag:
 ### [Claude Code 源码看 Agent 架构之争](20260402.md)
 
 ### [注意力残差](20260403.md)
+
+### [Harness Engineering：AI Agent 稳定落地的核心引擎](20260405.md)

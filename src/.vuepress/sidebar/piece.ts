@@ -28,6 +28,10 @@ export const piece = arraySidebar([
         text: "注意力残差",
         icon: "attention",
         link: "20260403",
+      }, {
+        text: "Harness Engineering：AI Agent 稳定落地的核心引擎",
+        icon: "harness",
+        link: "20260405"
       }
     ]
   }, {

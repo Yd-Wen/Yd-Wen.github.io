@@ -19,6 +19,8 @@ tag:
 
 ### [注意力残差](./fragment/20260403.md)
 
+### [Harness Engineering：AI Agent 稳定落地的核心引擎](./fragment/20260405.md)
+
 ## 收藏的诗歌
 
 ### [衡阳衡阳与梦得分路赠别](./fragment/20190913.md)
