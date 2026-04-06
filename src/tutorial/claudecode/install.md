@@ -234,3 +234,5 @@ set -e ALL_PROXY
 - [Claude Code 在 Linux(Ubuntu) 上的完整安装部署指南](https://blog.csdn.net/Little_Carter/article/details/155679936)
 
 - [解决 Claude Code 初次引导未完成的问题](https://blog.csdn.net/objectdsf/article/details/159240060)
+
+- [Claude code Not logged in · Please run /login 解决方法补充](https://linux.do/t/topic/1763091)
