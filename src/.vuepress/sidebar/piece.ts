@@ -32,6 +32,10 @@ export const piece = arraySidebar([
         text: "Harness Engineering：AI Agent 稳定落地的核心引擎",
         icon: "harness",
         link: "20260405"
+      }, {
+        text: "现代终端解决方案：Ghostty + Fish + Starship + Nerd Fonts",
+        icon: "cli",
+        link: "20260406"
       }
     ]
   }, {

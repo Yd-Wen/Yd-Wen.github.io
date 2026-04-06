@@ -21,6 +21,8 @@ tag:
 
 ### [Harness Engineering：AI Agent 稳定落地的核心引擎](./fragment/20260405.md)
 
+### [现代终端解决方案：Ghostty + Fish + Starship + Nerd Fonts](./fragment/20260406.md)
+
 ## 收藏的诗歌
 
 ### [衡阳衡阳与梦得分路赠别](./fragment/20190913.md)

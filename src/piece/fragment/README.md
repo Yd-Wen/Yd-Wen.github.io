@@ -16,3 +16,5 @@ tag:
 ### [注意力残差](20260403.md)
 
 ### [Harness Engineering：AI Agent 稳定落地的核心引擎](20260405.md)
+
+### [现代终端解决方案：Ghostty + Fish + Starship + Nerd Fonts](20260406.md)
