@@ -1,7 +1,7 @@
 ---
 title: Git
 icon: git
-date: 024-01-08
+date: 2024-01-08
 category: 教程
 tag: 
     - Git

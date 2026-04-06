@@ -27,6 +27,12 @@ tag:
 
 ### [6 Gitee/GitHub 实践](git/practice.md)
 
+## Claude Code
+
+### [Claude Code 基础入门](claudecode/intro.md)
+
+### [云服务器安装 Claude Code](claudecode/install.md)
+
 ## 云服务器
 
 ### [云服务器](server.md)

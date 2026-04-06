@@ -27,6 +27,17 @@ export const tutorial = arraySidebar([
         ]
     },
     {
+        text: "Claude Code",
+        icon: "claude",
+        link: "claudecode/",
+        prefix: "claudecode/",
+        collapsible: true,
+        children: [
+            "intro",
+            "install"
+        ]
+    },
+    {
         text: "云服务器",
         icon: "server",
         link: "server",
