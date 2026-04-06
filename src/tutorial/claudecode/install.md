@@ -42,6 +42,16 @@ npm --version
 npm install -g pnpm
 ```
 
+::: nodejs、npm 和 pnpm
+- **Node.js** 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，让 JavaScript 可以在服务器端运行。
+
+- **npm** 是 Node.js 的包管理器，可随 Node.js 一起安装。它用于管理项目的依赖包（安装、更新、卸载），并提供 `package.json` 来记录项目依赖。
+
+- **pnpm** 是新一代的 Node.js 包管理工具，与 npm 兼容但更高效。它通过**内容寻址存储**和**硬链接**机制，显著节省磁盘空间并加快安装速度，同时解决了 npm 的"幽灵依赖"问题。
+
+**三者关系**：Node.js 是基础运行时；npm 是官方标配的包管理器；pnpm 是 npm 的替代品/优化版，使用相同的 `package.json` 和 npm 生态，但性能更优。
+:::
+
 ## 🔧 安装 Claude Code
 
 ```bash
