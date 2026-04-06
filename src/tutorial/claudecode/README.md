@@ -12,3 +12,5 @@ tag:
 ### [1 Claude Code 基础入门](intro.md)
 
 ### [2 云服务器安装 Claude Code](install.md)
+
+### [3 常用命令](command.md)

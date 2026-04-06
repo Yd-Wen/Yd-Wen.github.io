@@ -33,6 +33,8 @@ tag:
 
 ### [云服务器安装 Claude Code](claudecode/install.md)
 
+### [常用命令](claudecode/command.md)
+
 ## 云服务器
 
 ### [云服务器](server.md)
