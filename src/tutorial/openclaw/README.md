@@ -13,5 +13,3 @@ tag:
 ### [什么是 OpenClaw](intro.md)
 
 ### [下载安装和跑通](install.md)
-
-### [常用命令](command.md)

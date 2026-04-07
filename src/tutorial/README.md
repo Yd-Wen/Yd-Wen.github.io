@@ -39,6 +39,8 @@ tag:
 
 ### [什么是 OpenClaw](openclaw/intro.md)
 
+### [下载安装和跑通](openclaw/install.md)
+
 ## 云服务器
 
 ### [云服务器](server.md)
