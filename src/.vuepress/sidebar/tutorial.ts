@@ -39,6 +39,16 @@ export const tutorial = arraySidebar([
         ]
     },
     {
+        text: "OpenClaw",
+        icon: "openclaw",
+        link: "openclaw/",
+        prefix: "openclaw/",
+        collapsible: true,
+        children: [
+            "intro",
+        ]
+    },
+    {
         text: "云服务器",
         icon: "server",
         link: "server",
