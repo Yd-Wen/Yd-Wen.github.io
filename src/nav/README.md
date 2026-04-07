@@ -101,6 +101,10 @@ categories:
     name: 常用网站
     icon: /assets/icon/icon_website.png
     items:
+      - name: ILoveImg
+        url: https://www.iloveimg.com
+        icon: https://www.iloveimg.com/img/favicons-img/favicon-16x16.png
+        external: true
       - name: 知乎
         url: https://www.zhihu.com
         icon: https://static.zhihu.com/heifetz/favicon.ico
