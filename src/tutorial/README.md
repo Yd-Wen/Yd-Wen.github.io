@@ -41,6 +41,8 @@ tag:
 
 ### [下载安装和跑通](openclaw/install.md)
 
+### [接入大模型与飞书渠道](./openclaw/feishu.md)
+
 ## 云服务器
 
 ### [云服务器](server.md)

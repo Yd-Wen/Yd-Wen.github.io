@@ -13,3 +13,5 @@ tag:
 ### [什么是 OpenClaw](intro.md)
 
 ### [下载安装和跑通](install.md)
+
+### [接入大模型与飞书渠道](feishu.md)
