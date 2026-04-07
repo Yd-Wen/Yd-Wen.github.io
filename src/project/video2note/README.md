@@ -15,7 +15,7 @@ star: true
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Whisper OpenAI](https://img.shields.io/badge/Whisper-OpenAI-orange.svg)](https://github.com/openai/whisper)
-[![Vibe Coding](https://img.shields.io/badge/Built%20with-Vibe%20Coding-purple.svg)](#vibe-coding)
+[![Vibe Coding](https://img.shields.io/badge/Built%20with-Vibe%20Coding-purple.svg)](../../tag/vibe-coding/)
 
 视频转笔记工具，支持视频转文本(v2t)、文本转笔记(t2n)、视频转笔记(v2n)三种模式。
 :::
