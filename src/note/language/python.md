@@ -345,6 +345,6 @@ df.drop_duplicates(subset=None, keep='first', inplace=False)
 df.isnull()
 ```
 
-::: info
+::: important 声明
 **待更新**
 :::
