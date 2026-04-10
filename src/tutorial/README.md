@@ -27,6 +27,10 @@ tag:
 
 ### [6 Gitee/GitHub 实践](git/practice.md)
 
+## Vibe Coding
+
+### [简介](vibe-coding/intro.md)
+
 ## Claude Code
 
 ### [Claude Code 基础入门](claudecode/intro.md)

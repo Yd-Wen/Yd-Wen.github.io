@@ -27,6 +27,16 @@ export const tutorial = arraySidebar([
         ]
     },
     {
+        text: "Vibe Coding",
+        icon: "vibe-coding",
+        link: "vibe-coding/",
+        prefix: "vibe-coding/",
+        collapsible: true,
+        children: [
+            "intro"
+        ]
+    },
+    {
         text: "Claude Code",
         icon: "claude",
         link: "claudecode/",
