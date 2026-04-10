@@ -9,3 +9,5 @@ tag:
 ---
 
 ### [基础入门](intro.md)
+
+### [五大实践心法](practice.md)

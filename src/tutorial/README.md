@@ -31,6 +31,8 @@ tag:
 
 ### [简介](vibe-coding/intro.md)
 
+### [五大实践心法](vibe-coding/practice.md)
+
 ## Claude Code
 
 ### [Claude Code 基础入门](claudecode/intro.md)

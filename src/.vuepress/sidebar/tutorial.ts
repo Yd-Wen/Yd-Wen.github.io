@@ -33,7 +33,8 @@ export const tutorial = arraySidebar([
         prefix: "vibe-coding/",
         collapsible: true,
         children: [
-            "intro"
+            "intro",
+            "practice"
         ]
     },
     {
