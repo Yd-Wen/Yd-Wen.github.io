@@ -33,6 +33,8 @@ tag:
 
 ### [五大实践心法](vibe-coding/practice.md)
 
+### [概念大全](vibe-coding/concept.md)
+
 ## Claude Code
 
 ### [Claude Code 基础入门](claudecode/intro.md)

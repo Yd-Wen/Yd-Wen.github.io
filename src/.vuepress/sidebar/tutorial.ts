@@ -34,7 +34,8 @@ export const tutorial = arraySidebar([
         collapsible: true,
         children: [
             "intro",
-            "practice"
+            "practice",
+            "concept"
         ]
     },
     {
