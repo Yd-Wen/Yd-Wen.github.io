@@ -96,5 +96,10 @@ export const project = arraySidebar([
         text: "视频转笔记工具",
         icon: "video2note",
         link: "video2note/",
+    },
+    {
+        text: "HeatPulse 热点追踪平台",
+        icon: "heatpulse",
+        link: "heatpulse/",
     }
 ]);

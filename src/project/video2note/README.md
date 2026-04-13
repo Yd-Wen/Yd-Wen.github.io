@@ -24,8 +24,8 @@ star: true
 
 ## 视频转笔记工具（Video2Note/V2N）
 
-::: important
-> **本项目是一个纯 Vibe Coding 项目 —— 没有敲一行代码，完全通过与 AI 对话完成开发。**
+::: tip
+**本项目是一个纯 Vibe Coding 项目 —— 没有敲一行代码，完全通过与 AI 对话完成开发。**
 :::
 
 Video2Note 是一个统一的命令行工具，支持三种工作模式：
@@ -277,7 +277,7 @@ output/
 
 ## 开源协议
 
-本项目基于 [MIT](LICENSE) License 开源。
+本项目基于 MIT License 开源。
 
 Copyright (C) 2026 - present by Yd Wen
 
@@ -294,9 +294,9 @@ Copyright (C) 2026 - present by Yd Wen
 
 ## Vibe Coding 开发历程
 
-> **什么是 Vibe Coding？**
-> 
-> Vibe Coding 是一种全新的开发方式 —— 开发者通过自然语言与 AI 对话，描述需求和想法，由 AI 生成代码并完成实现。开发者专注于产品思维、架构设计和需求表达，而具体的编码工作交给 AI 完成。
+::: tip 什么是 Vibe Coding
+Vibe Coding 是一种全新的开发方式 —— 开发者通过自然语言与 AI 对话，描述需求和想法，由 AI 生成代码并完成实现。开发者专注于产品思维、架构设计和需求表达，而具体的编码工作交给 AI 完成。
+:::
 
 本项目从零开始，完全采用 Vibe Coding 方式开发。以下是三个核心特性的诞生过程：
 
@@ -402,5 +402,5 @@ Copyright (C) 2026 - present by Yd Wen
 ---
 
 <p align="center">
-Made with ❤️ by Video2Note Project
+Made with ❤️ by Video2Note
 </p>

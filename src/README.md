@@ -77,5 +77,10 @@ projects:
     link: ./project/video2note/
     icon: /assets/img/video2note.png
 
+  - name: HeatPulse
+    desc: AI 驱动的热点追踪系统，自动监控多个数据源并通过 AI 分析发现热点
+    link: ./project/heatpulse/
+    icon: /assets/img/heatpulse.png
+
 footer: '<a href="http://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank" style="color:inherit;text-decoration:none;white-space:nowrap;">赣ICP备2024024210号-1</a> | <a href="/about/site.html">关于网站</a>'
 ---

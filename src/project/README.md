@@ -20,3 +20,5 @@ category: 项目
 ## [个人博客](./blog/README.md)
 
 ## [视频转笔记工具](./video2note/README.md)
+
+## [HeatPulse 热点追踪平台](./heatpulse/README.md)
