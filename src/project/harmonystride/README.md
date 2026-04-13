@@ -426,7 +426,7 @@ public static final String IP = "your-backend-address";
 
 ## 开源协议
 
-本项目采用 [Apache License 2.0](LICENSE) 协议开源。
+本项目采用 Apache License 2.0 协议开源。
 
 ### 许可证文件说明
 
@@ -434,8 +434,8 @@ public static final String IP = "your-backend-address";
 
 | 文件               | 说明                              |
 | ------------------ | --------------------------------- |
-| [LICENSE](LICENSE) | Apache License 2.0 完整许可证文本 |
-| [NOTICE](NOTICE)   | 版权声明和第三方依赖声明          |
+| LICENSE | Apache License 2.0 完整许可证文本 |
+| NOTICE  | 版权声明和第三方依赖声明          |
 
 ### 快速参考
 
