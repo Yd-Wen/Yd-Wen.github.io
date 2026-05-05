@@ -29,6 +29,8 @@ star: true
 
   - [https://api-xxmall.yindongwen.top/docs](https://api-xxmall.yindongwen.top/docs)
 
+  - [https://yindongwen.top/demo/xxmall](https://yindongwen.top/demo/xxmall)
+
 ## 技术栈
 
 | 类别       | 技术                         |
