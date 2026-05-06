@@ -36,6 +36,12 @@ git add .
 git commit -m "Initial commit"
 ```
 
+::: tip 撤销已 add 的单个文件
+```bash
+git restore --staged file_name
+```
+:::
+
 ## 6.3 添加远程仓库
 
 1. 添加 Gitee 远程仓库
