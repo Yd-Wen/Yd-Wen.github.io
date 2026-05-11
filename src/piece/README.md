@@ -23,6 +23,8 @@ tag:
 
 ### [现代终端解决方案：Ghostty + Fish + Starship + Nerd Fonts](./fragment/20260406.md)
 
+### [搞懂 Claude Code 的四个核心概念：Agent、Subagent、Skill、Agent Skill](./fragment/20260511.md)
+
 ## 收藏的诗歌
 
 ### [衡阳衡阳与梦得分路赠别](./fragment/20190913.md)
