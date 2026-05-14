@@ -8,6 +8,7 @@ category:
 tag:
   - PyTorch
   - 卷积神经网络
+  - CNN
 ---
 
 ## 10.1 从全连接到卷积

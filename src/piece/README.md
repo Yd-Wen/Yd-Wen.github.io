@@ -25,6 +25,10 @@ tag:
 
 ### [搞懂 Claude Code 的四个核心概念：Agent、Subagent、Skill、Agent Skill](./fragment/20260511.md)
 
+## 二值神经网络
+
+### [Binary neural networks - A survey](./bnn/20260510.md)
+
 ## 收藏的诗歌
 
 ### [衡阳衡阳与梦得分路赠别](./fragment/20190913.md)

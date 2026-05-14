@@ -8,6 +8,7 @@ category:
 tag:
   - PyTorch
   - 循环神经网络
+  - RNN
 ---
 
 ## 11.1 分词

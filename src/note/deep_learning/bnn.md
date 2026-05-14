@@ -8,6 +8,7 @@ category:
 tag:
   - PyTorch
   - 二值神经网络
+  - BNN
 ---
 
 ## 13.1 简介

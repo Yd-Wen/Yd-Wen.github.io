@@ -43,6 +43,19 @@ export const piece = arraySidebar([
             }
         ]
     }, {
+        text: "二值神经网络",
+        icon: "bnn",
+        link: "bnn/",
+        prefix: "bnn/",
+        collapsible: true,
+        children: [
+            {
+                text: "Binary neural networks - A survey",
+                icon: "paper",
+                link: "20260510",
+            }
+        ],
+    }, {
         text: "收藏的诗歌",
         icon: "poem",
         link: "poem/",
