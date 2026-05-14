@@ -101,5 +101,10 @@ export const project = arraySidebar([
         text: "HeatPulse 热点追踪平台",
         icon: "heatpulse",
         link: "heatpulse/",
+    },
+    {
+        text: "研墨 AI 博客写作助手",
+        icon: "devink",
+        link: "devink/",
     }
 ]);

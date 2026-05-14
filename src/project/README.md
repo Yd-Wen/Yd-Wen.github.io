@@ -22,3 +22,5 @@ category: 项目
 ## [视频转笔记工具](./video2note/README.md)
 
 ## [HeatPulse 热点追踪平台](./heatpulse/README.md)
+
+## [研墨 AI 博客写作助手](./devink/README.md)
