@@ -97,6 +97,11 @@ export const piece = arraySidebar([
                 icon: "poem",
                 link: "20191002",
             },
+            {
+                text: "浣溪沙·和无咎韵",
+                icon: "poem",
+                link: "20191005",
+            },
         ],
     },
 ]);
