@@ -29,7 +29,7 @@ star: true
 
   - [https://api-xxmall.yindongwen.top/docs](https://api-xxmall.yindongwen.top/docs)
 
-  - [https://yindongwen.top/demo/xxmall](https://yindongwen.top/demo/xxmall)
+  - [https://xxmall.yindongwen.top](https://xxmall.yindongwen.top)
 
 ## 技术栈
 

@@ -29,7 +29,7 @@ star: true
 
 - 演示地址：
     
-    - [https://yindongwen.top/demo/xxmall](https://yindongwen.top/demo/xxmall)
+    - [https://xxmall.yindongwen.top](https://xxmall.yindongwen.topl)
 
 - 项目截图
 
